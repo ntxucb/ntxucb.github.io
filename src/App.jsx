@@ -12,12 +12,12 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<WebPage />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/our_team" element={<Our_Team />} />
-          <Route path="/podcast" element={<Podcast />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/ntxucblapaz.github.io/" element={<WebPage />} />
+          <Route path="/ntxucblapaz.github.io/home" element={<Home />} />
+          <Route path="/ntxucblapaz.github.io/events" element={<Events />} />
+          <Route path="/ntxucblapaz.github.io/our_team" element={<Our_Team />} />
+          <Route path="/ntxucblapaz.github.io/podcast" element={<Podcast />} />
+          <Route path="/ntxucblapaz.github.io/projects" element={<Projects />} />
         </Routes>
       </BrowserRouter>
     </>
