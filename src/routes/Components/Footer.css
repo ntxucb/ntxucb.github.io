@@ -1,0 +1,63 @@
+.footer {
+    background-color: black;/*Si se autoriza cambiar por este color #282c34 al igual que en el taskbar*/
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.footer-logo {
+    width: 150px; 
+    height: auto; 
+    margin-right: 90px; 
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+.footer-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-links .link-facebook {
+    color: #17acfa;
+}
+
+.footer-links .link-twitter {
+    color: #08a0e9; 
+}
+
+.footer-links .link-linkedin {
+    color: #0077b5;
+}
+
+.footer-links .link-instagram {
+    color: #8134AF;
+}
+
+.footer-links .link-youtube {
+    color: #ff0000;
+}
+
+.footer-links .link-tiktok {
+    color: #69c9d0;
+}
+
+.footer-links .link-github {
+    color: #faa356;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}

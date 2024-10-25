@@ -1,0 +1,31 @@
+body {
+    background-color: #EBEBEB; /* Color de fondo del cuerpo */
+    color: black; /* Color del texto */
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .background {
+    background-image: url('./Components/Logos/NEUROTECHXBOLIVIA.png'); 
+    background-size: 900px 900px;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+  }
+  
+  .welcome-text {
+    position: absolute;
+    color: #23b2c6; 
+    font-size: 18em;
+    text-align: center;
+  }
+  

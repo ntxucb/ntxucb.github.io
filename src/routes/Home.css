@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .home-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .logo {
+    max-width: 25%;
+    height: auto;
+  }
+  
+  .title {
+    font-family: 'Armata', sans-serif;
+    font-size: 60px;
+    margin: 10px 0;
+    color: #23B2C6;
+    font-weight: bold;
+  }
+  
+  .description {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: black;
+  }
+  
+  .gif {
+    max-width: 90%;
+    height: auto;
+    margin-top: 5px;
+  }
+  
+  .split-screen {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0; 
+  }
+  
+  .column {
+    flex: 1; 
+    margin: 0 10px; 
+  }
+  
+  .subtitle {
+    font-weight: bold;
+  }
+  
+  .text {
+    margin-top: 10px; 
+  }
+  
+  .sponsors-section {
+    margin: 40px 0;
+    text-align: center;
+    color: #23B2C6;
+  }
+  
+  .sponsors-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .sponsor-logo {
+    margin: 10px;
+    max-width: 150px; /* Ajusta el tamaño según sea necesario */
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .sponsor-logo:hover {
+    transform: scale(1.05); /* Efecto de hover */
+  }
+  

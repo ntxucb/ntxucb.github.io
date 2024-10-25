@@ -1,0 +1,18 @@
+.nav-link {
+  color: #23B2C6 !important; /* Color del texto */
+  font-size: 1.1rem;
+  font-family: 'Orbitron', sans-serif; /* Aplicar la fuente Orbitron */
+  position: relative; 
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: black !important; /* Color del texto activo */
+  font-weight: bold;
+  text-shadow: 
+    1px 1px 0px #23B2C6, /* Contorno */
+    -1px -1px 0px #23B2C6, 
+    1px -1px 0px #23B2C6, 
+    -1px 1px 0px #23B2C6; 
+}
+
