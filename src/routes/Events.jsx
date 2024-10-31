@@ -6,7 +6,7 @@ export const Events = () => {
   return (
     <>
       <TaskBar />
-      <h1>Events</h1>
+      <h1>NeuroXplore: Innovation Bootcamp & Hackathon</h1>
       <Footer />
     </>
   );
