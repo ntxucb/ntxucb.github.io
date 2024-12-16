@@ -1,18 +1,18 @@
 body {
     background-color: #EBEBEB; /* Color de fondo del cuerpo */
     color: black; /* Color del texto */
-  }
+}
 
-  body, html {
+body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-  }
-  
-  .background {
+}
+
+.background {
     background-image: url('./Components/Logos/NEUROTECHXBOLIVIA.png'); 
-    background-size: 600px 600px;
+    background-size: 600px 600px; /* Tamaño predeterminado del fondo */
     background-position: center;
     background-repeat: no-repeat;
     height: 70vh; 
@@ -20,12 +20,39 @@ body {
     justify-content: center;
     align-items: center;
     position: relative; 
-  }
-  
-  .welcome-text {
+}
+
+.welcome-text {
     position: absolute;
     color: #23b2c6; 
-    font-size: 14em;
+    font-size: 14em; /* Tamaño grande para pantallas grandes */
     text-align: center;
-  }
-  
+    word-wrap: break-word; /* Ajustar texto si es necesario */
+    line-height: 1; /* Evita que las líneas se superpongan en pantallas más pequeñas */
+}
+
+/* Responsividad: Ajustes para tabletas y pantallas más pequeñas */
+@media (max-width: 768px) { /* Para dispositivos como tabletas */
+    .background {
+        background-size: 400px 400px; /* Reducir el tamaño del fondo */
+        height: 50vh; /* Reducir altura de la sección */
+    }
+
+    .welcome-text {
+        font-size: 8em; /* Reducir tamaño de fuente */
+        padding: 0 20px; /* Espaciado interno para texto largo */
+    }
+}
+
+/* Responsividad: Ajustes para teléfonos móviles */
+@media (max-width: 480px) { /* Para dispositivos móviles */
+    .background {
+        background-size: 250px 250px; /* Ajustar tamaño del fondo */
+        height: 40vh; /* Reducir altura de la sección */
+    }
+
+    .welcome-text {
+        font-size: 4em; /* Reducir aún más el tamaño del texto */
+        padding: 0 10px; /* Añadir espacio interno para evitar cortes en pantallas pequeñas */
+    }
+}
