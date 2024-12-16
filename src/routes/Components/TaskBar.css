@@ -1,87 +1,43 @@
-/* Estilo para los enlaces de navegación */
-.nav-link { 
-  color: #23B2C6 !important; /* Color del texto */
-  font-size: 1.1rem;
-  font-family: 'Orbitron', sans-serif; /* Aplicar la fuente Orbitron */
-  text-decoration: none;
-  display: block; /* Asegura que cada enlace ocupe toda la línea */
-  padding: 0.5rem 1rem; /* Espaciado interno */
-  transition: background-color 0.3s ease;
-}
-
-.nav-link:hover {
-  background-color: #f0f8ff; /* Fondo al hacer hover */
-  color: black !important; /* Cambiar color al hacer hover */
-}
-
-/* Navbar base */
+/* General para la barra de navegación */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  background-color: #f8f9fa; /* Fondo de la barra */
   border-bottom: 2px solid #23B2C6;
 }
 
-/* Estilo del logo */
-.navbar-logo {
-  font-size: 1.5rem;
+/* Enlaces de navegación */
+.nav-link {
+  color: #23B2C6 !important; /* Texto principal */
+  font-size: 1.1rem;
   font-family: 'Orbitron', sans-serif;
-  color: #23B2C6;
-  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-/* Ocultar el menú por defecto en móviles */
-.navbar-links {
-  display: none;
-  flex-direction: column;
-  gap: 0.5rem;
-  background-color: #ffffff; /* Fondo del menú desplegable */
-  position: absolute;
-  top: 60px; /* Ajustar la posición debajo de la barra */
-  right: 0;
-  width: 100%; /* Ocupa todo el ancho del dispositivo móvil */
-  border-top: 2px solid #23B2C6;
-  z-index: 1000; /* Asegura que esté por encima de otros elementos */
-  padding: 1rem 0;
-}
-
-/* Mostrar el menú cuando está activado */
-.navbar-links.active {
-  display: flex;
+.nav-link:hover {
+  color: rgb(0, 0, 0) !important; /* Color al hacer hover */
+  text-shadow: 
+    1px 1px 0px #23B2C6, 
+    -1px -1px 0px #23B2C6, 
+    1px -1px 0px #23B2C6, 
+    -1px 1px 0px #23B2C6;
 }
 
 /* Botón hamburguesa */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
+.navbar-toggler {
+  border-color: #23B2C6;
 }
 
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background-color: #23B2C6;
-  transition: transform 0.3s ease;
+.navbar-toggler-icon {
+  background-color: white; /* Cambiar color del ícono hamburguesa */
 }
 
-/* Responsividad: Menú desplegable en móviles */
+/* Fondo del menú desplegable */
+.navbar-collapse {
+  background-color: black; /* Fondo al desplegar en móviles */
+  border-top: 2px solid #23B2C6;
+}
+
 @media (max-width: 768px) {
-  .hamburger {
-    display: flex; /* Mostrar el botón hamburguesa */
-  }
-
-  .navbar-links {
-    position: absolute;
-    top: 60px; /* Ajustar debajo de la barra de navegación */
-    right: 0;
-    width: 100%; /* Asegura que ocupa todo el ancho */
-  }
-
   .nav-link {
-    font-size: 1rem; /* Reducir tamaño en móviles */
-    text-align: center; /* Centrar texto */
+    text-align: center; /* Centrar enlaces en dispositivos pequeños */
+    padding: 0.5rem 0;
   }
 }
