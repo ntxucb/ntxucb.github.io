@@ -1,3 +1,4 @@
+import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import NTX_Logo from "./Logos/NTXUCBLAT.png";
@@ -5,8 +6,9 @@ import "./TaskBar.css";
 
 export function TaskBar() {
   return (
-    <Navbar style={{ backgroundColor: "black" }}>
+    <Navbar expand="lg" style={{ backgroundColor: "black" }} variant="dark">
       <Container>
+        {/* Logo */}
         <Navbar.Brand as={Link} to="/ntxucblapaz.github.io/home">
           <img
             src={NTX_Logo}
@@ -15,8 +17,12 @@ export function TaskBar() {
             alt="Neurotech La Paz"
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+
+        {/* Botón Hamburguesa */}
+        <Navbar.Toggle aria-controls="navbar-nav" />
+
+        {/* Enlaces */}
+        <Navbar.Collapse id="navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link
               as={Link}
