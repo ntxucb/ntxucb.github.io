@@ -7,6 +7,7 @@ export const Events = () => {
     <>
       <TaskBar />
       <h1>Events</h1>
+      <h2>NeuroXplore: Innovation Bootcamp & Hackathon</h2>
       <Footer />
     </>
   );
