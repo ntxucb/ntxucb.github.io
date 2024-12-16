@@ -1,5 +1,5 @@
 .footer {
-    background-color: black;/*Si se autoriza cambiar por este color #282c34 al igual que en el taskbar*/
+    background-color: black; /*Si se autoriza cambiar por este color #282c34 al igual que en el taskbar*/
     color: white;
     text-align: center;
     padding: 20px;
@@ -9,6 +9,8 @@
     display: flex;
     align-items: center;
     justify-content: center; 
+    flex-wrap: wrap; /* Para permitir que los elementos se ajusten en pantallas pequeñas */
+    gap: 20px; /* Espaciado entre elementos */
 }
 
 .footer-logo {
@@ -21,6 +23,7 @@
     display: flex;
     flex-wrap: wrap; 
     justify-content: center; 
+    gap: 10px; /* Espaciado entre enlaces */
 }
 
 .footer-links a {
@@ -60,4 +63,40 @@
 
 .footer-links a:hover {
     text-decoration: underline;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) { /* Tablet y pantallas más pequeñas */
+    .footer-content {
+        flex-direction: column; /* Cambiar de fila a columna */
+        align-items: center;
+    }
+
+    .footer-logo {
+        margin-right: 0; /* Quitar margen derecho */
+        margin-bottom: 10px; /* Añadir margen inferior */
+    }
+
+    .footer-links {
+        justify-content: center;
+        gap: 15px; /* Más espaciado entre enlaces */
+    }
+
+    .footer-links a {
+        font-size: 14px; /* Reducir tamaño de fuente en dispositivos pequeños */
+    }
+}
+
+@media (max-width: 480px) { /* Teléfonos móviles */
+    .footer {
+        padding: 10px; /* Reducir padding para pantallas pequeñas */
+    }
+
+    .footer-logo {
+        width: 120px; /* Reducir tamaño del logo */
+    }
+
+    .footer-links a {
+        font-size: 12px; /* Reducir aún más el tamaño de los enlaces */
+    }
 }
