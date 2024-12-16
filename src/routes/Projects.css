@@ -1,0 +1,69 @@
+/* Importar la fuente Orbitron */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+.project-title {
+  font-family: 'Orbitron', sans-serif; /* Fuente */
+  color: #23B2C6; /* Color personalizado */
+  font-size: 1.5rem; 
+  text-align: center; 
+  margin-bottom: 1rem; 
+}
+
+.project-text {
+  font-family: 'Arial', sans-serif; /* Fuente genérica para texto */
+  color: #333; /* Gris oscuro */
+  font-size: 1rem; /* Tamaño inicial */
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.projects-heading {
+  font-family: 'Orbitron', sans-serif;
+  color: #23B2C6;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+
+@media (min-width: 576px) {
+  .project-title {
+    font-size: 1.6rem; 
+  }
+
+  .project-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .project-title {
+    font-size: 1.8rem; 
+  }
+
+  .project-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .projects-heading {
+    font-size: 1.8rem;
+  }
+
+  .project-title {
+    font-size: 1.4rem; 
+  }
+
+  .project-text {
+    font-size: 0.95rem;
+  }
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}

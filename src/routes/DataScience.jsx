@@ -2,11 +2,11 @@ import React from "react";
 import { TaskBar } from "./Components/TaskBar";
 import Footer from "./Components/Footer";
 
-export const Events = () => {
+export const Our_Team = () => {
   return (
     <>
       <TaskBar />
-      <h1>Events</h1>
+      <h1>DataScience</h1>
       <Footer />
     </>
   );

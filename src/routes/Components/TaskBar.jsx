@@ -18,19 +18,39 @@ export function TaskBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/ntxucblapaz.github.io/home" className="nav-link">
+            <Nav.Link
+              as={Link}
+              to="/ntxucblapaz.github.io/home"
+              className="nav-link"
+            >
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="/ntxucblapaz.github.io/projects" className="nav-link">
+            <Nav.Link
+              as={Link}
+              to="/ntxucblapaz.github.io/projects"
+              className="nav-link"
+            >
               Projects
             </Nav.Link>
-            <Nav.Link as={Link} to="/ntxucblapaz.github.io/events" className="nav-link">
+            <Nav.Link
+              as={Link}
+              to="/ntxucblapaz.github.io/events"
+              className="nav-link"
+            >
               Events
             </Nav.Link>
-            <Nav.Link as={Link} to="/ntxucblapaz.github.io/podcast" className="nav-link">
+            <Nav.Link
+              as={Link}
+              to="/ntxucblapaz.github.io/podcast"
+              className="nav-link"
+            >
               Podcast
             </Nav.Link>
-            <Nav.Link as={Link} to="/ntxucblapaz.github.io/our_team" className="nav-link">
+            <Nav.Link
+              as={Link}
+              to="/ntxucblapaz.github.io/our_team"
+              className="nav-link"
+            >
               Our Team
             </Nav.Link>
           </Nav>
