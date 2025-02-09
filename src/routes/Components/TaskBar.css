@@ -26,12 +26,12 @@
 }
 
 .navbar-toggler-icon {
-  background-color: rgb(0, 0, 0); /* Cambiar color del ícono hamburguesa */
+  background-color: #EBEBEB; /* Cambiar color del ícono hamburguesa */
 }
 
 /* Fondo del menú desplegable */
 .navbar-collapse {
-  background-color: black; /* Fondo al desplegar en móviles */
+  background-color: #EBEBEB; /* Fondo al desplegar en móviles */
   border-top: 2px solid #23B2C6;
 }
 
