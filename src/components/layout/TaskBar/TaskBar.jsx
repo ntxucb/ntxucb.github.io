@@ -26,7 +26,7 @@ export function TaskBar() {
           <Nav className="ms-auto">
             <Nav.Link
               as={Link}
-              to="/ntxucblapaz.github.io/home"
+              to="/ntxucblapaz.github.io/"
               className="nav-link"
             >
               Home
