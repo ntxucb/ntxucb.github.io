@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { TaskBar } from "../../components/layout/TaskBar/TaskBar";
 import Footer from "../../components/layout/Footer/Footer";
 import gif from "../../assets/logos/NTXUCB_Logo_first_github.gif";
-import ntxLogo from "../../assets/logos/NTX_logo.png";
+import ntxLogo from "../../assets/logos/NTX_logo.png"; 
 import UIE from "../../assets/logos/UIELogo.png";
 import UCB from "../../assets/logos/UCB.png";
 import cidimec from "../../assets/logos/cidimec.png";
