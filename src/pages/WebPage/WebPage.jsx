@@ -1,5 +1,5 @@
-import { TaskBar } from "./Components/TaskBar";
-import Footer from "./Components/Footer";
+import { TaskBar } from "../../components/layout/TaskBar/TaskBar";
+import Footer from "../../components/layout/Footer/Footer";
 import "./WebPage.css";
 
 export const WebPage = () => {

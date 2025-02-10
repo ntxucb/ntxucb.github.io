@@ -10,7 +10,7 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import "./Footer.css";
-import logo from "./Logos/LogoUIE.png";
+import logo from "../../../assets/logos/UIELogo.png";
 
 const Footer = () => {
   return (

@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { TaskBar } from "./Components/TaskBar";
-import Footer from "./Components/Footer";
-import gif from "./Components/Logos/NTXUCB_Logo_first_github.gif";
-import ntxLogo from "./Components/Logos/NTX_Logo.png";
-import UIE from "./Components/Logos/UIELogo.png";
-import UCB from "./Components/Logos/UCB.png";
-import cidimec from "./Components/Logos/cidimec.png";
-import backyard from "./Components/Logos/backyardbrains.png";
-import tinyml from "./Components/Logos/tinyml.png";
-import openbci from "./Components/Logos/openbci.png";
+import { TaskBar } from "../../components/layout/TaskBar/TaskBar";
+import Footer from "../../components/layout/Footer/Footer";
+import gif from "../../assets/logos/NTXUCB_Logo_first_github.gif";
+import ntxLogo from "../../assets/logos/NTX_logo.png";
+import UIE from "../../assets/logos/UIELogo.png";
+import UCB from "../../assets/logos/UCB.png";
+import cidimec from "../../assets/logos/cidimec.png";
+import backyard from "../../assets/logos/backyardbrains.png";
+import tinyml from "../../assets/logos/tinyml.png";
+import openbci from "../../assets/logos/openbci.png";
 import "./Home.css";
 
 export const Home = () => {

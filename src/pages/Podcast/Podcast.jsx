@@ -1,14 +1,14 @@
 import React from "react";
-import { TaskBar } from "./Components/TaskBar";
-import Footer from "./Components/Footer";
+import { TaskBar } from "../../components/layout/TaskBar/TaskBar";
+import Footer from "../../components/layout/Footer/Footer";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import "./Podcast.css";
-import SpotifyIcon from "./Components/Icons/Spotify.png";
-import YoutubePodcastIcon from "./Components/Icons/Youtube.png";
-import Img1 from "./Components/Icons/Podcast1.png";
-import Img2 from "./Components/Icons/Podcast2.png";
+import SpotifyIcon from "../../assets/icons/Spotify.png";
+import YoutubePodcastIcon from "../../assets/icons/Youtube.png";
+import Img1 from "../../assets/images/Podcast1.png";
+import Img2 from "../../assets/images/Podcast2.png";
 
 const PodcastGrid = () => {
   const podcastData = [

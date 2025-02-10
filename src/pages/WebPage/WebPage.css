@@ -11,7 +11,7 @@ body, html {
 }
 
 .background {
-    background-image: url('./Components/Logos/NEUROTECHXBOLIVIA.png'); 
+    background-image: url('../../assets/logos/NEUROTECHXBOLIVIA.png'); 
     background-size: 600px 600px; /* Tamaño predeterminado del fondo */
     background-position: center;
     background-repeat: no-repeat;

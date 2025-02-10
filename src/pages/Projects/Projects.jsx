@@ -1,11 +1,11 @@
 import React from "react";
-import { TaskBar } from "./Components/TaskBar";
-import Footer from "./Components/Footer";
+import { TaskBar } from "../../components/layout/TaskBar/TaskBar";
+import Footer from "../../components/layout/Footer/Footer";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import Project1 from "./Components/ProjectImg/Project1.png";
-import Project2 from "./Components/ProjectImg/Neurotec1.jpg";
+import Project1 from "../../assets/images/Project1.png";
+import Project2 from "../../assets/images/Neurotec1.jpg";
 import "./Projects.css";
 
 const GridExample = () => {

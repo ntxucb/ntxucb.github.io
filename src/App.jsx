@@ -1,11 +1,11 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home } from "./routes/Home";
-import { Events } from "./routes/Events";
-import { Our_Team } from "./routes/Our_Team";
-import { Podcast } from "./routes/Podcast";
-import { Projects } from "./routes/Projects";
-import { WebPage } from "./routes/WebPage";
+import { Home } from "./pages/Home/Home";
+import { Events } from "./pages/Events/Events";
+import { Our_Team } from "./pages/Our_Team/Our_Team";
+import { Podcast } from "./pages/Podcast/Podcast";
+import { Projects } from "./pages/Projects/Projects";
+import { WebPage } from "./pages/WebPage/WebPage";
 
 function App() {
   return (

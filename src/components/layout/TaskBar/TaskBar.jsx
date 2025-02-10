@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import NTX_Logo from "./Logos/NTXUCBLAT.png";
+import NTX_Logo from "../../../assets/logos/NTXUCBLAT.png";
 import "./TaskBar.css";
 
 export function TaskBar() {
