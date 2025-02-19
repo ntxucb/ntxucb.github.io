@@ -1,5 +1,6 @@
 import React, { useId, useEffect, useRef } from 'react';
 import Node from './models/Node';
+import NodeCluster from './models/NodeCluster';
 
 export default function CanvasTest(){
     const canvas = useRef() // Dont have to ensure uniqueness manually 
@@ -15,23 +16,29 @@ export default function CanvasTest(){
             if(!canvas.current) return
             const context = canvas.current.getContext("2d")
             
-            const nodeBase = new Node(0, 0, 0, Infinity)
-            const node = new Node(1400, 400, Math.PI/2 + 1)
-            const node1 = new Node(1500, 300, Math.PI/3 + 1, Infinity)
+            const cluster = new NodeCluster();
+            cluster.createNode(50, 40, 0.1)
+            cluster.createNode(150, 400, 0.3)
+            cluster.createNode(250, 300, 0.5)
+            cluster.createNode(570, 300, 1.4)
+            cluster.createNode(570, 500, 2.3)
+
+
             setTimeout(() => {
-                node.lowerEdge.anchor.attach(nodeBase.lowerEdge)
-                node.upperEdge.anchor.attach(node1.lowerEdge)
+                cluster[0].upperEdge.anchor.attach(cluster[1].upperEdge)
             }, 1000)
+
+            canvas.current.addEventListener('mousemove',  (e) => {
+                cluster.updateMouse(e.clientX, e.clientY)
+            })
 
             let id = 0
             function draw(){
-                context.clearRect(0, 0, canvas.current.width, canvas.current.height)
-                nodeBase.draw(context)
-                node.draw(context)
-                node1.draw(context)
+                context.fillStyle = "black"
+                context.fillRect(0, 0, canvas.current.width, canvas.current.height)
+                cluster.draw(context)
                 id = requestAnimationFrame(draw)
             }
-
             draw()
             return () => cancelAnimationFrame(id)
         }

@@ -6,7 +6,7 @@ import './index.css'
 import HomePage from './Home'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <React.StrictMode>    
     {/* <App /> */}
     <CanvasTest/>
     {/* <HomePage/> */}
