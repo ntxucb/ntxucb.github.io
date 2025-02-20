@@ -77,22 +77,37 @@
 } */
 
 .neuron-illustration {
-  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: radial-gradient( 
+        rgba(0, 0, 0, 1) 0,   /* Center: solid/semi-transparent */
+        rgba(0, 0, 0, 0.5) 50%,   /* Center: solid/semi-transparent */
+        rgba(255, 255, 255, 0) 70%);
+  position: absolute;
+  z-index: 4;
+  /* backdrop-filter: blur(10px) brightness(1); */
+  
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
 }
 
 .neuron-illustration img {
   object-fit: contain;
-  margin-bottom: 3rem;
-  width: 400px;
-  height: 400px;
+  margin-bottom: 1rem;
+  width: 200px;
+  height: 200px;
 }
 
 .title {
   letter-spacing: 0.3rem;
-  color: #333;
+  color: white;
   font-family: "Lexend Giga";
   font-weight: 200;
-  font-size: 60px;
+  font-size: 30px;
   /* margin: auto; */
 }
 
@@ -163,4 +178,18 @@
 .scroll-view {
   height: 100%;
   overflow: auto;
+}
+
+.animation-container { 
+  position: relative;
+  z-index: 1;
+}
+
+.blur-container {
+  position: absolute;
+  z-index: 900;
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(8px);
 }

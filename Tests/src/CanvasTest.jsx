@@ -1,6 +1,7 @@
 import React, { useId, useEffect, useRef } from 'react';
 import Node from './models/Node';
 import NodeCluster from './models/NodeCluster';
+import "./HomePage.css"
 
 export default function CanvasTest(){
     const canvas = useRef() // Dont have to ensure uniqueness manually 
@@ -25,7 +26,11 @@ export default function CanvasTest(){
             cluster.createNode(670, 100, 2.3)
             cluster.createNode(700, 700, 2.3)
             cluster.createNode(870, 300, 2.3)
-            cluster.createNode(970, 50, 2.3)
+            cluster.createNode(100, 300, 2.3)
+            cluster.createNode(1270, 50, 2.5)
+            cluster.createNode(870, 660, 0.3)
+            cluster.createNode(770, 200, 0.3)
+            cluster.createNode(970, 200, 0.3)
 
 
             // setTimeout(() => {
@@ -35,9 +40,9 @@ export default function CanvasTest(){
             //     cluster.nodes[3].upperEdge.anchor.attach(cluster.nodes[4].lowerEdge)
             // }, 3000)
 
-            canvas.current.addEventListener('mousemove',  (e) => {
+            div.current.addEventListener('mousemove',  (e) => {
                 cluster.updateMouse(e.offsetX, e.offsetY)
-            })
+            }, true)
 
             let id = 0
             function draw(){
@@ -54,10 +59,28 @@ export default function CanvasTest(){
 
     const { innerWidth: width, innerHeight: height } = window;
 
-    return <div ref={div} style={{overflow: "auto", height: "100vh", width:"100vw"}}> 
-    {/* <span ref={div}>sdfdsf<br/>fsadfsad</span> */}
-        <canvas style={{overflow: "auto", width: "100dvw", height: "100dvh", objectFit: "contain", display:"block"}} height={height} width={width} ref={canvas}></canvas> 
-    </div>  
+    return (
+      <div
+        className='animation-container'
+        ref={div}
+        style={{ overflow: "auto", height: "100%", width: "100%" }}
+      >
+        {/* <span ref={div}>sdfdsf<br/>fsadfsad</span> */}
+        <div className="blur-container"></div>
+        <canvas
+          style={{
+            overflow: "auto",
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+            display: "block",
+          }}
+          height={height}
+          width={width}
+          ref={canvas}
+        ></canvas>
+      </div>
+    );  
 }
 
 //additional scrollbar width and height are automatically compensated

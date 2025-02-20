@@ -1,5 +1,6 @@
 import React from "react";
 import "./HomePage.css";
+import CanvasTest from "./CanvasTest";
 
 const HomePage = () => {
   return (
@@ -41,6 +42,7 @@ const HomePage = () => {
         {/* Sección Home – utiliza el background y logo definidos en el CSS */}
         <div className="main-content" id="home">
           {/* La imagen de fondo se define en CSS mediante background-image */}
+          <CanvasTest/>
           <div className="neuron-illustration">
             <img src="Logo.png" alt="Logo" />
             <h1 className="title">

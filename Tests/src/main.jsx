@@ -8,7 +8,7 @@ import HomePage from './Home'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>    
     {/* <App /> */}
-    <CanvasTest/>
-    {/* <HomePage/> */}
+    {/* <CanvasTest/> */}
+    <HomePage/>
   </React.StrictMode>,
 )
