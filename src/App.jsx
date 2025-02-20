@@ -7,10 +7,13 @@ import { Podcast } from "./pages/Podcast/Podcast";
 import { Projects } from "./pages/Projects/Projects";
 import config from "./config.json"
 import UnderConstruction from "./pages/UnderConstruction/UnderConstruction";
+import { TaskBar } from "./components/layout/TaskBar/TaskBar";
+import Footer from "./components/layout/Footer/Footer";
 
 function AppRoutes() {
   const location = useLocation();
-  const isUnderConstruction = config.pagesUnderConstruction.includes(location.pathname);
+  const isProduction = import.meta.env.VITE_ENV === "production";
+  const isUnderConstruction = isProduction && config.pagesUnderConstruction.includes(location.pathname);
 
   return (
     <Routes>
@@ -32,7 +35,9 @@ function AppRoutes() {
 function App() {
   return (
     <BrowserRouter>
+      <TaskBar />
       <AppRoutes />
+      <Footer />
     </BrowserRouter>
   );
 }

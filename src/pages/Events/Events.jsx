@@ -5,10 +5,8 @@ import Footer from "../../components/layout/Footer/Footer";
 export const Events = () => {
   return (
     <>
-      <TaskBar />
       <h1>Events</h1>
       <h2>NeuroXplore: Innovation Bootcamp & Hackathon</h2>
-      <Footer />
     </>
   );
 };

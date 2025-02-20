@@ -7,7 +7,7 @@ import "./UnderConstruction.css";
 const UnderConstruction = () => {
   return (
     <>
-      <TaskBar />
+
       <div className="forbidden-container">
         <div className="forbidden-content">
           <div className="forbidden-icon">
@@ -24,7 +24,7 @@ const UnderConstruction = () => {
           </a>
         </div>
       </div>
-      <Footer />
+
     </>
   );
 };

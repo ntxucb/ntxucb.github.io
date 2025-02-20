@@ -51,7 +51,6 @@ const PodcastGrid = () => {
 export const Podcast = () => {
   return (
     <>
-      <TaskBar />
       <div className="podcasts-container">
         <h1 className="podcasts-heading">Suggested Podcasts</h1>
         <h2>
@@ -63,7 +62,6 @@ export const Podcast = () => {
         </h2>
         <PodcastGrid />
       </div>
-      <Footer />
     </>
   );
 };
