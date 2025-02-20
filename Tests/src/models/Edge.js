@@ -1,6 +1,6 @@
 export default class Edge {
   phaseK = 0.7;
-  phaseE = 0.5;
+  phaseE = 0.15;
   shrink = 1;
 
   baseLength = 250;
@@ -23,29 +23,29 @@ export default class Edge {
         this
       );
 
-      this.k = k;
-      this.e = e;
-      this.energy = 0;
-      
-      this.time = 0;
-      this.lDelta = undefined;
-    
-      this.lastValidDir = { x: 0, y: 0 };
-      this.growthPhases = Edge.generateDephases();
-      this.growthFrequencies = Edge.generateFrequencies();
-      this.growthDisplacements = Edge.generateDisplacements();
-      
+    this.k = k;
+    this.e = e;
+    this.energy = 0;
+
+    this.time = 0;
+    this.lDelta = undefined;
+
+    this.lastValidDir = { x: 0, y: 0 };
+    this.growthPhases = Edge.generateDephases();
+    this.growthFrequencies = Edge.generateFrequencies();
+    this.growthDisplacements = Edge.generateDisplacements();
+
     this.minBranchLength = Math.min(
-        this.maxBranchLength,
-        Math.max(this.minBranchLength, (5 / 4) * this.node.r)
+      this.maxBranchLength,
+      Math.max(this.minBranchLength, (5 / 4) * this.node.r)
     );
     this.maxBranchLength = Math.max(
-        this.minBranchLength,
-        Math.min(this.maxBranchLength, 5 * this.node.r)
+      this.minBranchLength,
+      Math.min(this.maxBranchLength, 5 * this.node.r)
     );
     this.length = this.minBranchLength;
     this.lastLength = this.length;
-    
+
     this.branchWidth = Math.min(
       this.maxBranchWidth,
       Math.max(this.branchWidth, this.node.r / 5)
@@ -58,12 +58,12 @@ export default class Edge {
     let res = Array.from({ length: Edge.nHarmonics }, () => {
       return 2 * Math.PI * Math.random();
     });
-    return res; 
+    return res;
   }
 
   static generateDisplacements() {
     let res = Array.from({ length: Edge.nHarmonics }, () => {
-      return 10 * (1 + (0.1 * (Math.random() - 0.5)) / 2);
+      return 15 * (1 + (0.1 * (Math.random() - 0.5)) / 2);
     });
     return res;
   }
@@ -126,7 +126,7 @@ export default class Edge {
     let delta =
       diff < 2 * Math.PI - diff ? dir * diff : -dir * (2 * Math.PI - diff);
 
-    if (Math.abs(delta) < 1e-8) {
+    if (Math.abs(delta) < 1e-5) {
       this.anchor.update({ x: 0, y: 0 });
       return { x: 0, y: 0 };
     }
@@ -148,7 +148,7 @@ export default class Edge {
   feed(energy) {
     this.energy = Math.max(0, Math.min(1, energy));
     // console.log("Alimentando a las dendritas", this.energy);
-    return true
+    return true;
   }
 
   draw(context) {
@@ -156,10 +156,12 @@ export default class Edge {
       (acc, displacement, index) => {
         return (
           acc +
-          (displacement * this.energy) *
+          displacement *
+            this.energy *
             Math.sin(
-              (this.growthFrequencies[index] + this.energy * 0.001) * this.time  *   +
-                this.growthPhases[index]
+              (this.growthFrequencies[index] + this.energy * 0.001) *
+                this.time *
+                +this.growthPhases[index]
             )
         );
       },
@@ -170,7 +172,7 @@ export default class Edge {
       this.minBranchLength +
       this.maxBranchLength *
         this.energy *
-        (1 / (1 + Math.exp(-this.time  * this.growthSpeed + 5)));
+        (1 / (1 + Math.exp(-this.time * this.growthSpeed + 5)));
 
     this.length += this.length + noise > this.minBranchLength ? noise : 0;
 
@@ -178,8 +180,6 @@ export default class Edge {
     this.lastLength = this.elongation();
 
     this.time += 1;
-
-
 
     context.strokeStyle = "#0000";
     context.shadowColor = "#6ed5f0";
@@ -200,14 +200,13 @@ export default class Edge {
     context.lineCap = "round";
 
     context.lineWidth = Math.max(
-        Math.min(dynamicWidth, this.maxBranchWidth),
-        this.minBranchWidth
+      Math.min(dynamicWidth, this.maxBranchWidth),
+      this.minBranchWidth
     );
     context.stroke();
     context.beginPath();
     context.moveTo(this.node.x, this.node.y);
     if (this.anchor) context.lineTo(this.anchor.x, this.anchor.y);
-
   }
 }
 

@@ -18,23 +18,26 @@ export default function CanvasTest(){
             
             const cluster = new NodeCluster();
             cluster.createNode(50, 40, 0.1)
-            cluster.createNode(150, 400, 0.3)
-            cluster.createNode(250, 300, 0.5)
+            cluster.createNode(1700, 400, 0.3, Infinity)
+            cluster.createNode(250, 300, 0.5, Infinity)
             cluster.createNode(570, 300, 1.4)
             cluster.createNode(570, 500, 2.3)
 
 
             setTimeout(() => {
-                cluster[0].upperEdge.anchor.attach(cluster[1].upperEdge)
-            }, 1000)
+                cluster.nodes[4].upperEdge.anchor.attach(cluster.nodes[1].upperEdge)
+                cluster.nodes[4].lowerEdge.anchor.attach(cluster.nodes[2].lowerEdge)
+                cluster.nodes[3].lowerEdge.anchor.attach(cluster.nodes[2].lowerEdge)
+                cluster.nodes[3].upperEdge.anchor.attach(cluster.nodes[4].lowerEdge)
+            }, 3000)
 
             canvas.current.addEventListener('mousemove',  (e) => {
-                cluster.updateMouse(e.clientX, e.clientY)
+                cluster.updateMouse(e.offsetX, e.offsetY)
             })
 
             let id = 0
             function draw(){
-                context.fillStyle = "black"
+                context.fillStyle = "white"
                 context.fillRect(0, 0, canvas.current.width, canvas.current.height)
                 cluster.draw(context)
                 id = requestAnimationFrame(draw)
@@ -49,7 +52,7 @@ export default function CanvasTest(){
 
     return <div ref={div} style={{overflow: "auto", height: "100vh", width:"100vw"}}> 
     {/* <span ref={div}>sdfdsf<br/>fsadfsad</span> */}
-        <canvas style={{overflow: "auto", width: "100%", height: "100%", objectFit: "contain", display:"block"}} height={height} width={width} ref={canvas}></canvas> 
+        <canvas style={{overflow: "auto", width: "100dvw", height: "100dvh", objectFit: "contain", display:"block"}} height={height} width={width} ref={canvas}></canvas> 
     </div>  
 }
 
