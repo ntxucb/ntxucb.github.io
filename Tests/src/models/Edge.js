@@ -1,5 +1,5 @@
 export default class Edge {
-  phaseK = 0.7;
+  phaseK = 0.5;
   phaseE = 0.15;
   shrink = 1;
 
@@ -151,6 +151,14 @@ export default class Edge {
     return true;
   }
 
+  isAttached() {
+    return this.anchor.attachEdge !== undefined;
+  }
+
+  attach(edge, t0, ta){
+    this.anchor.attach(edge)
+  }
+
   draw(context) {
     const noise = this.growthDisplacements.reduce(
       (acc, displacement, index) => {
@@ -213,7 +221,7 @@ export default class Edge {
 class Anchor {
   m = 0.1;
 
-  constructor(x, y, rootEdge, attachEdge, attachmentPoint = 1) {
+  constructor(x, y, rootEdge, attachEdge = undefined, attachmentPoint = 1) {
     this.x = x;
     this.y = y;
 
@@ -235,7 +243,8 @@ class Anchor {
     return { x: -at.x - rt.x, y: -at.y - rt.y };
   }
 
-  attach(edge) {
+  attach(edge, t0, t1) {
+    console.log("Holly", t0, t1)
     this.attachEdge = edge;
     edge.anchor = this;
   }

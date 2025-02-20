@@ -21,13 +21,12 @@ export default class Node {
     this.upperEdge = new Edge(
       this,
       undefined,
-      this.angle + 0.5 * (2 * Math.random() - 1)
+      this.angle // + 0.5 * (2 * Math.random() - 1)
     );  
     this.lowerEdge = new Edge(
       this,
       undefined,
-      ((Math.PI + angle).toFixed(7) % (2 * Math.PI)) +
-        0.5 * (2 * Math.random() - 1)
+      ((Math.PI + angle).toFixed(7) % (2 * Math.PI)) //+ 0.5 * (2 * Math.random() - 1)
     );
   }
 

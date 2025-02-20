@@ -17,19 +17,23 @@ export default function CanvasTest(){
             const context = canvas.current.getContext("2d")
             
             const cluster = new NodeCluster();
-            cluster.createNode(50, 40, 0.1)
+            cluster.createNode(400, 200, 2.3)
             cluster.createNode(1700, 400, 0.3, Infinity)
             cluster.createNode(250, 300, 0.5, Infinity)
-            cluster.createNode(570, 300, 1.4)
+            cluster.createNode(570, 300, 3.3)
             cluster.createNode(570, 500, 2.3)
+            cluster.createNode(670, 100, 2.3)
+            cluster.createNode(700, 700, 2.3)
+            cluster.createNode(870, 300, 2.3)
+            cluster.createNode(970, 50, 2.3)
 
 
-            setTimeout(() => {
-                cluster.nodes[4].upperEdge.anchor.attach(cluster.nodes[1].upperEdge)
-                cluster.nodes[4].lowerEdge.anchor.attach(cluster.nodes[2].lowerEdge)
-                cluster.nodes[3].lowerEdge.anchor.attach(cluster.nodes[2].lowerEdge)
-                cluster.nodes[3].upperEdge.anchor.attach(cluster.nodes[4].lowerEdge)
-            }, 3000)
+            // setTimeout(() => {
+            //     cluster.nodes[4].upperEdge.anchor.attach(cluster.nodes[1].upperEdge)
+            //     cluster.nodes[4].lowerEdge.anchor.attach(cluster.nodes[2].lowerEdge)
+            //     cluster.nodes[3].lowerEdge.anchor.attach(cluster.nodes[2].lowerEdge)
+            //     cluster.nodes[3].upperEdge.anchor.attach(cluster.nodes[4].lowerEdge)
+            // }, 3000)
 
             canvas.current.addEventListener('mousemove',  (e) => {
                 cluster.updateMouse(e.offsetX, e.offsetY)
@@ -37,7 +41,7 @@ export default function CanvasTest(){
 
             let id = 0
             function draw(){
-                context.fillStyle = "white"
+                context.fillStyle = "black"
                 context.fillRect(0, 0, canvas.current.width, canvas.current.height)
                 cluster.draw(context)
                 id = requestAnimationFrame(draw)
