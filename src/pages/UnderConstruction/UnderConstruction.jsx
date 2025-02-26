@@ -18,7 +18,7 @@ const UnderConstruction = () => {
           <p className="forbidden-message">
             Sorry, we are working on something amazing. Come back soon!
           </p>
-          <a href="https://ntxucb.github.io/ntxucblapaz.github.io" className="back-button">
+          <a href="/ntxucblapaz.github.io" className="back-button">
             <i className="fa fa-arrow-left"></i> 
             Go Back
           </a>
