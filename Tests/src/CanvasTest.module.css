@@ -1,0 +1,14 @@
+.animation-container {
+  filter: blur(3px) brightness(70%);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  height: 100%;
+   width: 100%;
+}
+
+.animation-container canvas { 
+  width: 100%;
+  height: 100%;
+  display: block;
+}

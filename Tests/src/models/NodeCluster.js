@@ -19,6 +19,10 @@ export default class NodeCluster {
     this.nodes.push(new Node(x, y, angle, m));
   }
 
+  removeMouse(){
+    this.mouseIn = false;
+  }
+
   updateMouse(x, y) {
     this.mouseIn = true;
     this.mouseX = x;
@@ -128,7 +132,7 @@ export default class NodeCluster {
       const dx = node.x - x;
       const dy = node.y - y;
       const dist = Math.sqrt(dx * dx + dy * dy);
-      node.feed(power / (dist ** 2 + 1));
+      node.feed(power / (dist ** 2/3 + 1));
     });
   }
 

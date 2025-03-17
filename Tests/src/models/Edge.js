@@ -4,7 +4,7 @@ export default class Edge {
   shrink = 1;
 
   baseLength = 250;
-  branchWidth = 13;
+  branchWidth = 6;
   maxBranchWidth = 1.5 * this.branchWidth;
   minBranchWidth = 0.5 * this.branchWidth;
 
@@ -41,7 +41,7 @@ export default class Edge {
     );
     this.maxBranchLength = Math.max(
       this.minBranchLength,
-      Math.min(this.maxBranchLength, 5 * this.node.r)
+      Math.min(this.maxBranchLength, 6 * this.node.r)
     );
     this.length = this.minBranchLength;
     this.lastLength = this.length;
@@ -63,7 +63,7 @@ export default class Edge {
 
   static generateDisplacements() {
     let res = Array.from({ length: Edge.nHarmonics }, () => {
-      return 15 * (1 + (0.1 * (Math.random() - 0.5)) / 2);
+      return 2 * (1 + (0.1 * (Math.random() - 0.5)) / 2);
     });
     return res;
   }
@@ -155,8 +155,8 @@ export default class Edge {
     return this.anchor.attachEdge !== undefined;
   }
 
-  attach(edge, t0, ta){
-    this.anchor.attach(edge)
+  attach(edge, t0, ta) {
+    this.anchor.attach(edge);
   }
 
   draw(context) {
@@ -189,9 +189,11 @@ export default class Edge {
 
     this.time += 1;
 
-    context.strokeStyle = "#0000";
-    context.shadowColor = "#6ed5f0";
-    context.shadowBlur = context.lineWidth * 4;
+    context.globalAlpha = this.energy;
+    context.strokeStyle = "#000000";
+    context.shadowColor = "#6de3cf";
+    context.shadowBlur = this.node.energy * 10;
+    // console.log(context.shadowBlur)
     context.lineCap = "round";
     const dynamicWidth =
       (this.branchWidth * this.baseLength) / this.elongation();
@@ -199,11 +201,13 @@ export default class Edge {
       Math.min(dynamicWidth, this.maxBranchWidth),
       this.minBranchWidth
     );
-    context.stroke();
     context.beginPath();
     context.moveTo(this.node.x, this.node.y);
     if (this.anchor) context.lineTo(this.anchor.x, this.anchor.y);
+    context.stroke();
 
+    context.shadowBlur = 0;
+    context.shadowColor = "transparent";
     context.strokeStyle = "#45c5e6";
     context.lineCap = "round";
 
@@ -211,10 +215,10 @@ export default class Edge {
       Math.min(dynamicWidth, this.maxBranchWidth),
       this.minBranchWidth
     );
-    context.stroke();
     context.beginPath();
     context.moveTo(this.node.x, this.node.y);
     if (this.anchor) context.lineTo(this.anchor.x, this.anchor.y);
+    context.stroke();
   }
 }
 
@@ -244,7 +248,7 @@ class Anchor {
   }
 
   attach(edge, t0, t1) {
-    console.log("Holly", t0, t1)
+    // console.log("Holly", t0, t1)
     this.attachEdge = edge;
     edge.anchor = this;
   }

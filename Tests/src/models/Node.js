@@ -3,9 +3,9 @@ import Edge from "./Edge";
 export default class Node {
   inertia = 10;
   maxCapacity = 1;
-  feedRate = 5;
-  consumeRate = 0.02;
-  constructor(x = 0, y = 0, angle = 1, m = 20, density = 0.5) {
+  feedRate = 0.1;
+  consumeRate = 0.005;
+  constructor(x = 0, y = 0, angle = 1, m = 10, density = 0.5) {
     this.x = x;
     this.y = y;
     this.angle = (angle + 2 * Math.PI).toFixed(7) % (2 * Math.PI);
@@ -75,6 +75,7 @@ export default class Node {
     this.angle += this.do;
     this.angle = (this.angle + 2 * Math.PI).toFixed(7) % (2 * Math.PI);
 
+    context.globalAlpha = this.energy
     context.beginPath();
     context.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
     context.fillStyle = "#45c5e6";
