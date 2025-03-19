@@ -12,7 +12,7 @@
 }
 
 .nav-link:hover {
-  color: rgb(0, 0, 0) !important; /* Color al hacer hover */
+  color: #ffffff !important; /* Color al hacer hover */
   text-shadow: 
     1px 1px 0px #23B2C6, 
     -1px -1px 0px #23B2C6, 
