@@ -151,11 +151,6 @@ export const Home = () => {
         ></iframe>
       </div>
 
-      {showButton && (
-        <button className="scroll-top-btn" onClick={scrollToTop}>
-          ↑
-        </button>
-      )}
     </div>
   );
 };

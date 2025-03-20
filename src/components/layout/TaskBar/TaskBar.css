@@ -1,38 +1,41 @@
-/* General para la barra de navegación */
+@import '../../../assets/styles/variables.css';
+
+/* General para la barra de navegación #23B2C6*/
 .navbar {
-  border-bottom: 2px solid #23B2C6;
+  border-bottom: 2px solid var(--primary-color);
+  background-color: var(--background-color-light);
 }
 
 /* Enlaces de navegación */
 .nav-link {
-  color: #23B2C6 !important; /* Texto principal */
+  color: var(--primary-color); /* Texto principal */
   font-size: 1.1rem;
   font-family: 'Orbitron', sans-serif;
   transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: rgb(0, 0, 0) !important; /* Color al hacer hover */
+  color: var(--text-color-light); /* Color al hacer hover */
   text-shadow: 
-    1px 1px 0px #23B2C6, 
-    -1px -1px 0px #23B2C6, 
-    1px -1px 0px #23B2C6, 
-    -1px 1px 0px #23B2C6;
+    1px 1px 0px var(--primary-color), 
+    -1px -1px 0px var(--primary-color), 
+    1px -1px 0px var(--primary-color), 
+    -1px 1px 0px var(--primary-color);
 }
 
 /* Botón hamburguesa */
 .navbar-toggler {
-  border-color: #23B2C6;
+  border-color: var(--primary-color);
 }
 
 .navbar-toggler-icon {
-  background-color: #EBEBEB; /* Cambiar color del ícono hamburguesa */
+  background-color: var(--background-color-light); /* Cambiar color del ícono hamburguesa */
 }
 
 /* Fondo del menú desplegable */
 .navbar-collapse {
-  background-color: #EBEBEB; /* Fondo al desplegar en móviles */
-  border-top: 2px solid #23B2C6;
+  background-color: var(--background-color-light); /* Fondo al desplegar en móviles */
+  border-top: 2px solid var(--primary-color);
 }
 
 @media (max-width: 768px) {

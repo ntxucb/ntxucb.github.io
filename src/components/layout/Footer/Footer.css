@@ -1,6 +1,8 @@
+@import '../../../assets/styles/variables.css';
+
 .footer {
-    background-color: black; /*Si se autoriza cambiar por este color #282c34 al igual que en el taskbar*/
-    color: white;
+    background-color: var(--background-color-dark); /*Si se autoriza cambiar por este color #282c34 al igual que en el taskbar*/
+    color: var(--text-color-dark);
     text-align: center;
     padding: 20px;
 }

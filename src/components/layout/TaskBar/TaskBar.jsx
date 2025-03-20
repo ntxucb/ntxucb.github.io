@@ -6,7 +6,7 @@ import "./TaskBar.css";
 
 export function TaskBar() {
   return (
-    <Navbar expand="lg" style={{ backgroundColor: "#EBEBEB" }} >
+    <Navbar expand="lg" id="navbar" >
       <Container>
         {/* Logo */}
         <Navbar.Brand as={Link} to="/ntxucblapaz.github.io/home">
