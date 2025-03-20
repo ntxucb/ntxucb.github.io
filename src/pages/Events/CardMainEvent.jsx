@@ -9,7 +9,7 @@ const CardMainEvent = ({ title, description, image, buttonText, onButtonClick })
         <div className="container alto">
             <div className="card card-principal">
                 <div className="row g-0">
-                    
+
                     {/* Columna de Texto */}
                     <div className="col-md-6 d-flex align-items-center text-container">
                         <div className="card-body">

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-
+import './CardEvent.css';
 
 const CardEvent = ({ title, description, image, buttonText, onButtonClick }) => {
     return (

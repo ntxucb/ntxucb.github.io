@@ -1,7 +1,7 @@
 import React from "react";
 // import { TaskBar } from "../../components/layout/TaskBar/TaskBar";
 // import Footer from "../../components/layout/Footer/Footer";
-// import CardEvent from "../Events/CardEvent";
+import CardEvent from "../Events/CardEvent";
 import "./Events.css";
 import CardMainEvent from "./CardMainEvent";
 
@@ -17,16 +17,33 @@ export const Events = () => {
 
         <h1 className="title-section">Evento Destacado</h1>
         <div>
-          <CardMainEvent 
-          title={title} 
-          image={image} 
-          description={description} 
-          buttonText={buttonText} 
-          onButtonClick={onButtonClick}/>
-        
+          <CardMainEvent
+            title={title}
+            image={image}
+            description={description}
+            buttonText={buttonText}
+            onButtonClick={onButtonClick} />
+
 
         </div>
         <h1 className="title-section">Proximos Eventos</h1>
+        <div className="row">
+          <CardEvent
+            title={title}
+            image={image}
+            description={description}
+            buttonText="Registrarse"
+            onButtonClick={onButtonClick}
+          ></CardEvent>
+          <CardEvent
+            title={title}
+            image={image}
+            description={description}
+            buttonText="Registrarse"
+            onButtonClick={onButtonClick}
+          ></CardEvent>
+        </div>
+
 
       </div>
 
