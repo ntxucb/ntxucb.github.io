@@ -1,12 +1,13 @@
-import React, { useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
+import React, { forwardRef, useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
 import { flushSync } from 'react-dom';
 import styles from './CircleSection.module.css';
 
-export default function CircleSection({children}){
+
+function CircleSectionComp({children}, ref){
     const selfId = useId()
     const [height, setHeight] = useState(0);
     const selfRef = useRef();
-
+    
     useEffect(
         function(){
             const selfNode = document.getElementById(selfId);
@@ -20,18 +21,25 @@ export default function CircleSection({children}){
                     const bottomChild = child.getBoundingClientRect().bottom;
                     maxi = Math.max(bottomChild - top, maxi);
                 })
-                setHeight(maxi);    
+                setHeight(`calc(${maxi}px + 100svh)`);    
             })
             
             childrenNodes.forEach((child) => {
                 observer.observe(child)
             })
-
+            
             return () => {observer.disconnect()}
         }, [])
-    
-    
-    return <div id={selfId} className={styles['circle-section']} ref={selfRef} style={{height: height}}>
+        
+        function attachRefs(node){
+            ref.current = node;
+            selfRef.current = node;
+        }
+        
+        return <div id={selfId} className={styles['circle-section']} ref={attachRefs} style={{height: height}}>
         {children}
     </div>
 }
+
+const CircleSection = forwardRef(CircleSectionComp)
+export default CircleSection

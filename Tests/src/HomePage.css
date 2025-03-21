@@ -8,6 +8,12 @@
   gap: 0;
 
   position: relative;
+  padding: 0;
+  margin: 0;
+
+  background: black;
+
+  overflow: hidden;
 }
 
 .scroll-view {
@@ -18,5 +24,14 @@
   position: relative;
 
   height: 100%;
-  background-color: black;
+
+  scroll-snap-type: y mandatory;
+  overscroll-behavior: contain;
+  padding: 0px;
+  margin: 0px;
+}
+
+.scroll-view > * {
+  scroll-snap-stop: always;
+  scroll-snap-align: start;
 }

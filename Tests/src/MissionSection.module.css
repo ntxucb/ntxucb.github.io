@@ -16,7 +16,7 @@
   overflow-y:hidden;
   overflow-x: hidden;
 
-  margin-top: 250px;
+  padding-top: 20svh;
 }
 
 @media (max-width: 1000px) {

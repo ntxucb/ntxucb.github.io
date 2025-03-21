@@ -1,7 +1,7 @@
 import React from "react";
-import styles from './MainLogo.module.css'
+import styles from "./MainLogo.module.css";
 
-export default function MainLogo() {
+export default function MainLogo({ next }) {
   return (
     <div className={styles["neuron-illustration"]}>
       <img src="Logo.png" alt="Logo" />
@@ -9,8 +9,8 @@ export default function MainLogo() {
         NEUROTECH
         <br /> UCB
       </h1>
-      <div className={styles["scroll-indicator"]}>
-        <img src="Arrow.png" height={40} />
+      <div className={styles["scroll-indicator"]} onClick={next}>
+        <img className={styles["scroll-image"]} src="Arrow.png" height={40} />
       </div>
     </div>
   );

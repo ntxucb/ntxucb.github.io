@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./HomePage.css";
 import CanvasTest from "./CanvasTest";
 import CircularDescriptionContainer from "./CircularDescriptionContainer";
@@ -7,17 +7,67 @@ import CircleSection from "./CirclesSection";
 import MissionSection from "./MissionSection";
 import MainLogo from "./MainLogo";
 import NavBar from "./NavBar";
+import { flushSync } from "react-dom";
 
 const HomePage = () => {
+  const scrollRef = useRef();
+  const canvasRef = useRef();
+  const sectionRef = useRef();
+  useEffect(function () {
+    const scrollView = scrollRef.current;
+    const canvasView = canvasRef.current;
+    const sectionView = sectionRef.current;
+
+    function checkScroll() {
+      const sectionBottom = sectionView.getBoundingClientRect().bottom;
+      const canvasHeight = canvasView.getBoundingClientRect().height;
+      const offsetY = Math.min(0, -(canvasHeight - sectionBottom));
+      // console.log(offsetY);
+      // console.log(sectionBottom);
+      canvasView.style.top = `${offsetY}px`;
+      requestAnimationFrame(checkScroll);
+    }
+    // scrollView.addEventListener("scroll", (_) => {
+    // })
+
+    requestAnimationFrame(checkScroll);
+  }, []);
+
   return (
     <div className="landing-page">
-      <NavBar />
+      <CanvasTest ref={canvasRef} />
+      <div className="scroll-view" ref={scrollRef}>
+        <NavBar />
 
-      <div className="scroll-view">
-        <CanvasTest />
-        <MainLogo />
+        {/* <div ref={canvasRef} style={{background: 'red', width: "100vw", height: "100vh", position: 'absolute'}}>
+          Anarco<br></br>
+          Anarco<br></br>
+          Anarco<br></br>
+          Anarco<br></br>
+          Anarco<br></br>
+          Anarco<br></br>
+          Anarco<br></br>
+          Anarco<br></br>
+          Anarco<br></br>
+          Anarco<br></br>
+          Anarco<br></br>
+          Anarco<br></br>
+          Anarco<br></br>
+          Anarco<br></br>
+          Anarco<br></br>
+          Anarco<br></br>
+          Anarco<br></br>
+          Anarco<br></br>
+          Anarco<br></br>
+          Anarco<br></br>
+          Anarco<br></br>
+          Anarco<br></br>
+        </div> */}
+        <MainLogo next={() => {
+          sectionRef.current.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'start'})
+        }}/>
 
-        <CircleSection>
+        <CircleSection ref={sectionRef}>
           <CircularDescriptionContainer
             title="NEUROTECH UCB"
             left={"5svw"}
@@ -35,7 +85,7 @@ const HomePage = () => {
 
           <CircularDescriptionContainer
             title="HISTORY"
-            left={"50svw"}
+            left={"55svw"}
             top={"100px"}
             radius={"40svw"}
           >
@@ -74,6 +124,8 @@ const HomePage = () => {
             </p>
           </DendriteContainer>
         </MissionSection>
+
+        <div style={{ height: "100svh" }}>cocaine</div>
       </div>
     </div>
   );

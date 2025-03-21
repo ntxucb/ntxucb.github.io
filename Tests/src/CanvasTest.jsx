@@ -1,68 +1,112 @@
-import React, { useId, useEffect, useRef } from 'react';
-import Node from './models/Node';
-import NodeCluster from './models/NodeCluster';
+import React, {
+  useEffect,
+  useRef,
+  useState,
+  useLayoutEffect,
+  forwardRef,
+} from "react";
+import NodeCluster from "./models//NodeCluster";
 import styles from "./CanvasTest.module.css";
 
-export default function CanvasTest(){
-    const canvas = useRef()
-    const div = useRef()
-    useEffect(
-        function(){
-            if(!canvas.current) return
-            const context = canvas.current.getContext("2d")
-            
-            const cluster = new NodeCluster();
-            for(let i = 0; i<100; i++){
-              cluster.createNode(Math.random()*1500, Math.random()*1080, Math.random() *2*Math.PI)
-            }
+const CanvasTest = forwardRef(
+  function CanvasTest(props, ref){
+  const canvas = useRef();
+  const [canvasWidth, setCanvasWidth] = useState(0);
+  const [canvasHeight, setCanvasHeight] = useState(0);
+  const [cluster, setCluster] = useState(new NodeCluster());
 
-            document.addEventListener('mousemove',  (e) => {
-                cluster.updateMouse(e.clientX, e.clientY)
-            }, true)
-            document.addEventListener('touchmove',  (e) => {
-              const touch = e.touches[0];
-              const rect = div.current.getBoundingClientRect();
-              const offsetX = touch.clientX - rect.left;
-              const offsetY = touch.clientY - rect.top;
-              cluster.updateMouse(offsetX, offsetY)
-            }, true)
+  useEffect(
+    function () {
+      if (!canvas.current) return;
+      console.log("Reloaded");
+      const newCluster = new NodeCluster();
+      for (let i = 0; i < 100; i++) {
+        newCluster.createNode(
+          Math.random() * canvasWidth,
+          Math.random() * canvasHeight,
+          Math.random() * 2 * Math.PI, 
+         Math.random()*5 + 7
+        );
+      }
+      newCluster.startRandom();
+      setCluster(newCluster);
+    },
+    [canvasHeight, canvasWidth]
+  );
 
-            document.addEventListener('touchend', () => {
-              cluster.removeMouse()
-            })
+  useEffect(
+    function () {
+      let id = 0;
+      const context = canvas.current.getContext("2d");
+      function draw() {
+        context.fillStyle = "black";
+        context.globalAlpha = 0.6;
+        context.fillRect(-10, -10, canvasWidth + 10, canvasHeight+10);
+        cluster.draw(context);
+        id = requestAnimationFrame(draw);
+      }
+      draw();
+      return () => cancelAnimationFrame(id);
+    },
+    [cluster]
+  );
 
-            document.addEventListener('touchcancel', () => {
-              cluster.removeMouse()
-            })
+  useEffect(
+    function () {
+      const updateMouse = (e) => {
+        const rect = canvas.current.getBoundingClientRect();
+        const offsetX = e.clientX - rect.left;
+        const offsetY = e.clientY - rect.top;
+        cluster.updateMouse(offsetX, offsetY);
+      };
 
-            let id = 0
-            function draw(){
-                context.fillStyle = "black"
-                context.globalAlpha=0.6
-                const w = canvas.current.getBoundingClientRect().width
-                const h = canvas.current.getBoundingClientRect().height
-                context.fillRect(0, 0, w,  h)
-                cluster.draw(context)
-                id = requestAnimationFrame(draw)
-            }
-            draw()
-            return () => cancelAnimationFrame(id)
-        }
-        , [])
+      const updateTouch = (e) => {
+        const touch = e.touches[0];
+        const rect = canvas.current.getBoundingClientRect();
+        const offsetX = touch.clientX - rect.left;
+        const offsetY = touch.clientY - rect.top;
+        cluster.updateMouse(offsetX, offsetY);
+      };
 
+      const removeMouse = (e) => {
+        cluster.removeMouse();
+      };
 
-    const { innerWidth: width, innerHeight: height } = window;
+      document.addEventListener("mousemove", updateMouse, true);
+      document.addEventListener("touchmove", updateTouch, true);
+      document.addEventListener("touchend", removeMouse);
+      document.addEventListener("touchcancel", removeMouse);
 
-    return (
-      <div className={styles['animation-container']} ref={div}>
-        <canvas
-          height={height}
-          width={width}
-          ref={canvas}
-        ></canvas>
-      </div>
-    );  
-}
+      return function () {
+        document.removeEventListener("mousemove", updateMouse);
+        document.removeEventListener("touchmove", updateTouch);
+        document.removeEventListener("touchend", removeMouse);
+        document.removeEventListener("touchcancel", removeMouse);
+      };
+    },
+    [cluster]
+  );
+
+  useEffect(function () {
+    const observer = new ResizeObserver(() => {
+      const w = canvas.current.getBoundingClientRect().width;
+      const h = canvas.current.getBoundingClientRect().height;
+      setCanvasHeight(h);
+      setCanvasWidth(w);
+    });
+    observer.observe(canvas.current);
+  }, []);
+
+  
+
+  return (
+    <div className={styles["animation-container"]} ref={ref}>
+      <canvas height={canvasHeight} width={canvasWidth} ref={canvas} />
+    </div>
+  );
+});
+
+export default CanvasTest;
 
 //additional scrollbar width and height are automatically compensated
 //when a container width and height are calculated with vw and vh

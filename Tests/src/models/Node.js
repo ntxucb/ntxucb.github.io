@@ -4,7 +4,7 @@ export default class Node {
   inertia = 10;
   maxCapacity = 1;
   feedRate = 0.1;
-  consumeRate = 0.005;
+  consumeRate = 0.02;
   constructor(x = 0, y = 0, angle = 1, m = 10, density = 0.5) {
     this.x = x;
     this.y = y;
