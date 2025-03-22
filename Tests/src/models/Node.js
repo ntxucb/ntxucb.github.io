@@ -78,7 +78,7 @@ export default class Node {
     context.globalAlpha = this.energy
     context.beginPath();
     context.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
-    context.fillStyle = "#45c5e6";
+    context.fillStyle = "#54aeaf4a";
     context.fill();
 
     const dEnergy = this.energy * this.consumeRate;

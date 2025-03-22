@@ -41,7 +41,7 @@ export default class Edge {
     );
     this.maxBranchLength = Math.max(
       this.minBranchLength,
-      Math.min(this.maxBranchLength, 6 * this.node.r)
+      Math.min(this.maxBranchLength, 3 * this.node.r)
     );
     this.length = this.minBranchLength;
     this.lastLength = this.length;
@@ -70,7 +70,7 @@ export default class Edge {
 
   static generateFrequencies() {
     let res = Array.from({ length: Edge.nHarmonics }, (_, i) => {
-      return ((10 - i) * (1 + (0.3 * (Math.random() - 0.5)) / 2)) / 200;
+      return ((10 - i) * (1 + (0.3 * (Math.random() - 0.5)) / 2)) / 400;
     });
     return res;
   }
@@ -189,34 +189,39 @@ export default class Edge {
 
     this.time += 1;
 
+    const {x:ux, y:uy} = this.direction();
+    const cx = this.node.x  + this.node.r * ux;
+    const cy = this.node.y + this.node.r * uy;
+
+
     context.globalAlpha = this.energy;
-    context.strokeStyle = "#000000";
-    context.shadowColor = "#6de3cf";
+    context.strokeStyle = "#54aeaf2a";
+    context.shadowColor = "#c0e2eb";
     context.shadowBlur = this.node.energy * 10;
     // console.log(context.shadowBlur)
     context.lineCap = "round";
     const dynamicWidth =
       (this.branchWidth * this.baseLength) / this.elongation();
-    context.lineWidth = Math.max(
+    context.lineWidth = 1.5*Math.max(
       Math.min(dynamicWidth, this.maxBranchWidth),
       this.minBranchWidth
     );
     context.beginPath();
-    context.moveTo(this.node.x, this.node.y);
+    context.moveTo(cx, cy);
     if (this.anchor) context.lineTo(this.anchor.x, this.anchor.y);
     context.stroke();
 
-    context.shadowBlur = 0;
-    context.shadowColor = "transparent";
-    context.strokeStyle = "#45c5e6";
+    context.shadowBlur = 2;
+    context.shadowColor = "62cdc4ff";
+    context.strokeStyle = "62cdc4ff";
     context.lineCap = "round";
 
-    context.lineWidth = Math.max(
+    context.lineWidth = 1/4* Math.max(
       Math.min(dynamicWidth, this.maxBranchWidth),
       this.minBranchWidth
     );
     context.beginPath();
-    context.moveTo(this.node.x, this.node.y);
+    context.moveTo(cx, cy);
     if (this.anchor) context.lineTo(this.anchor.x, this.anchor.y);
     context.stroke();
   }

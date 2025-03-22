@@ -46,7 +46,7 @@
     flex-direction: column;
     align-items: var(--text-align);
     justify-content: start;
-    gap: 5%;
+    gap: 20px;
 
     z-index: 1;
     overflow: auto;
@@ -64,7 +64,7 @@
     font-family: "Orbitron";
     font-weight: 200;
     font-size: 25px;
-    color: #414141;
+    color: black;
     text-align: var(--text-align);
 }
 
@@ -73,7 +73,7 @@
     font-family: "Lexend Giga";
     font-size: 15px;
     font-weight: 200;
-    color: rgb(255, 255, 255);   
+    color: black;  
 }
 
 

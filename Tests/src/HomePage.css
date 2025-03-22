@@ -25,7 +25,7 @@
 
   height: 100%;
 
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */
   overscroll-behavior: contain;
   padding: 0px;
   margin: 0px;

@@ -26,7 +26,7 @@ export default class NodeCluster {
       this.triggerRandom()
       setTimeout(() => {
         this.timeoutId = this.triggerRandom()
-      }, Math.random()*500 + 500)
+      }, Math.random()*700 + 700)
     }, Math.random()*500)
   }
 
@@ -168,12 +168,12 @@ export default class NodeCluster {
     return [to, ta];
   }
 
-  #feed(x, y, power = 100) {
+  #feed(x, y, power = 200, radius = 20) {
     this.nodes.forEach((node) => {
       const dx = node.x - x;
       const dy = node.y - y;
       const dist = Math.sqrt(dx * dx + dy * dy);
-      node.feed(power / (dist ** 2 / 3 + 1));
+      node.feed(power / (dist ** 2 / radius + 1));
     });
   }
 
@@ -241,8 +241,8 @@ export default class NodeCluster {
   }
 
   draw(context) {
-    if (this.mouseIn) this.#feed(this.mouseX, this.mouseY, 120);
-    if (this.randomOn) this.#feed(this.randomX, this.randomY, 50);
+    if (this.mouseIn) this.#feed(this.mouseX, this.mouseY, 160);
+    if (this.randomOn) this.#feed(this.randomX, this.randomY, 140, 10);
     this.#intersect();
     this.nodes.forEach((node) => {
       node.draw(context);

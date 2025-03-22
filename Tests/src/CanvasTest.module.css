@@ -1,9 +1,8 @@
 .animation-container {
-  filter: blur(4px) brightness(30%);
+  filter: blur(2px);
   overflow: hidden;
   position: absolute;
   top: 0svh;
-  background-color: black;
 
   margin-left: -10px;
   width: calc(100svw + 20px);

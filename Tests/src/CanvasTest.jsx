@@ -20,7 +20,7 @@ const CanvasTest = forwardRef(
       if (!canvas.current) return;
       console.log("Reloaded");
       const newCluster = new NodeCluster();
-      for (let i = 0; i < 100; i++) {
+      for (let i = 0; i < 70; i++) {
         newCluster.createNode(
           Math.random() * canvasWidth,
           Math.random() * canvasHeight,
@@ -39,8 +39,8 @@ const CanvasTest = forwardRef(
       let id = 0;
       const context = canvas.current.getContext("2d");
       function draw() {
-        context.fillStyle = "black";
-        context.globalAlpha = 0.6;
+        context.fillStyle = "#f4e4dcff";
+        context.globalAlpha = 1;
         context.fillRect(-10, -10, canvasWidth + 10, canvasHeight+10);
         cluster.draw(context);
         id = requestAnimationFrame(draw);

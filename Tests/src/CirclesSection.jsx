@@ -31,12 +31,8 @@ function CircleSectionComp({children}, ref){
             return () => {observer.disconnect()}
         }, [])
         
-        function attachRefs(node){
-            ref.current = node;
-            selfRef.current = node;
-        }
         
-        return <div id={selfId} className={styles['circle-section']} ref={attachRefs} style={{height: height}}>
+        return <div id={selfId} className={styles['circle-section']} ref={selfRef} style={{height: height}}>
         {children}
     </div>
 }

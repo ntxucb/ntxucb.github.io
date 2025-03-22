@@ -25,12 +25,11 @@ const HomePage = () => {
       // console.log(offsetY);
       // console.log(sectionBottom);
       canvasView.style.top = `${offsetY}px`;
-      requestAnimationFrame(checkScroll);
     }
-    // scrollView.addEventListener("scroll", (_) => {
-    // })
-
-    requestAnimationFrame(checkScroll);
+    // requestAnimationFrame(checkScroll);
+    scrollView.addEventListener("scroll", checkScroll)
+    return () => {scrollView.removeEventListener("scroll", checkScroll)}
+    // requestAnimationFrame(checkScroll);
   }, []);
 
   return (
@@ -67,7 +66,7 @@ const HomePage = () => {
           sectionRef.current.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'start'})
         }}/>
 
-        <CircleSection ref={sectionRef}>
+        <CircleSection >
           <CircularDescriptionContainer
             title="NEUROTECH UCB"
             left={"5svw"}
@@ -101,7 +100,7 @@ const HomePage = () => {
           </CircularDescriptionContainer>
         </CircleSection>
 
-        <MissionSection>
+        <MissionSection ref={sectionRef}>
           <DendriteContainer title={"MISSION"} width="40svw" height={"30svw"}>
             <p>
               To promote research, education and practical application of
