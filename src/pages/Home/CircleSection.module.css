@@ -1,0 +1,26 @@
+.circle-section {
+  padding-top: 100px;
+  top: 100px;
+
+  height: 500svh;
+
+}
+
+@media (max-width: 1000px) {
+  .circle-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    align-items: center;
+
+    max-height: fit-content;
+  }
+
+  .circle-section > * {
+    flex-grow: 0;
+    flex-shrink: 0;
+    position: static;
+  }
+}

@@ -2,25 +2,25 @@ import React, {
   useEffect,
   useRef,
   useState,
-  useLayoutEffect,
   forwardRef,
 } from "react";
 import NodeCluster from "./models//NodeCluster";
 import styles from "./CanvasTest.module.css";
 
 const CanvasTest = forwardRef(
-  function CanvasTest(props, ref){
+  function CanvasTest({progress}, ref){
   const canvas = useRef();
   const [canvasWidth, setCanvasWidth] = useState(0);
   const [canvasHeight, setCanvasHeight] = useState(0);
   const [cluster, setCluster] = useState(new NodeCluster());
 
+  console.log("Tatito", progress)
   useEffect(
     function () {
       if (!canvas.current) return;
       console.log("Reloaded");
       const newCluster = new NodeCluster();
-      for (let i = 0; i < 70; i++) {
+      for (let i = 0; i < 20; i++) {
         newCluster.createNode(
           Math.random() * canvasWidth,
           Math.random() * canvasHeight,

@@ -1,6 +1,7 @@
+import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home } from "./pages/Home/Home";
+import Home from "./pages/Home/Home";
 import { Events } from "./pages/Events/Events";
 import { Our_Team } from "./pages/Our_Team/Our_Team";
 import { Podcast } from "./pages/Podcast/Podcast";

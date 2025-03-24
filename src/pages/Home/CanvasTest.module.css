@@ -1,0 +1,22 @@
+.animation-container {
+  filter: blur(4px);
+  overflow: hidden;
+  position: absolute;
+  top: 0svh;
+
+  margin-left: -10px;
+  width: calc(100svw + 20px);
+  height: calc(100svh + 2px);
+}
+
+.animation-container::before{
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.animation-container canvas { 
+  width: 100%;
+  height: 100%;
+  display: block;
+}
