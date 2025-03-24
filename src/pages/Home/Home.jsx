@@ -85,7 +85,10 @@ const HomePage = () => {
         </CircleSection>
 
         <MissionSection setProgress={setBackgroundProgress} progress={backgroundProgress}         ref={sectionRef}>
-          <DendriteContainer title={"MISSION"} width="40svw" height={"30svw"}>
+          <DendriteContainer 
+          title={"MISSION"} 
+          top={"100px"}
+          radius={"40svw"}>
             <p>
               To promote research, education and practical application of
               neurotechnology in La Paz through a multidisciplinary approach,
@@ -95,8 +98,8 @@ const HomePage = () => {
           </DendriteContainer>
           <DendriteContainer
             title={"VISION"}
-            width="40svw"
-            height={"30svw"}
+            top={"100px"}
+            radius={"40svw"}
             direction={true}
           >
             <p>

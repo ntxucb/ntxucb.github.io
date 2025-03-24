@@ -9,7 +9,7 @@ const CanvasTest = forwardRef(function CanvasTest({ progress }, ref) {
   const [canvasHeight, setCanvasHeight] = useState(0);
   const [cluster, setCluster] = useState(new NodeCluster());
 
-  const normalizedProgress = Math.abs(Math.round(10000 * progress) / 10000);
+  const nProgress = Math.abs(Math.round(10000 * progress) / 10000);
 
   useEffect(
     function () {
@@ -37,7 +37,7 @@ const CanvasTest = forwardRef(function CanvasTest({ progress }, ref) {
         context.fillStyle = interpolateColors(
           "#e6e2e0ffp",
           "#0b0413ff",
-          normalizedProgress
+          nProgress
         );
         context.globalAlpha = 1;
         context.fillRect(-10, -10, canvasWidth + 10, canvasHeight + 10);
@@ -47,7 +47,7 @@ const CanvasTest = forwardRef(function CanvasTest({ progress }, ref) {
       draw();
       return () => cancelAnimationFrame(id);
     },
-    [cluster, canvasHeight, canvasWidth, normalizedProgress]
+    [cluster, canvasHeight, canvasWidth, nProgress]
   );
 
   useEffect(
@@ -100,7 +100,7 @@ const CanvasTest = forwardRef(function CanvasTest({ progress }, ref) {
     <div
       className={styles["animation-container"]}
       style={{
-        filter: `brightness(${(Math.max(1 - progress, 0.4) * 100).toFixed(0)}%) blur(${(Math.max(progress, 0.3) * 10).toFixed(0)}px)`,
+        filter: `brightness(${(Math.max(1 - nProgress, 0.6) * 100).toFixed(0)}%) blur(${(Math.max(nProgress, 0.2) * 5).toFixed(0)}px)`,
       }}
       ref={ref}
     >

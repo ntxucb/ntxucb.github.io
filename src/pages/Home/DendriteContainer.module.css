@@ -12,6 +12,7 @@
     --self-align: start;
     /* --hide-translate: 0%; */
 
+    margin-inline: auto;
     align-self: var(--self-align);
     background-color: transparent;
 

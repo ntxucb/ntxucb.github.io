@@ -3,7 +3,7 @@ import styles from "./CircularDescriptionContainer.module.css";
 
 export default function CircularDescriptionContainer({
   title,
-  left,
+  left = 0,
   top = 0,
   radius = "400px",
   children,

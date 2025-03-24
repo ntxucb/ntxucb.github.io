@@ -21,7 +21,7 @@ function CircleSectionComp({children}, ref){
                     const bottomChild = child.getBoundingClientRect().bottom;
                     maxi = Math.max(bottomChild - top, maxi);
                 })
-                setHeight(`calc(${maxi}px + 100svh)`);    
+                setHeight(`calc(${maxi}px + 20svh)`);    
             })
             
             childrenNodes.forEach((child) => {
