@@ -16,7 +16,7 @@
     align-self: var(--self-align);
     background-color: transparent;
 
-    overflow: hidden;
+    /* overflow: hidden; */
     /* padding-inline-start: 1fr; */
     position: relative;
     min-width: 350px;
@@ -31,20 +31,20 @@
     transform: translateX(calc(-1 * var(--flip-direction) * var(--hide-translate)));
 }
 
-.dendriteContainer::before{
+/* .dendriteContainer::before{
     position: absolute;
     content: "";
     inset: 0;
     z-index: 0;
-    /* background-image: url('./MissionShape.png'); */
+    background-image: url('./MissionShape.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-origin: border-box;
     transform: scaleX(var(--flip-direction));
 
-    /* mix-blend-mode: hard-light; */
-    /* filter: brightness(50%) saturate(130%);  */
-}
+    mix-blend-mode: hard-light;
+    filter: brightness(50%) saturate(130%); 
+} */
 
 .innerContent{
     display: flex;

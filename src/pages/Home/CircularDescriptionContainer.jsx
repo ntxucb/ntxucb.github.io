@@ -11,7 +11,7 @@ export default function CircularDescriptionContainer({
   return (
     <div
       className={styles.circularContainer}
-      style={{ left: left, top: top, height: radius }}
+      style={{ left: left, top: top, width: radius }}
     >
       <div className={styles["inner-content"]}>
         <div className={styles["inner-column"]}>

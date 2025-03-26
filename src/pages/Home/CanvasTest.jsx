@@ -9,7 +9,7 @@ const CanvasTest = forwardRef(function CanvasTest({ progress }, ref) {
   const [canvasHeight, setCanvasHeight] = useState(0);
   const [cluster, setCluster] = useState(new NodeCluster());
 
-  const nProgress = Math.abs(Math.round(10000 * progress) / 10000);
+  const nProgress = Math.abs(Math.round(100000 * progress) / 100000);
 
   useEffect(
     function () {
