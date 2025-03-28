@@ -9,6 +9,8 @@ import MainLogo from "./MainLogo";
 import NavBar from "./NavBar";
 import BentoGrid from "../../components/layout/BentoGallery/BentoGallery";
 import TeamSection from "./TeamSection";
+import { TaskBar } from "../../components/layout/TaskBar/TaskBar";
+import Footer from "../../components/layout/Footer/Footer";
 
 const HomePage = () => {
   const scrollRef = useRef();
@@ -36,9 +38,9 @@ const HomePage = () => {
 
   return (
     <div className={styles["landing-page"]}>
-      <CanvasTest ref={canvasRef}  progress={backgroundProgress}/>
+      {/* <CanvasTest ref={canvasRef}  progress={backgroundProgress}/> */}
       <div className={styles["scroll-view"]} ref={scrollRef}>
-        <NavBar />
+        <TaskBar/>
 
         <MainLogo
           next={() => {
@@ -110,7 +112,7 @@ const HomePage = () => {
             </p>
           </DendriteContainer>
         </MissionSection>
-          
+        <Footer/>
       </div>
     </div>
   );
