@@ -83,7 +83,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className={styles["philosophy-section"]}>
+      <div className={styles["philosophy-section"]} >
         <div className={styles["philosophy-section__card"]}>
 
           <div className={styles["philosophy-section__card-number"]}>
