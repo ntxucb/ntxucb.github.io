@@ -8,7 +8,6 @@ import teams from "../../assets/data/teams.json"; // Importamos el JSON
 export const Our_Team = () => {
   return (
     <>
-      <TaskBar />
       <h1>Our Team</h1>
       <div className="cards-container">
         {teams.map((team, index) => (
@@ -25,7 +24,6 @@ export const Our_Team = () => {
           </div>
         ))}
       </div>
-      <Footer />
     </>
   );
 };

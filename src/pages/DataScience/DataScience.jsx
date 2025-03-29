@@ -5,9 +5,7 @@ import Footer from "../../components/layout/Footer/Footer";
 export const Our_Team = () => {
   return (
     <>
-      <TaskBar />
       <h1>DataScience</h1>
-      <Footer />
     </>
   );
 };

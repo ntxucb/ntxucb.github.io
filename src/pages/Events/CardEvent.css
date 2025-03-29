@@ -1,0 +1,11 @@
+.container-cards{
+    background-color: #222;
+    color: #00bcd4;  /* Color de texto similar al de la imagen */
+    border-radius: 8px;
+    overflow: hidden;
+    border: none;
+}
+
+.card{
+    margin: 5px;
+}

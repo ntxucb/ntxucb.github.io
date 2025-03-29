@@ -33,12 +33,10 @@ const GridExample = () => {
 export const Projects = () => {
   return (
     <>
-      <TaskBar />
       <div className="container my-4">
         <h1 className="projects-heading">Projects</h1>
         <GridExample />
       </div>
-      <Footer />
     </>
   );
 };
