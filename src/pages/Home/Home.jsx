@@ -54,7 +54,7 @@ const HomePage = () => {
 
           <div className={styles["hero-banner__cta"]}>
             <a href="#about" className={styles["hero-banner__cta-button"]}>
-              Learn More
+              More Info
             </a>
           </div>
         </div>
