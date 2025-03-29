@@ -9,7 +9,7 @@ export function TaskBar() {
     <Navbar expand="lg" style={{ backgroundColor: "#EBEBEB" }} >
       <Container>
         {/* Logo */}
-        <Navbar.Brand as={Link} to="/ntxucblapaz.github.io/home">
+        <Navbar.Brand as={Link} to="/ntxucblapaz.github.io/">
           <img
             src={NTX_Logo}
             width="120"
