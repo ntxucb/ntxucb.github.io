@@ -83,6 +83,62 @@ const HomePage = () => {
         </div>
       </div>
 
+      <div className={styles["philosophy-section"]}>
+        <div className={styles["philosophy-section__card"]}>
+
+          <div className={styles["philosophy-section__card-number"]}>
+            <span>01</span>
+          </div>
+
+          <div className={styles["philosophy-section__card-content"]}>
+            <h3 className={styles["philosophy-section__card-title"]}>Mission</h3>
+            <p className={styles["philosophy-section__card-description"]}>
+              To promote research, education and practical application of neurotechnology in La Paz through a multidisciplinary approach, offering academic events, networking and student participation opportunities.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div className={styles["philosophy-section__card"]}>
+
+          <div className={styles["philosophy-section__card-number"]}>
+            <span>02</span>
+          </div>
+
+          <div className={styles["philosophy-section__card-content"]}>
+            <h3 className={styles["philosophy-section__card-title"]}>Vision</h3>
+            <p className={styles["philosophy-section__card-description"]}>
+              To be recognized as a leading student initiative in the field of neurotechnology in La Paz, Bolivia, promoting research, education and practical application of neurotechnology through a multidisciplinary approach.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div className={styles["philosophy-section__card"]}>
+
+          <div className={styles["philosophy-section__card-number"]}>
+            <span>03</span>
+          </div>
+
+          <div className={styles["philosophy-section__card-content"]}>
+            <h3 className={styles["philosophy-section__card-title"]}>Values</h3>
+            <p className={styles["philosophy-section__card-description"]}>
+              Our 3 pilars are:
+            </p>
+
+            <ul className={styles["philosophy-section__card-description"]}>
+              <li>COMUNNITY</li>
+              <li>INNOVATION</li>
+              <li>EDUCATION</li>
+            </ul>
+
+          </div>
+
+        </div>
+      </div>
+
       {/* <MainLogo
         next={() => {
           sectionRef.current.scrollIntoView({
