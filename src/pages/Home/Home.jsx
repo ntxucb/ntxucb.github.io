@@ -39,17 +39,16 @@ const HomePage = () => {
   return (
     <div className={styles["landing-page scroll-view"]} ref={scrollRef}>
       {/* <CanvasTest ref={canvasRef}  progress={backgroundProgress}/> */}
-      <TaskBar />
 
       <div className={styles["hero-banner"]}>
         <div className={styles["hero-banner__content"]}>
           <h1 className={styles["hero-banner__title"]}> NEUROTECHX UCB </h1>
           <p className={styles["hero-banner__description"]}>
             <span className={styles["hero-banner__description--highlight"]}>
-           Neurotechnology Innovative Club
+              Neurotechnology Innovative Club
             </span>
 
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
           </p>
 
           <div className={styles["hero-banner__cta"]}>
@@ -60,6 +59,27 @@ const HomePage = () => {
         </div>
         <div className={styles["hero-banner__logo"]}>
           <img src="assets/logos/NTX_BLUE.png" alt="Logo" />
+        </div>
+      </div>
+
+      <div className={styles["about-section"]}>
+        <div className={styles["about-section__image"]}>
+          <img src="src/assets/images/image1.png" alt="Logo" />
+        </div>
+        <div className={styles["about-section__content"]}>
+          <h2 className={styles["about-section__title"]}>ABOUT NTX UCB</h2>
+          <p className={styles["about-section__description"]}>
+            NeurotechX UCB is the neurotechnology student initiative from Universidad Católica Boliviana “San Pablo” in La Paz, Bolivia. Our club goal is to work on issues related to neuroscience with a technological and data-oriented approach. We aim to develop innovative solutions, and train others with the same goal.
+          </p>
+          <p className={styles["about-section__description"]}>
+            NTX UCB was born on 2021, during the COVID-19 lock down. It was formed due to the curiosity for Neuroscience and Data Science from a group of Psychology students of the UCB. We were the first NeurotechX club in Bolivia, and we´re really proud of it.
+          </p>
+
+          <div className={styles["about-section__cta"]}>
+            <a href="#mission" className={styles["about-section__cta-button"]}>
+              More Info
+            </a>
+          </div>
         </div>
       </div>
 
@@ -133,7 +153,6 @@ const HomePage = () => {
           </p>
         </DendriteContainer>
       </MissionSection>
-      <Footer />
       {/* <div className={styles["scroll-view"]} ref={scrollRef}>
        
       </div> */}

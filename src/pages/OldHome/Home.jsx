@@ -33,7 +33,6 @@ export const Home = () => {
 
   return (
     <div>
-      <TaskBar className="task-bar" />
       <img src={gif} alt="Descripción del GIF" className="main-gif" />
       <div className="home-container">
         <h2 className="main-title">Neurotech UCB</h2>
@@ -151,7 +150,6 @@ export const Home = () => {
           title="Mapa de la Universidad Católica Boliviana"
         ></iframe>
       </div>
-      <Footer className="footer" />
 
       {showButton && (
         <button className="scroll-top-btn" onClick={scrollToTop}>
