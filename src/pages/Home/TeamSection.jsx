@@ -4,11 +4,9 @@ import styles from "./TeamSection.module.css";
 function TeamSection({ layout, images }, ref) {
   return (
     <div className={styles["section-container"]} ref={ref}>
-      <div className={styles["background-container"]} />
-      <div className={styles["title-container"]}>
-        <h1 className={styles.title}>Our Club</h1>
-      </div>
+      <div className={styles["grid-container"]}>
       <BentoGrid layout={layout} images={images}></BentoGrid>
+      </div>
     </div>
   );
 }

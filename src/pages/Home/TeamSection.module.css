@@ -1,13 +1,15 @@
 .section-container {
-  padding-block: 30px;
   width: 100%;
   position: relative;
   z-index: 1;
-
-  background: transparent;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
   overflow: hidden;
-
-  margin-top: 500px;
+  background-color: #010013;
+  margin-bottom: 1.5rem;
+  border-radius: 20px;
 }
 /* 
 .background-container {
@@ -52,18 +54,9 @@
 }
 
 .title {
-  flex-shrink: 0;
-
   font-family: "Orbitron";
-  text-align: center;
-  color: white;
+  color: #23B2C6;
   font-size: 40px;
-  min-height: fit-content;
 
-  display: flex;
-  align-items: center;
-  position: relative;
-  z-index: 4;
-
-  overflow: visible;
 }
+

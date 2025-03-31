@@ -7,10 +7,10 @@ import CircleSection from "./CirclesSection";
 import MissionSection from "./MissionSection";
 import MainLogo from "./MainLogo";
 import NavBar from "./NavBar";
-import BentoGrid from "../../components/layout/BentoGallery/BentoGallery";
 import TeamSection from "./TeamSection";
 import { TaskBar } from "../../components/layout/TaskBar/TaskBar";
 import Footer from "../../components/layout/Footer/Footer";
+import TeamSectionComp from "./TeamSection";
 
 const HomePage = () => {
   const scrollRef = useRef();
@@ -192,6 +192,43 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      
+
+      {/* <div className={styles["our-club-section"]}>
+        <h2 className={styles["our-club-section__title"]}>OUR CLUB</h2>
+        <div className={styles["our-club-section__gallery"]} >
+          <div className={styles["our-club-section__gallery-item"]}>
+            <img src="assets/project-images/Portrait_Placeholder.png" alt="member picture" />
+          </div>
+          <div className={styles["our-club-section__gallery-item"]}>
+            <img src="assets/project-images/Portrait_Placeholder.png" alt="member picture" />
+          </div>
+          <div className={styles["our-club-section__gallery-item"]}>
+            <img src="assets/project-images/Portrait_Placeholder.png" alt="member picture" />
+          </div>
+          <div className={styles["our-club-section__gallery-item--wide"]}>
+            <img src="assets/project-images/Portrait_Placeholder.png" alt="member picture" />
+          </div>
+          <div className={styles["our-club-section__gallery-item"]}>
+            <img src="assets/project-images/Portrait_Placeholder.png" alt="member picture" />
+          </div>
+        </div>
+        
+      </div> */}
+      <div className={styles["our-club-section"]}>
+      <h3 className={styles["our-club-section__title"]}>OUR CLUB</h3>
+      <TeamSectionComp
+        layout={["'a a b'", "'a a c'", "'d e e'"]}
+        images={[
+          { gridArea: "b", url: "team1.png" },
+          { gridArea: "c", url: "team2.png" },
+          { gridArea: "a", url: "team3.png" },
+          { gridArea: "d", url: "team4.png" },
+          { gridArea: "e", url: "team5.png" },
+        ]}
+      />
+      </div>
+
 
       {/* <MainLogo
         next={() => {
@@ -203,7 +240,7 @@ const HomePage = () => {
         }}
       /> */}
 
-      <CircleSection>
+      {/* <CircleSection>
         <CircularDescriptionContainer
           title="NEUROTECH UCB"
           left={"5svw"}
@@ -262,7 +299,7 @@ const HomePage = () => {
             opportunities.
           </p>
         </DendriteContainer>
-      </MissionSection>
+      </MissionSection> */}
       {/* <div className={styles["scroll-view"]} ref={scrollRef}>
        
       </div> */}

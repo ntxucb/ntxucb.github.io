@@ -1,22 +1,17 @@
 .gridContainer {
   display: grid;
   gap: 12px;
-  padding-block: 50px;
   height: 80svh;
 
-  margin-inline: 200px;
-  width: auto;
+  width: 100%;
   /* background-color:  rgba(0, 0, 0, 0.865);
   mix-blend-mode: multiply; /* Replace with your desired blend mode */
   /* z-index: -1; */ 
 
   /* filter: invert(60%); */
-  position: relative;
-  z-index: 2;
 }
 
 .gridItem {
-  position: relative;
   overflow: hidden;
   border-radius: 6px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -36,14 +31,12 @@
 
 @media (max-width: 768px) {
   .gridContainer {
-    grid-template-areas: none;
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
+    grid-template-columns: repeat(1, 1fr);
+  }
 
-    margin-inline: 50px;
+  .gridItem img{
+    object-position: 50% 50%;
   }
-  .gridItem {
-    grid-area: auto !important;
-    height: 200px;
-  }
+
+
 }

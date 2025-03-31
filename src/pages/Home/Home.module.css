@@ -295,6 +295,47 @@
   gap: 1.5rem;
 }
 
+.our-club-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  margin-left: 3.125%;
+  margin-right: 3.125%;
+  margin-top: 1.8rem;
+}
+
+.our-club-section__title {
+  font-family: 'Orbitron', sans-serif;
+  color: #23B2C6;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.our-club-section__gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 10px;
+  margin: 0 auto;
+  background-color: #010013;
+  padding: 1.5rem;
+}
+
+.our-club-section__gallery-item {
+  overflow: hidden;
+}
+
+.our-club-section__gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Imagen destacada (ancha) en la segunda fila */
+.our-club-section__gallery-item--wide {
+  grid-column: span 2; /* Ocupa dos columnas */
+}
+
 
 .scroll-view > * {
   scroll-snap-stop: always;
