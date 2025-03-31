@@ -192,41 +192,117 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      
 
-      {/* <div className={styles["our-club-section"]}>
-        <h2 className={styles["our-club-section__title"]}>OUR CLUB</h2>
-        <div className={styles["our-club-section__gallery"]} >
-          <div className={styles["our-club-section__gallery-item"]}>
-            <img src="assets/project-images/Portrait_Placeholder.png" alt="member picture" />
+      <div className={styles["our-club-section"]}>
+        <h3 className={styles["our-club-section__title"]}>OUR CLUB</h3>
+        <TeamSectionComp
+          layout={["'a a b'", "'a a c'", "'d e e'"]}
+          images={[
+            { gridArea: "b", url: "team1.png" },
+            { gridArea: "c", url: "team2.png" },
+            { gridArea: "a", url: "team3.png" },
+            { gridArea: "d", url: "team4.png" },
+            { gridArea: "e", url: "team5.png" },
+          ]}
+        />
+      </div>
+
+      <div className={styles["news-section"]}>
+        <h2 className={styles["news-section__title"]}>NEWS</h2>
+        <div className={styles["news-section__new-container"]}>
+          <div className={styles["news-section__new"]}>
+            <div className={styles["news-section__new-image"]}>
+              <img src="assets/project-images/wide_placeholder.webp" alt="new image" />
+            </div>
+            <div className={styles["news-section__new-content"]}>
+              <h4 className={styles["news-section__new-title"]}>
+                <a href="">
+                  New project in the works
+                </a>
+              </h4>
+              <p className={styles["news-section__new-date"]}>
+                12/12/2021
+              </p>
+              <p className={styles["news-section__new-description"]}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+              </p>
+            </div>
           </div>
-          <div className={styles["our-club-section__gallery-item"]}>
-            <img src="assets/project-images/Portrait_Placeholder.png" alt="member picture" />
+
+          <div className={styles["news-section__new"]}>
+            <div className={styles["news-section__new-image"]}>
+              <img src="assets/project-images/wide_placeholder.webp" alt="new image" />
+            </div>
+            <div className={styles["news-section__new-content"]}>
+              <h4 className={styles["news-section__new-title"]}>
+                <a href="">
+                  New project in the works
+                </a>
+              </h4>
+              <p className={styles["news-section__new-date"]}>
+                12/12/2021
+              </p>
+              <p className={styles["news-section__new-description"]}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+              </p>
+            </div>
           </div>
-          <div className={styles["our-club-section__gallery-item"]}>
-            <img src="assets/project-images/Portrait_Placeholder.png" alt="member picture" />
+
+          <div className={styles["news-section__new"]}>
+            <div className={styles["news-section__new-image"]}>
+              <img src="assets/project-images/wide_placeholder.webp" alt="new image" />
+            </div>
+            <div className={styles["news-section__new-content"]}>
+              <h4 className={styles["news-section__new-title"]}>
+                <a href="">
+                  New project in the works
+                </a>
+              </h4>
+              <p className={styles["news-section__new-date"]}>
+                12/12/2021
+              </p>
+              <p className={styles["news-section__new-description"]}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+              </p>
+            </div>
           </div>
-          <div className={styles["our-club-section__gallery-item--wide"]}>
-            <img src="assets/project-images/Portrait_Placeholder.png" alt="member picture" />
-          </div>
-          <div className={styles["our-club-section__gallery-item"]}>
-            <img src="assets/project-images/Portrait_Placeholder.png" alt="member picture" />
+
+        </div>
+      </div>
+
+      <div className={styles["join-us-section"]}>
+        <div className={styles["join-us-section__content"]}>
+          <h2 className={styles["join-us-section__title"]}>JOIN US</h2>
+          <p className={styles["join-us-section__description"]}>
+            Are you curious about Neuroscience, Artificial Intelligence, and Data Science?
+            Neurotech UCB invites you to join our incredible community and explore the fascinating world of neurotechnology.
+          </p>
+          <p className={styles["join-us-section__description"]}>
+            We are looking for students for the following areas:
+            <span className={styles["join-us-section__description--highlight"]}>
+              SOCIAL MEDIA, SOFTWARE,  DATA SCIENCE, HARDWARE ENGINEERING, OUTREACH, EDUCATION
+            </span>
+          </p>
+
+          <div className={styles["join-us-section__cta"]}>
+            <a href="#join" className={styles["join-us-section__cta-button"]}>
+              Join Us
+            </a>
           </div>
         </div>
-        
-      </div> */}
-      <div className={styles["our-club-section"]}>
-      <h3 className={styles["our-club-section__title"]}>OUR CLUB</h3>
-      <TeamSectionComp
-        layout={["'a a b'", "'a a c'", "'d e e'"]}
-        images={[
-          { gridArea: "b", url: "team1.png" },
-          { gridArea: "c", url: "team2.png" },
-          { gridArea: "a", url: "team3.png" },
-          { gridArea: "d", url: "team4.png" },
-          { gridArea: "e", url: "team5.png" },
-        ]}
-      />
+      </div>
+
+      <div className={styles["sponsors-section"]}>
+        <h2 className={styles["sponsors-section__title"]}>Our Sponsors</h2>
+        <div className={styles["sponsors-section__logos"]}>
+          <img src="src/assets/logos/NTX_Logo.png" alt="Logo" />
+          <img src="src/assets/logos/UIELogo.png" alt="Logo" />
+          <img src="src/assets/logos/UCB.png" alt="Logo" />
+          <img src="src/assets/logos/cidimec.png" alt="Logo" />
+          <img src="src/assets/logos/backyardbrains.png" alt="Logo" />
+          <img src="src/assets/logos/tinyml.png" alt="Logo" />
+          <img src="src/assets/logos/openbci.png" alt="Logo" />
+        </div>
       </div>
 
 

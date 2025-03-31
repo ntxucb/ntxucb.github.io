@@ -312,28 +312,169 @@
   font-size: 2rem;
 }
 
-.our-club-section__gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 10px;
-  margin: 0 auto;
-  background-color: #010013;
+.news-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   padding: 1.5rem;
+  margin-left: 3.125%;
+  margin-right: 3.125%;
+  margin-top: 1.8rem;
 }
 
-.our-club-section__gallery-item {
+.news-section__title {
+  font-family: 'Orbitron', sans-serif;
+  color: #23B2C6;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.news-section__new-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.news-section__new {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.news-section__new-image {
+  max-width: 42%;
+  border-radius: 10px;
   overflow: hidden;
 }
 
-.our-club-section__gallery-item img {
+.news-section__new-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-section__new-content {
+  width: 48%;
+}
+
+.news-section__new-title {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.news-section__new-title a {
+  color: #23B2C6;
+}
+
+.news-section__new-date {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.news-section__new-description {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.join-us-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.8rem;
+  background-image: url(/ntxucblapaz.github.io/src/assets/images/join-us-background.png);
+  background-size: cover;
+  background-position: center;
+  color: #FFFFFF;
+  margin-bottom: 1.8rem;
+}
+
+.join-us-section__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  width: 71%;
+  margin: auto;
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.join-us-section__title {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.join-us-section__description {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.join-us-section__description--highlight {
+  font-weight: 600;
   display: block;
 }
 
-/* Imagen destacada (ancha) en la segunda fila */
-.our-club-section__gallery-item--wide {
-  grid-column: span 2; /* Ocupa dos columnas */
+.join-us-section__cta {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.join-us-section__cta-button {
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  background-color: #23B2C6;
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  font-weight: 100;
+  border: none;
+  width: 50%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.sponsors-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  margin-left: 3.125%;
+  margin-right: 3.125%;
+  margin-top: 1.8rem;
+  /*very light gray*/
+  background-color: #F5F5F5;
+  margin-bottom: 1.8rem; 
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.sponsors-section__title {
+  font-family: 'Orbitron', sans-serif;
+  color: #23B2C6;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.sponsors-section__logos {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.sponsors-section__logos img {
+  max-width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+  margin: auto;
+  height: auto;
 }
 
 
@@ -376,22 +517,12 @@
     width: 100%;
   }
 
-
   .about-section{
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 1.5rem;
-    margin-left: 3.125%;
-    margin-right: 3.125%;
-    margin-top: 1.8rem;
   }
 
   .about-section__image{
     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .about-section__image img{
@@ -400,45 +531,10 @@
 
   .about-section__content{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-  }
-
-  .about-section__title{
-    font-family: 'Orbitron', sans-serif;
-    color: #23B2C6;
-    font-weight: 500;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .about-section__description{
-    font-family: 'Lato', sans-serif;
-    color: #000000;
-    font-size: 0.9rem;
-    font-weight: 400;
-    line-height: 1.4;
-  }
-
-  .about-section__cta{
-    margin-top: 1.5rem;
-    display: flex;
-    gap: 1.5rem;
   }
 
   .about-section__cta-button{
-    padding: 0.5rem 1.5rem;
-    border-radius: 10px;
-    background-color: #23B2C6;
-    color: #FFFFFF;
-    font-size: 1.2rem;
-    font-weight: 100;
-    border: none;
     width: 100%;
-    text-align: center;
-    text-decoration: none;
   }
 
   .philosophy-section{
@@ -461,60 +557,8 @@
     padding: 1.5rem;
   }
 
-  .philosophy-section__card-number{
-    color: #FFFFFF;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2rem;
-    background-color: #414141;
-    border-radius: 50%;
-    height: 120px;
-    width: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-  }
-
-  .philosophy-section__card-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .philosophy-section__card-title{
-    font-family: 'Orbitron', sans-serif;
-    color: #23B2C6;
-    font-weight: 500;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .philosophy-section__card-description{
-    font-family: 'Lato', sans-serif;
-    color: #000000;
-    font-size: 0.9rem;
-    font-weight: 400;
-    line-height: 1.4;
-    text-align: justify;
-  }
-
-  .testimonials-section{
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 1.5rem;
-    margin-left: 3.125%;
-    margin-right: 3.125%;
-    margin-top: 1.8rem;
-  }
-
-  .testimonials-section__card{
-    background-color: #131327;
-    color: #FFFFFF;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    padding: 2rem;
-    max-width: 70%;
+  .testimonials-section__card-picture{
+    max-width: 100%;
   }
 
   .cards-container {
@@ -523,5 +567,21 @@
     gap: 1.5rem;
     align-items: center;
   }
+
+  .news-section__new {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .news-section__new-image {
+    max-width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .news-section__new-content {
+    width: 100%;
+  }  
 
 }
