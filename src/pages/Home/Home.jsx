@@ -139,6 +139,60 @@ const HomePage = () => {
         </div>
       </div>
 
+      <div className={styles["testimonials-section"]} >
+        <h2 className={styles["testimonials-section__title"]}>TESTIMONIALS</h2>
+        <div className={styles["cards-container"]}>
+          <div className={styles["testimonials-section__card"]}>
+            <div className={styles["testimonials-section__card-picture"]}>
+              <img src="assets/project-images/Portrait_Placeholder.png" alt="member picture" />
+            </div>
+            <div className={styles["testimonials-section__card-content"]}>
+              <p className={styles["testimonials-section__card-description"]}>
+                "I´m really proud of being part of this club. I´ve learned a lot of things that I didn´t even know existed. I´m really grateful for the opportunity to be here"
+              </p>
+              <p className={styles["testimonials-section__card-author"]}>
+                - Juan Perez
+              </p>
+              <p className={styles["testimonials-section__card-position"]}>
+                President of NTX UCB
+              </p>
+            </div>
+          </div>
+          <div className={styles["testimonials-section__card"]}>
+            <div className={styles["testimonials-section__card-picture"]}>
+              <img src="assets/project-images/Portrait_Placeholder.png" alt="member picture" />
+            </div>
+            <div className={styles["testimonials-section__card-content"]}>
+              <p className={styles["testimonials-section__card-description"]}>
+                "I´m really proud of being part of this club. I´ve learned a lot of things that I didn´t even know existed. I´m really grateful for the opportunity to be here"
+              </p>
+              <p className={styles["testimonials-section__card-author"]}>
+                - Juan Perez
+              </p>
+              <p className={styles["testimonials-section__card-position"]}>
+                President of NTX UCB
+              </p>
+            </div>
+          </div>
+          <div className={styles["testimonials-section__card"]}>
+            <div className={styles["testimonials-section__card-picture"]}>
+              <img src="assets/project-images/Portrait_Placeholder.png" alt="member picture" />
+            </div>
+            <div className={styles["testimonials-section__card-content"]}>
+              <p className={styles["testimonials-section__card-description"]}>
+                "I´m really proud of being part of this club. I´ve learned a lot of things that I didn´t even know existed. I´m really grateful for the opportunity to be here"
+              </p>
+              <p className={styles["testimonials-section__card-author"]}>
+                - Juan Perez
+              </p>
+              <p className={styles["testimonials-section__card-position"]}>
+                President of NTX UCB
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* <MainLogo
         next={() => {
           sectionRef.current.scrollIntoView({
