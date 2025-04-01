@@ -12,6 +12,7 @@ import { TaskBar } from "../../components/layout/TaskBar/TaskBar";
 import Footer from "../../components/layout/Footer/Footer";
 import TeamSectionComp from "./TeamSection";
 import QuoteCard from "../../components/common/QuoteCard/QuoteCard";
+import InfoCard from "../../components/common/InfoCard/InfoCard";
 
 const HomePage = () => {
   const scrollRef = useRef();
@@ -137,13 +138,13 @@ const HomePage = () => {
             name="Juan Perez"
             position="President of NTX UCB"
           />
-           <QuoteCard
+          <QuoteCard
             image="assets/project-images/Portrait_Placeholder.png"
             quote={"I´m really proud of being part of this club. I´ve learned a lot of things that I didn´t even know existed. I´m really grateful for the opportunity to be here"}
             name="Juan Perez"
             position="President of NTX UCB"
           />
-           <QuoteCard
+          <QuoteCard
             image="assets/project-images/Portrait_Placeholder.png"
             quote={"I´m really proud of being part of this club. I´ve learned a lot of things that I didn´t even know existed. I´m really grateful for the opportunity to be here"}
             name="Juan Perez"
@@ -169,62 +170,30 @@ const HomePage = () => {
       <div className={styles["section-container--column"]} id="news">
         <h2 className={styles["section-container__title"]}>NEWS</h2>
         <div className={styles["news-section__new-container"]}>
-          <div className={styles["news-section__new"]}>
-            <div className={styles["news-section__new-image"]}>
-              <img src="assets/project-images/wide_placeholder.webp" alt="new image" />
-            </div>
-            <div className={styles["news-section__new-content"]}>
-              <h4 className={styles["news-section__new-title"]}>
-                <a href="">
-                  New project in the works
-                </a>
-              </h4>
-              <p className={styles["news-section__new-date"]}>
-                12/12/2021
-              </p>
-              <p className={styles["news-section__new-description"]}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
-              </p>
-            </div>
-          </div>
+          
+          <InfoCard
+            image="assets/project-images/wide_placeholder.webp"
+            title="New project in the works"
+            link="#"
+            date="12/12/2021"
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
+          />
 
-          <div className={styles["news-section__new"]}>
-            <div className={styles["news-section__new-image"]}>
-              <img src="assets/project-images/wide_placeholder.webp" alt="new image" />
-            </div>
-            <div className={styles["news-section__new-content"]}>
-              <h4 className={styles["news-section__new-title"]}>
-                <a href="">
-                  New project in the works
-                </a>
-              </h4>
-              <p className={styles["news-section__new-date"]}>
-                12/12/2021
-              </p>
-              <p className={styles["news-section__new-description"]}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
-              </p>
-            </div>
-          </div>
+          <InfoCard
+            image="assets/project-images/wide_placeholder.webp"
+            title="New project in the works"
+            link="#"
+            date="12/12/2021"
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
+          />
 
-          <div className={styles["news-section__new"]}>
-            <div className={styles["news-section__new-image"]}>
-              <img src="assets/project-images/wide_placeholder.webp" alt="new image" />
-            </div>
-            <div className={styles["news-section__new-content"]}>
-              <h4 className={styles["news-section__new-title"]}>
-                <a href="">
-                  New project in the works
-                </a>
-              </h4>
-              <p className={styles["news-section__new-date"]}>
-                12/12/2021
-              </p>
-              <p className={styles["news-section__new-description"]}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
-              </p>
-            </div>
-          </div>
+          <InfoCard
+            image="assets/project-images/wide_placeholder.webp"
+            title="New project in the works"
+            link="#"
+            date="12/12/2021"
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
+          />
 
         </div>
       </div>
