@@ -1,7 +1,8 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import NTX_Logo from "../../../assets/logos/NTXUCBLAT.png";
+import NTX_Logo from "../../../assets/logos/neurotechXLatamWhite.png";
+import NTXUCB_Logo from "../../../assets/logos/NeuroTechUCB.png"
 import "./TaskBar.css";
 
 export function TaskBar() {
@@ -12,7 +13,13 @@ export function TaskBar() {
         <Navbar.Brand as={Link} to="/ntxucblapaz.github.io/">
           <img
             src={NTX_Logo}
-            width="120"
+            width="150"
+            className="d-inline-block align-top"
+            alt="Neurotech La Paz"
+          />
+          <img
+            src={NTXUCB_Logo}
+            width="150"
             className="d-inline-block align-top"
             alt="Neurotech La Paz"
           />

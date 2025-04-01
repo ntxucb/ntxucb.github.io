@@ -3,7 +3,7 @@
 /* General para la barra de navegación #23B2C6*/
 .navbar {
   border-bottom: 2px solid var(--primary-color);
-  background-color: var(--background-color-light);
+  background-color: #131327;
 }
 
 /* Enlaces de navegación */
@@ -15,12 +15,12 @@
 }
 
 .nav-link:hover {
-  color: var(--text-color-light); /* Color al hacer hover */
-  text-shadow: 
+  color:white; /* Color al hacer hover */
+  /* text-shadow: 
     1px 1px 0px var(--primary-color), 
     -1px -1px 0px var(--primary-color), 
     1px -1px 0px var(--primary-color), 
-    -1px 1px 0px var(--primary-color);
+    -1px 1px 0px var(--primary-color); */
 }
 
 /* Botón hamburguesa */
@@ -29,13 +29,15 @@
 }
 
 .navbar-toggler-icon {
-  background-color: var(--background-color-light); /* Cambiar color del ícono hamburguesa */
+  background-color: #131327; /* Cambiar color del ícono hamburguesa */
+  background-image: url(../../../../public/assets/icons/burger-menu-svgrepo-com.svg);
 }
 
 /* Fondo del menú desplegable */
 .navbar-collapse {
-  background-color: var(--background-color-light); /* Fondo al desplegar en móviles */
+  background-color: #131327; /* Fondo al desplegar en móviles */
   border-top: 2px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
 @media (max-width: 768px) {

@@ -201,52 +201,6 @@
   text-decoration: none;
 }
 
-.philosophy-section__card{
-  width: 30%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 1.5rem;
-}
-
-.philosophy-section__card-number{
-  color: #FFFFFF;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
-  background-color: #414141;
-  border-radius: 50%;
-  height: 120px;
-  width: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-}
-
-.philosophy-section__card-content{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.philosophy-section__card-title{
-  font-family: 'Orbitron', sans-serif;
-  color: #23B2C6;
-  font-weight: 500;
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-}
-
-.philosophy-section__card-description{
-  font-family: 'Lato', sans-serif;
-  color: #000000;
-  font-size: 0.9rem;
-  font-weight: 400;
-  line-height: 1.4;
-  text-align: justify;
-}
-
 .cards-container {
   display: flex;
   flex-direction: row;
