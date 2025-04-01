@@ -66,7 +66,7 @@ const HomePage = () => {
           <img src="src/assets/images/image1.png" alt="Logo" />
         </div>
         <div className={styles["about-section__content"]}>
-          <h2 className={styles["about-section__title"]}>ABOUT NTX UCB</h2>
+          <h2 className={styles["section-container__title"]}>ABOUT NTX UCB</h2>
           <p className={styles["about-section__description"]}>
             NeurotechX UCB is the neurotechnology student initiative from Universidad Católica Boliviana “San Pablo” in La Paz, Bolivia. Our club goal is to work on issues related to neuroscience with a technological and data-oriented approach. We aim to develop innovative solutions, and train others with the same goal.
           </p>
@@ -139,7 +139,7 @@ const HomePage = () => {
       </div>
 
       <div className={styles["section-container--column"]} id = "testimonials">
-        <h2 className={styles["testimonials-section__title"]}>TESTIMONIALS</h2>
+        <h2 className={styles["section-container__title"]}>TESTIMONIALS</h2>
         <div className={styles["cards-container"]}>
           <div className={styles["testimonials-section__card"]}>
             <div className={styles["testimonials-section__card-picture"]}>
@@ -193,7 +193,7 @@ const HomePage = () => {
       </div>
 
       <div className={styles["section-container--column"]} id = "our-club">
-        <h3 className={styles["our-club-section__title"]}>OUR CLUB</h3>
+        <h3 className={styles["section-container__title"]}>OUR CLUB</h3>
         <TeamSectionComp
           layout={["'a a b'", "'a a c'", "'d e e'"]}
           images={[
@@ -207,7 +207,7 @@ const HomePage = () => {
       </div>
 
       <div className={styles["section-container--column"]} id = "news">
-        <h2 className={styles["news-section__title"]}>NEWS</h2>
+        <h2 className={styles["section-container__title"]}>NEWS</h2>
         <div className={styles["news-section__new-container"]}>
           <div className={styles["news-section__new"]}>
             <div className={styles["news-section__new-image"]}>

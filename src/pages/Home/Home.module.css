@@ -143,6 +143,13 @@
   justify-content: space-between;
 }
 
+.section-container__title{
+  font-family: 'Orbitron', sans-serif;
+  color: #23B2C6;
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
 
 .about-section__image{
   width: 48%;
@@ -153,7 +160,9 @@
 }
 
 .about-section__image img{
-  max-width: 100%;
+  max-width: 700px;
+  width: 100%;
+  height: auto;
 }
 
 .about-section__content{
@@ -162,14 +171,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: left;
-}
-
-.about-section__title{
-  font-family: 'Orbitron', sans-serif;
-  color: #23B2C6;
-  font-weight: 500;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
 }
 
 .about-section__description{
@@ -245,14 +246,6 @@
   text-align: justify;
 }
 
-.testimonials-section__title{
-  font-family: 'Orbitron', sans-serif;
-  color: #23B2C6;
-  font-weight: 500;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-
 .testimonials-section__card{
   background-color: #131327;
   color: #FFFFFF;
@@ -285,20 +278,6 @@
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
-}
-
-.our-club-section__title {
-  font-family: 'Orbitron', sans-serif;
-  color: #23B2C6;
-  font-weight: 500;
-  font-size: 2rem;
-}
-
-.news-section__title {
-  font-family: 'Orbitron', sans-serif;
-  color: #23B2C6;
-  font-weight: 500;
-  font-size: 2rem;
 }
 
 .news-section__new-container {
