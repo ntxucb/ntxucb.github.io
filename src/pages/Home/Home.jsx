@@ -11,6 +11,7 @@ import TeamSection from "./TeamSection";
 import { TaskBar } from "../../components/layout/TaskBar/TaskBar";
 import Footer from "../../components/layout/Footer/Footer";
 import TeamSectionComp from "./TeamSection";
+import QuoteCard from "../../components/common/QuoteCard/QuoteCard";
 
 const HomePage = () => {
   const scrollRef = useRef();
@@ -61,7 +62,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className={styles["section-container--row"]} id = "about">
+      <div className={styles["section-container--row"]} id="about">
         <div className={styles["about-section__image"]}>
           <img src="src/assets/images/image1.png" alt="Logo" />
         </div>
@@ -82,117 +83,76 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className={styles["section-container--row"]} id = "philosophy">
-        <div className={styles["philosophy-section__card"]}>
+      <div className={styles["section-container--row"]} id="philosophy">
 
+        <div className={styles["philosophy-section__card"]}>
           <div className={styles["philosophy-section__card-number"]}>
             <span>01</span>
           </div>
-
           <div className={styles["philosophy-section__card-content"]}>
             <h3 className={styles["philosophy-section__card-title"]}>Mission</h3>
             <p className={styles["philosophy-section__card-description"]}>
               To promote research, education and practical application of neurotechnology in La Paz through a multidisciplinary approach, offering academic events, networking and student participation opportunities.
             </p>
-
           </div>
-
         </div>
 
         <div className={styles["philosophy-section__card"]}>
-
           <div className={styles["philosophy-section__card-number"]}>
             <span>02</span>
           </div>
-
           <div className={styles["philosophy-section__card-content"]}>
             <h3 className={styles["philosophy-section__card-title"]}>Vision</h3>
             <p className={styles["philosophy-section__card-description"]}>
               To be recognized as a leading student initiative in the field of neurotechnology in La Paz, Bolivia, promoting research, education and practical application of neurotechnology through a multidisciplinary approach.
             </p>
-
           </div>
-
         </div>
 
         <div className={styles["philosophy-section__card"]}>
-
           <div className={styles["philosophy-section__card-number"]}>
             <span>03</span>
           </div>
-
           <div className={styles["philosophy-section__card-content"]}>
             <h3 className={styles["philosophy-section__card-title"]}>Values</h3>
             <p className={styles["philosophy-section__card-description"]}>
               Our 3 pilars are:
             </p>
-
             <ul className={styles["philosophy-section__card-description"]}>
               <li>COMUNNITY</li>
               <li>INNOVATION</li>
               <li>EDUCATION</li>
             </ul>
-
           </div>
-
         </div>
+
       </div>
 
-      <div className={styles["section-container--column"]} id = "testimonials">
+      <div className={styles["section-container--column"]} id="testimonials">
         <h2 className={styles["section-container__title"]}>TESTIMONIALS</h2>
         <div className={styles["cards-container"]}>
-          <div className={styles["testimonials-section__card"]}>
-            <div className={styles["testimonials-section__card-picture"]}>
-              <img src="assets/project-images/Portrait_Placeholder.png" alt="member picture" />
-            </div>
-            <div className={styles["testimonials-section__card-content"]}>
-              <p className={styles["testimonials-section__card-description"]}>
-                "I´m really proud of being part of this club. I´ve learned a lot of things that I didn´t even know existed. I´m really grateful for the opportunity to be here"
-              </p>
-              <p className={styles["testimonials-section__card-author"]}>
-                - Juan Perez
-              </p>
-              <p className={styles["testimonials-section__card-position"]}>
-                President of NTX UCB
-              </p>
-            </div>
-          </div>
-          <div className={styles["testimonials-section__card"]}>
-            <div className={styles["testimonials-section__card-picture"]}>
-              <img src="assets/project-images/Portrait_Placeholder.png" alt="member picture" />
-            </div>
-            <div className={styles["testimonials-section__card-content"]}>
-              <p className={styles["testimonials-section__card-description"]}>
-                "I´m really proud of being part of this club. I´ve learned a lot of things that I didn´t even know existed. I´m really grateful for the opportunity to be here"
-              </p>
-              <p className={styles["testimonials-section__card-author"]}>
-                - Juan Perez
-              </p>
-              <p className={styles["testimonials-section__card-position"]}>
-                President of NTX UCB
-              </p>
-            </div>
-          </div>
-          <div className={styles["testimonials-section__card"]}>
-            <div className={styles["testimonials-section__card-picture"]}>
-              <img src="assets/project-images/Portrait_Placeholder.png" alt="member picture" />
-            </div>
-            <div className={styles["testimonials-section__card-content"]}>
-              <p className={styles["testimonials-section__card-description"]}>
-                "I´m really proud of being part of this club. I´ve learned a lot of things that I didn´t even know existed. I´m really grateful for the opportunity to be here"
-              </p>
-              <p className={styles["testimonials-section__card-author"]}>
-                - Juan Perez
-              </p>
-              <p className={styles["testimonials-section__card-position"]}>
-                President of NTX UCB
-              </p>
-            </div>
-          </div>
+          <QuoteCard
+            image="assets/project-images/Portrait_Placeholder.png"
+            quote={"I´m really proud of being part of this club. I´ve learned a lot of things that I didn´t even know existed. I´m really grateful for the opportunity to be here"}
+            name="Juan Perez"
+            position="President of NTX UCB"
+          />
+           <QuoteCard
+            image="assets/project-images/Portrait_Placeholder.png"
+            quote={"I´m really proud of being part of this club. I´ve learned a lot of things that I didn´t even know existed. I´m really grateful for the opportunity to be here"}
+            name="Juan Perez"
+            position="President of NTX UCB"
+          />
+           <QuoteCard
+            image="assets/project-images/Portrait_Placeholder.png"
+            quote={"I´m really proud of being part of this club. I´ve learned a lot of things that I didn´t even know existed. I´m really grateful for the opportunity to be here"}
+            name="Juan Perez"
+            position="President of NTX UCB"
+          />
         </div>
       </div>
 
-      <div className={styles["section-container--column"]} id = "our-club">
+      <div className={styles["section-container--column"]} id="our-club">
         <h3 className={styles["section-container__title"]}>OUR CLUB</h3>
         <TeamSectionComp
           layout={["'a a b'", "'a a c'", "'d e e'"]}
@@ -206,7 +166,7 @@ const HomePage = () => {
         />
       </div>
 
-      <div className={styles["section-container--column"]} id = "news">
+      <div className={styles["section-container--column"]} id="news">
         <h2 className={styles["section-container__title"]}>NEWS</h2>
         <div className={styles["news-section__new-container"]}>
           <div className={styles["news-section__new"]}>
@@ -269,7 +229,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className={styles["join-us-section"]} id = "join-us">
+      <div className={styles["join-us-section"]} id="join-us">
         <div className={styles["join-us-section__content"]}>
           <h2 className={styles["join-us-section__title"]}>JOIN US</h2>
           <p className={styles["join-us-section__description"]}>
@@ -291,7 +251,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className={styles["sponsors-section"]} id = "our-sponsors">
+      <div className={styles["sponsors-section"]} id="our-sponsors">
         <h2 className={styles["sponsors-section__title"]}>Our Sponsors</h2>
         <div className={styles["sponsors-section__logos"]}>
           <img src="src/assets/logos/NTX_Logo.png" alt="Logo" />
