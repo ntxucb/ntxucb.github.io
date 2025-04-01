@@ -38,7 +38,6 @@ const HomePage = () => {
 
   return (
     <div className={styles["landing-page scroll-view"]} ref={scrollRef}>
-      {/* <CanvasTest ref={canvasRef}  progress={backgroundProgress}/> */}
 
       <div className={styles["hero-banner"]}>
         <div className={styles["hero-banner__content"]}>
@@ -62,7 +61,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className={styles["about-section"]}>
+      <div className={styles["section-container--row"]} id = "about">
         <div className={styles["about-section__image"]}>
           <img src="src/assets/images/image1.png" alt="Logo" />
         </div>
@@ -83,7 +82,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className={styles["philosophy-section"]} >
+      <div className={styles["section-container--row"]} id = "philosophy">
         <div className={styles["philosophy-section__card"]}>
 
           <div className={styles["philosophy-section__card-number"]}>
@@ -139,7 +138,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className={styles["testimonials-section"]} >
+      <div className={styles["section-container--column"]} id = "testimonials">
         <h2 className={styles["testimonials-section__title"]}>TESTIMONIALS</h2>
         <div className={styles["cards-container"]}>
           <div className={styles["testimonials-section__card"]}>
@@ -193,7 +192,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className={styles["our-club-section"]}>
+      <div className={styles["section-container--column"]} id = "our-club">
         <h3 className={styles["our-club-section__title"]}>OUR CLUB</h3>
         <TeamSectionComp
           layout={["'a a b'", "'a a c'", "'d e e'"]}
@@ -207,7 +206,7 @@ const HomePage = () => {
         />
       </div>
 
-      <div className={styles["news-section"]}>
+      <div className={styles["section-container--column"]} id = "news">
         <h2 className={styles["news-section__title"]}>NEWS</h2>
         <div className={styles["news-section__new-container"]}>
           <div className={styles["news-section__new"]}>
@@ -270,7 +269,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className={styles["join-us-section"]}>
+      <div className={styles["join-us-section"]} id = "join-us">
         <div className={styles["join-us-section__content"]}>
           <h2 className={styles["join-us-section__title"]}>JOIN US</h2>
           <p className={styles["join-us-section__description"]}>
@@ -292,7 +291,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className={styles["sponsors-section"]}>
+      <div className={styles["sponsors-section"]} id = "our-sponsors">
         <h2 className={styles["sponsors-section__title"]}>Our Sponsors</h2>
         <div className={styles["sponsors-section__logos"]}>
           <img src="src/assets/logos/NTX_Logo.png" alt="Logo" />
@@ -304,81 +303,6 @@ const HomePage = () => {
           <img src="src/assets/logos/openbci.png" alt="Logo" />
         </div>
       </div>
-
-
-      {/* <MainLogo
-        next={() => {
-          sectionRef.current.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-            inline: "start",
-          });
-        }}
-      /> */}
-
-      {/* <CircleSection>
-        <CircularDescriptionContainer
-          title="NEUROTECH UCB"
-          left={"5svw"}
-          radius={"40svw"}
-          top={"100px"}
-        >
-          <p>
-            NeurotechUCB is the neurotechnology student initiative from UCB.
-            Our goal is to work on issues related to neuroscience with a
-            techonological and data-oriented approach. We aim to develop
-            innovative solutions, and train others with the same goal. We are
-            located in La Paz, Bolivia.
-          </p>
-        </CircularDescriptionContainer>
-
-        <CircularDescriptionContainer
-          title="HISTORY"
-          left={"55svw"}
-          top={"100px"}
-          radius={"40svw"}
-        >
-          <p>
-            NeurotechUCB was born on 2021, during the COVID-19 lock down.
-            Mainly driven by curiosity for Neuroscience, a group of university
-            students founded the first NeurotechX club in Bolivia.
-            <br />
-            We have participated in many events related to Neuroscience and
-            Neurotechnology. And even got to win an award in the 2024 FUNTEC
-            FEST with one of our projects.
-          </p>
-        </CircularDescriptionContainer>
-      </CircleSection>
-
-      <MissionSection setProgress={setBackgroundProgress} progress={backgroundProgress} ref={sectionRef}>
-        <DendriteContainer
-          title={"MISSION"}
-          top={"100px"}
-          radius={"40svw"}>
-          <p>
-            To promote research, education and practical application of
-            neurotechnology in La Paz through a multidisciplinary approach,
-            offering academic events, networking and student participation
-            opportunities.
-          </p>
-        </DendriteContainer>
-        <DendriteContainer
-          title={"VISION"}
-          top={"100px"}
-          radius={"40svw"}
-          direction={true}
-        >
-          <p>
-            To promote research, education and practical application of
-            neurotechnology in La Paz through a multidisciplinary approach,
-            offering academic events, networking and student participation
-            opportunities.
-          </p>
-        </DendriteContainer>
-      </MissionSection> */}
-      {/* <div className={styles["scroll-view"]} ref={scrollRef}>
-       
-      </div> */}
     </div>
   );
 };

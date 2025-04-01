@@ -121,7 +121,7 @@
   text-decoration: none;
 }
 
-.about-section{
+.section-container--row{
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
@@ -129,7 +129,20 @@
   margin-left: 3.125%;
   margin-right: 3.125%;
   margin-top: 1.8rem;
+  justify-content: space-between;
 }
+
+.section-container--column{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  margin-left: 3.125%;
+  margin-right: 3.125%;
+  margin-top: 1.8rem;
+  justify-content: space-between;
+}
+
 
 .about-section__image{
   width: 48%;
@@ -186,17 +199,6 @@
   text-decoration: none;
 }
 
-.philosophy-section{
-  display: flex;
-  flex-direction: row;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  margin-left: 3.125%;
-  margin-right: 3.125%;
-  margin-top: 1.8rem;
-  justify-content: space-between;
-}
-
 .philosophy-section__card{
   width: 30%;
   height: 100%;
@@ -243,16 +245,6 @@
   text-align: justify;
 }
 
-.testimonials-section{
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  margin-left: 3.125%;
-  margin-right: 3.125%;
-  margin-top: 1.8rem;
-}
-
 .testimonials-section__title{
   font-family: 'Orbitron', sans-serif;
   color: #23B2C6;
@@ -295,31 +287,11 @@
   gap: 1.5rem;
 }
 
-.our-club-section {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  margin-left: 3.125%;
-  margin-right: 3.125%;
-  margin-top: 1.8rem;
-}
-
 .our-club-section__title {
   font-family: 'Orbitron', sans-serif;
   color: #23B2C6;
   font-weight: 500;
   font-size: 2rem;
-}
-
-.news-section {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  margin-left: 3.125%;
-  margin-right: 3.125%;
-  margin-top: 1.8rem;
 }
 
 .news-section__title {
@@ -517,7 +489,7 @@
     width: 100%;
   }
 
-  .about-section{
+  .section-container--row{
     flex-direction: column;
   }
 
@@ -535,16 +507,6 @@
 
   .about-section__cta-button{
     width: 100%;
-  }
-
-  .philosophy-section{
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 1.5rem;
-    margin-left: 3.125%;
-    margin-right: 3.125%;
-    margin-top: 1.8rem;
-    justify-content: space-between;
   }
 
   .philosophy-section__card{
