@@ -13,6 +13,7 @@ import Footer from "../../components/layout/Footer/Footer";
 import TeamSectionComp from "./TeamSection";
 import QuoteCard from "../../components/common/QuoteCard/QuoteCard";
 import InfoCard from "../../components/common/InfoCard/InfoCard";
+import FeatureCard from "../../components/common/FeatureCard/FeatureCard";
 
 const HomePage = () => {
   const scrollRef = useRef();
@@ -86,46 +87,24 @@ const HomePage = () => {
 
       <div className={styles["section-container--row"]} id="philosophy">
 
-        <div className={styles["philosophy-section__card"]}>
-          <div className={styles["philosophy-section__card-number"]}>
-            <span>01</span>
-          </div>
-          <div className={styles["philosophy-section__card-content"]}>
-            <h3 className={styles["philosophy-section__card-title"]}>Mission</h3>
-            <p className={styles["philosophy-section__card-description"]}>
-              To promote research, education and practical application of neurotechnology in La Paz through a multidisciplinary approach, offering academic events, networking and student participation opportunities.
-            </p>
-          </div>
-        </div>
+        <FeatureCard
+          number={1}
+          title="Mission"
+          description="To promote research, education and practical application of neurotechnology in La Paz through a multidisciplinary approach, offering academic events, networking and student participation opportunities."
+        />
 
-        <div className={styles["philosophy-section__card"]}>
-          <div className={styles["philosophy-section__card-number"]}>
-            <span>02</span>
-          </div>
-          <div className={styles["philosophy-section__card-content"]}>
-            <h3 className={styles["philosophy-section__card-title"]}>Vision</h3>
-            <p className={styles["philosophy-section__card-description"]}>
-              To be recognized as a leading student initiative in the field of neurotechnology in La Paz, Bolivia, promoting research, education and practical application of neurotechnology through a multidisciplinary approach.
-            </p>
-          </div>
-        </div>
+        <FeatureCard
+          number={2}
+          title="Vision"
+          description="To be recognized as a leading student initiative in the field of neurotechnology in La Paz, Bolivia, promoting research, education and practical application of neurotechnology through a multidisciplinary approach."
+        />
 
-        <div className={styles["philosophy-section__card"]}>
-          <div className={styles["philosophy-section__card-number"]}>
-            <span>03</span>
-          </div>
-          <div className={styles["philosophy-section__card-content"]}>
-            <h3 className={styles["philosophy-section__card-title"]}>Values</h3>
-            <p className={styles["philosophy-section__card-description"]}>
-              Our 3 pilars are:
-            </p>
-            <ul className={styles["philosophy-section__card-description"]}>
-              <li>COMUNNITY</li>
-              <li>INNOVATION</li>
-              <li>EDUCATION</li>
-            </ul>
-          </div>
-        </div>
+        <FeatureCard
+          number={3}
+          title="Values"
+          description="Our 3 pilars are:"
+          list={["COMMUNITY", "INNOVATION", "EDUCATION"]}
+        />
 
       </div>
 
@@ -169,8 +148,8 @@ const HomePage = () => {
 
       <div className={styles["section-container--column"]} id="news">
         <h2 className={styles["section-container__title"]}>NEWS</h2>
-        <div className={styles["news-section__new-container"]}>
-          
+        <div className={styles["cards-container--column"]}>
+
           <InfoCard
             image="assets/project-images/wide_placeholder.webp"
             title="New project in the works"
