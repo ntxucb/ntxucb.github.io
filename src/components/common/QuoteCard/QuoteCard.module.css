@@ -1,6 +1,7 @@
 .quote__card{
-    background-color: #131327;
-    color: #FFFFFF;
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+    font-family: var(--secondary-font-family);
     border-radius: 20px;
     display: flex;
     flex-direction: column;

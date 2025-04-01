@@ -1,3 +1,5 @@
+@import url(../../../assets/styles/variables.css);
+
 .feature-card{
     width: 30%;
     height: 100%;
@@ -9,8 +11,8 @@
   }
   
   .feature-card__number{
-    color: #FFFFFF;
-    font-family: 'Orbitron', sans-serif;
+    color: var(--text-color-dark);
+    font-family: var(--font-family);
     font-size: 2rem;
     background-color: #414141;
     border-radius: 50%;
@@ -28,16 +30,16 @@
   }
   
   .feature-card__title{
-    font-family: 'Orbitron', sans-serif;
-    color: #23B2C6;
+    font-family: var(--font-family);
+    color: var(--primary-color);
     font-weight: 500;
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
   }
   
   .feature-card__description{
-    font-family: 'Lato', sans-serif;
-    color: #000000;
+    font-family: var(--secondary-font-family);
+    color: var(--text-color-light);
     font-size: 0.9rem;
     font-weight: 400;
     line-height: 1.4;

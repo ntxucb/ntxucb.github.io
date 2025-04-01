@@ -47,8 +47,6 @@
 }
 
 .hero-banner__content{
-  background-color: yellow;
-  /* margin: 1.05%; */
   width: 55%;
   height: fit-content;
   border-radius: 20px;
@@ -65,16 +63,16 @@
 }
 
 .hero-banner__title{
-  font-family: 'Orbitron', sans-serif;
+  font-family: var(--font-family);
   margin-top: 1.5rem;
-  color: #23B2C6;
+  color: var(--primary-color);
   font-weight: 100;
   width: 100%;
 }
 
 .hero-banner__description{
-  font-family: 'Lato', sans-serif;
-  color: #FFFFFF;
+  font-family: var(--secondary-font-family);
+  color: var(--text-color-dark);
   font-size: 1.2rem;
   font-weight: 100;
   line-height: 1.4;
@@ -113,8 +111,8 @@
 .hero-banner__cta-button{
   padding: 0.5rem 1.5rem;
   border-radius: 10px;
-  background-color: #23B2C6;
-  color: #FFFFFF;
+  background-color: var(--primary-color);
+  color: var(--text-color-dark);
   font-size: 1.2rem;
   font-weight: 100;
   border: none;
@@ -145,8 +143,8 @@
 }
 
 .section-container__title{
-  font-family: 'Orbitron', sans-serif;
-  color: #23B2C6;
+  font-family: var(--font-family);
+  color: var(--primary-color);
   font-weight: 500;
   font-size: 2rem;
   margin-bottom: 1.5rem;
@@ -175,8 +173,8 @@
 }
 
 .about-section__description{
-  font-family: 'Lato', sans-serif;
-  color: #000000;
+  font-family: var(--secondary-font-family);
+  color: var(--text-color-light);
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.4;
@@ -191,8 +189,8 @@
 .about-section__cta-button{
   padding: 0.5rem 1.5rem;
   border-radius: 10px;
-  background-color: #23B2C6;
-  color: #FFFFFF;
+  background-color: var(--primary-color);
+  color: var(--text-color-dark);
   font-size: 1.2rem;
   font-weight: 100;
   border: none;
@@ -222,7 +220,7 @@
   background-image: url(/ntxucblapaz.github.io/src/assets/images/join-us-background.png);
   background-size: cover;
   background-position: center;
-  color: #FFFFFF;
+  color: var(--text-color-dark);
   margin-bottom: 1.8rem;
 }
 
@@ -238,13 +236,13 @@
 }
 
 .join-us-section__title {
-  font-family: 'Orbitron', sans-serif;
+  font-family: var(--font-family);
   font-weight: 500;
   font-size: 2rem;
 }
 
 .join-us-section__description {
-  font-family: 'Lato', sans-serif;
+  font-family: var(--secondary-font-family);
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.4;
@@ -263,8 +261,8 @@
 .join-us-section__cta-button {
   padding: 0.5rem 1.5rem;
   border-radius: 10px;
-  background-color: #23B2C6;
-  color: #FFFFFF;
+  background-color: var(--primary-color);
+  color: var(--text-color-dark);
   font-size: 1.2rem;
   font-weight: 100;
   border: none;
@@ -284,13 +282,13 @@
   /*very light gray*/
   background-color: #F5F5F5;
   margin-bottom: 1.8rem; 
-  border: 1px solid #000;
+  border: 1px solid var(--text-color-light);
   text-align: center;
 }
 
 .sponsors-section__title {
-  font-family: 'Orbitron', sans-serif;
-  color: #23B2C6;
+  font-family: var(--font-family);
+  color: var(--primary-color);
   font-weight: 500;
   font-size: 2rem;
 }

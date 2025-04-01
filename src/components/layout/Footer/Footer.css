@@ -1,10 +1,10 @@
 @import '../../../assets/styles/variables.css';
 
 .footer {
-    background-color: #131327; /*Si se autoriza cambiar por este color #282c34 al igual que en el taskbar*/
+    background-color: var(--background-color-dark); /*Si se autoriza cambiar por este color #282c34 al igual que en el taskbar*/
     color: var(--text-color-dark);
     padding: 20px;
-    font-family: 'Lato', sans-serif;
+    font-family: var(--secondary-font-family);
     font-size: 16px;
     font-weight: 400;
     text-align: center;
