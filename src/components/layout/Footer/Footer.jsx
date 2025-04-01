@@ -24,7 +24,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faFacebook} /> Facebook
+            <FontAwesomeIcon icon={faFacebook} className="icon"/> 
           </a>
           <a
             className="link-twitter"
@@ -32,7 +32,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faTwitter} /> Twitter
+            <FontAwesomeIcon icon={faTwitter} className="icon"/> 
           </a>
           <a
             className="link-linkedin"
@@ -40,7 +40,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
+            <FontAwesomeIcon icon={faLinkedin} className="icon"/> 
           </a>
           <a
             className="link-instagram"
@@ -48,7 +48,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faInstagram} /> Instagram
+            <FontAwesomeIcon icon={faInstagram} className="icon"/> 
           </a>
           <a
             className="link-youtube"
@@ -56,7 +56,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faYoutube} /> Youtube
+            <FontAwesomeIcon icon={faYoutube} className="icon"/> 
           </a>
           <a
             className="link-tiktok"
@@ -64,7 +64,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faTiktok} /> TikTok
+            <FontAwesomeIcon icon={faTiktok} className="icon"/> 
           </a>
           <a
             className="link-github"
@@ -72,7 +72,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faGithub} /> Github
+            <FontAwesomeIcon icon={faGithub} className="icon"/> 
           </a>
         </div>
       </div>
