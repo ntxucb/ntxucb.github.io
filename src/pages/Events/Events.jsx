@@ -1,9 +1,7 @@
 import React from "react";
-// import { TaskBar } from "../../components/layout/TaskBar/TaskBar";
-// import Footer from "../../components/layout/Footer/Footer";
-import CardEvent from "../Events/CardEvent";
 import "./Events.css";
-import CardMainEvent from "./CardMainEvent";
+import CardEvent from "../../components/common/CardEvent/CardEvent";
+import CardMainEvent from "../../components/common/CardMainEvent/CardMainEvent";
 
 export const Events = () => {
   const image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxFvoRX4Y_mAxPaWqaHP5XBrWmjd47UfiM0A&s";
