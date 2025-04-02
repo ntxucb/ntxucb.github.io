@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./Home.module.css";
-import TeamSectionComp from "./TeamSection";
 import QuoteCard from "../../components/common/QuoteCard/QuoteCard";
 import InfoCard from "../../components/common/InfoCard/InfoCard";
 import FeatureCard from "../../components/common/FeatureCard/FeatureCard";
+import TeamSectionComp from "../../components/common/TeamSection/TeamSection";
+
 
 const HomePage = () => {
   const scrollRef = useRef();
@@ -127,11 +128,11 @@ const HomePage = () => {
         <TeamSectionComp
           layout={["'a a b'", "'a a c'", "'d e e'"]}
           images={[
-            { gridArea: "b", url: "team1.png" },
-            { gridArea: "c", url: "team2.png" },
-            { gridArea: "a", url: "team3.png" },
-            { gridArea: "d", url: "team4.png" },
-            { gridArea: "e", url: "team5.png" },
+            { gridArea: "b", url: "src/assets/images/team1.png" },
+            { gridArea: "c", url: "src/assets/images/team2.png" },
+            { gridArea: "a", url: "src/assets/images/team3.png" },
+            { gridArea: "d", url: "src/assets/images/team4.png" },
+            { gridArea: "e", url: "src/assets/images/team5.png" },
           ]}
         />
       </div>

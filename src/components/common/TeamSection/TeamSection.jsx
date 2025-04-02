@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
-import BentoGrid from "../../components/layout/BentoGallery/BentoGallery";
 import styles from "./TeamSection.module.css";
+import BentoGrid from "../../layout/BentoGallery/BentoGallery";
 function TeamSection({ layout, images }, ref) {
   return (
     <div className={styles["section-container"]} ref={ref}>
