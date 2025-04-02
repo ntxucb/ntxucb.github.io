@@ -15,7 +15,7 @@ export const Events = () => {
     <>
       <div className="container">
 
-        <h1 className="title-section">Evento Destacado</h1>
+        <h2 className="title-section">Evento Destacado</h2>
         <div>
           <CardMainEvent
             title={title}
@@ -26,7 +26,7 @@ export const Events = () => {
 
 
         </div>
-        <h1 className="title-section">Proximos Eventos</h1>
+        <h2 className="title-section">Proximos Eventos</h2>
         <div className="row">
           <CardEvent
             title={title}
@@ -34,14 +34,59 @@ export const Events = () => {
             description={description}
             buttonText="Registrarse"
             onButtonClick={onButtonClick}
-          ></CardEvent>
+          />
           <CardEvent
             title={title}
             image={image}
             description={description}
             buttonText="Registrarse"
             onButtonClick={onButtonClick}
-          ></CardEvent>
+          />
+          <CardEvent
+            title={title}
+            image={image}
+            description={description}
+            buttonText="Registrarse"
+            onButtonClick={onButtonClick}
+          />
+        </div>
+
+        <h2 className="title-section">Eventos pasados</h2>
+        <div className="row">
+          <CardEvent
+            title={title}
+            image={image}
+            description={description}
+            buttonText="Registrarse"
+            onButtonClick={onButtonClick}
+          />
+          <CardEvent
+            title={title}
+            image={image}
+            description={description}
+            buttonText="Registrarse"
+            onButtonClick={onButtonClick}
+          />
+          <CardEvent
+            title={title}
+            image={image}
+            description={description}
+            buttonText="Registrarse"
+            onButtonClick={onButtonClick}
+          />
+        </div>
+
+        <h2 className="title-section">Colaboradores</h2>
+        <div className="row">
+          <div className="colaborador">
+            <img src="src/assets/images/placeholder-cuadrado.jpg" alt="" />
+          </div>
+          <div className="colaborador">
+            <img src="src/assets/images/placeholder-cuadrado.jpg" alt="" />
+          </div>
+          <div className="colaborador">
+            <img src="src/assets/images/placeholder-cuadrado.jpg" alt="" />
+          </div>
         </div>
 
 
