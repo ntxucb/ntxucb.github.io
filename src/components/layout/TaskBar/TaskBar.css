@@ -18,6 +18,10 @@
   color:var(--text-color-dark); /* Color al hacer hover */
 }
 
+.nav-link:focus {
+  color: var(--text-color-dark)
+}
+
 /* Botón hamburguesa */
 .navbar-toggler {
   border-color: var(--primary-color);
