@@ -25,7 +25,7 @@
 
 .navbar-toggler-icon {
   background-color: var(--background-color-dark); /* Cambiar color del ícono hamburguesa */
-  background-image: url(../../../../public/assets/icons/burger-menu-svgrepo-com.svg);
+  background-image: url(/assets/icons/burger-menu-svgrepo-com.svg);
 }
 
 /* Fondo del menú desplegable */

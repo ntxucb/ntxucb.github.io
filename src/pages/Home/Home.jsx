@@ -1,15 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./Home.module.css";
-import CanvasTest from "./CanvasTest";
-import CircularDescriptionContainer from "./CircularDescriptionContainer";
-import DendriteContainer from "./DendriteContainer";
-import CircleSection from "./CirclesSection";
-import MissionSection from "./MissionSection";
-import MainLogo from "./MainLogo";
-import NavBar from "./NavBar";
-import TeamSection from "./TeamSection";
-import { TaskBar } from "../../components/layout/TaskBar/TaskBar";
-import Footer from "../../components/layout/Footer/Footer";
 import TeamSectionComp from "./TeamSection";
 import QuoteCard from "../../components/common/QuoteCard/QuoteCard";
 import InfoCard from "../../components/common/InfoCard/InfoCard";
