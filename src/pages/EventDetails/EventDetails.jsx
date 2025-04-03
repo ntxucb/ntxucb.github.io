@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import "./EventDetails.css"
 import placeholderImage from "../../assets/images/wide_placeholder.webp";
 import portraitPlaceholder from "../../assets/images/Portrait_Placeholder.png"
+import placeholderCuadraro from "../../assets/images/placeholder-cuadrado.jpg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faClock,
@@ -212,6 +213,20 @@ function EventDetails() {
                         <p className="profile__role">
                             Mobile Developer
                         </p>
+                    </div>
+                </div>
+            </div>
+            <div className="section--column">
+                <h2 className="title-section">Colaboradores</h2>
+                <div className="row">
+                    <div className="colaborador">
+                        <img src={placeholderCuadraro} alt="" />
+                    </div>
+                    <div className="colaborador">
+                        <img src={placeholderCuadraro} alt="" />
+                    </div>
+                    <div className="colaborador">
+                        <img src={placeholderCuadraro} alt="" />
                     </div>
                 </div>
             </div>
