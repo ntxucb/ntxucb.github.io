@@ -1,7 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import "./EventDetails.css"
-import placeholderImage from "../..//assets/images/wide_placeholder.webp";
+import placeholderImage from "../../assets/images/wide_placeholder.webp";
+import portraitPlaceholder from "../../assets/images/Portrait_Placeholder.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faClock,
@@ -106,6 +107,112 @@ function EventDetails() {
                 </div>
                 <div className="section__map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1671.4825846391861!2d-68.11042608241759!3d-16.52208641711459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f20ee187a3103%3A0x2f2bb2b7df32a24d!2sUniversidad%20Cat%C3%B3lica%20Boliviana%20%22San%20Pablo%22!5e0!3m2!1ses-419!2sbo!4v1743635547336!5m2!1ses-419!2sbo" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div className="section--column" id="organizers">
+                <h2 className="section__content-title--secondary">
+                    Organizadores
+                </h2>
+                <div className="section--row cards-container">
+                    <div className="profile">
+                        <div className="profile__picture">
+                            <img src={portraitPlaceholder} alt="imagen de perfil de organizador" />
+                        </div>
+                        <p className="profile__name">
+                            Pepito Perez Perez
+                        </p>
+                        <p className="profile__role">
+                            Mobile Developer
+                        </p>
+                    </div>
+                    <div className="profile">
+                        <div className="profile__picture">
+                            <img src={portraitPlaceholder} alt="imagen de perfil de organizador" />
+                        </div>
+                        <p className="profile__name">
+                            Pepito Perez Perez
+                        </p>
+                        <p className="profile__role">
+                            Mobile Developer
+                        </p>
+                    </div>
+                    <div className="profile">
+                        <div className="profile__picture">
+                            <img src={portraitPlaceholder} alt="imagen de perfil de organizador" />
+                        </div>
+                        <p className="profile__name">
+                            Pepito Perez Perez
+                        </p>
+                        <p className="profile__role">
+                            Mobile Developer
+                        </p>
+                    </div>
+                    <div className="profile">
+                        <div className="profile__picture">
+                            <img src={portraitPlaceholder} alt="imagen de perfil de organizador" />
+                        </div>
+                        <p className="profile__name">
+                            Pepito Perez Perez
+                        </p>
+                        <p className="profile__role">
+                            Mobile Developer
+                        </p>
+                    </div>
+                    <div className="profile">
+                        <div className="profile__picture">
+                            <img src={portraitPlaceholder} alt="imagen de perfil de organizador" />
+                        </div>
+                        <p className="profile__name">
+                            Pepito Perez Perez
+                        </p>
+                        <p className="profile__role">
+                            Mobile Developer
+                        </p>
+                    </div>
+                    <div className="profile">
+                        <div className="profile__picture">
+                            <img src={portraitPlaceholder} alt="imagen de perfil de organizador" />
+                        </div>
+                        <p className="profile__name">
+                            Pepito Perez Perez
+                        </p>
+                        <p className="profile__role">
+                            Mobile Developer
+                        </p>
+                    </div>
+                    <div className="profile">
+                        <div className="profile__picture">
+                            <img src={portraitPlaceholder} alt="imagen de perfil de organizador" />
+                        </div>
+                        <p className="profile__name">
+                            Pepito Perez Perez
+                        </p>
+                        <p className="profile__role">
+                            Mobile Developer
+                        </p>
+                    </div>
+                    <div className="profile">
+                        <div className="profile__picture">
+                            <img src={portraitPlaceholder} alt="imagen de perfil de organizador" />
+                        </div>
+                        <p className="profile__name">
+                            Pepito Perez Perez
+                        </p>
+                        <p className="profile__role">
+                            Mobile Developer
+                        </p>
+                    </div>
+                    <div className="profile">
+                        <div className="profile__picture">
+                            <img src={portraitPlaceholder} alt="imagen de perfil de organizador" />
+                        </div>
+                        <p className="profile__name">
+                            Pepito Perez Perez
+                        </p>
+                        <p className="profile__role">
+                            Mobile Developer
+                        </p>
+                    </div>
                 </div>
             </div>
         </>
