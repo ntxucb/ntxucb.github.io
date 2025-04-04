@@ -3,7 +3,7 @@ import './CardEvent.css';
 
 const CardEvent = ({ title, description, image, buttonText, onButtonClick }) => {
     return (
-        <div className="card" style={{ width: "18rem" }}>
+        <div className="size-card" style={{ width: "100%" }}>
             {image && <img src={image} className="card-img-top" alt={title} />}
             <div className="card-body">
                 <h5 className="card-title">{title}</h5>

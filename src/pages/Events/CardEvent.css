@@ -1,11 +1,24 @@
-.container-cards{
-    background-color: #222;
-    color: #00bcd4;  /* Color de texto similar al de la imagen */
-    border-radius: 8px;
-    overflow: hidden;
-    border: none;
+*{
+    box-sizing: border-box;
 }
 
+
+
 .card{
+    
+    background-color: transparent;
     margin: 5px;
+    border: 1px solid white;
+    border-radius: 12px;
+}
+
+.size-card{
+    width: 30%;
+}
+.card-img-top{
+    max-height: 250px;
+}
+.card-title{
+    color: #00bcd4;
+    font-weight: 400;
 }

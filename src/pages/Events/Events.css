@@ -1,3 +1,8 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
 .title-section{
     padding-top: 20px;
     padding-bottom: 10px;
@@ -7,4 +12,26 @@
     font-size: 40px;
     color: #23B2C6 !important;
 
+}
+.own-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #131327;
+
+}
+
+
+.proximos-eventos-container{
+    background-color: transparent;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.even-item{
+    width: 30%;
 }

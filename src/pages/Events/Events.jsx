@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 // import { TaskBar } from "../../components/layout/TaskBar/TaskBar";
 // import Footer from "../../components/layout/Footer/Footer";
 import CardEvent from "../Events/CardEvent";
@@ -13,39 +13,77 @@ export const Events = () => {
   const onButtonClick = "Click";
   return (
     <>
-      <div className="container">
+      {/* Seccion del evento Principal */}
+      <section>
+        <div className="container">
+          <h1 className="title-section">Evento Destacado</h1>
+          <div>
+            <CardMainEvent
+              title={title}
+              image={image}
+              description={description}
+              buttonText={buttonText}
+              onButtonClick={onButtonClick} />
+          </div>
+        </div>
+      </section>
 
-        <h1 className="title-section">Evento Destacado</h1>
+      {/* Seccion de los Proximos Eventos */}
+      <section className="proximos-eventos-section">
+        <div className="own-container">
+          <h1 className="title-section">Proximos Eventos</h1>
+          <div className="proximos-eventos-container">
+            
+            <div className="even-item">
+              <CardEvent
+                title={title}
+                image={image}
+                description={description}
+                buttonText="Registrarse1"
+                onButtonClick={onButtonClick}
+              ></CardEvent>
+            </div>
+            <div className="even-item">
+              <CardEvent
+                title={title}
+                image={image}
+                description={description}
+                buttonText="Registrarse2"
+                onButtonClick={onButtonClick}
+              ></CardEvent>
+            </div>
+            <div className="even-item">
+              <CardEvent
+                title={title}
+                image={image}
+                description={description}
+                buttonText="Registrars3e"
+                onButtonClick={onButtonClick}
+              ></CardEvent>
+            </div>
+
+            <div className="even-item">
+              <CardEvent
+                title={title}
+                image={image}
+                description={description}
+                buttonText="Registrars3e"
+                onButtonClick={onButtonClick}
+              ></CardEvent>
+            </div>
+
+
+
+          </div>
+        </div>
+      </section>
+      
+      <section>
         <div>
-          <CardMainEvent
-            title={title}
-            image={image}
-            description={description}
-            buttonText={buttonText}
-            onButtonClick={onButtonClick} />
-
-
+          <h1>Eventos pasados</h1>
         </div>
-        <h1 className="title-section">Proximos Eventos</h1>
-        <div className="row">
-          <CardEvent
-            title={title}
-            image={image}
-            description={description}
-            buttonText="Registrarse"
-            onButtonClick={onButtonClick}
-          ></CardEvent>
-          <CardEvent
-            title={title}
-            image={image}
-            description={description}
-            buttonText="Registrarse"
-            onButtonClick={onButtonClick}
-          ></CardEvent>
-        </div>
-
-
-      </div>
+        <div></div>
+      </section>
 
     </>
   );

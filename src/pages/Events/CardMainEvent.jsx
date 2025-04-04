@@ -4,7 +4,7 @@ import "./CardMainEvent.css";
 // import imagenPrueba from "../../assets/images/Podcast1.png";
 
 
-const CardMainEvent = ({ title, description, image, buttonText, onButtonClick }) => {
+const CardMainEvent = ({ title, description, buttonText, onButtonClick }) => {
     return (
         <div className="container alto">
             <div className="card card-principal">
