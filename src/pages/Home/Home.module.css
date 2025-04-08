@@ -150,9 +150,14 @@
   margin-bottom: 1.5rem;
 }
 
+#about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .about-section__image{
   width: 48%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,7 +166,6 @@
 .about-section__image img{
   max-width: 700px;
   width: 100%;
-  height: auto;
 }
 
 .about-section__content{

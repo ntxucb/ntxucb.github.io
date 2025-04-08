@@ -8,3 +8,20 @@
     color: #23B2C6 !important;
 
 }
+
+.row{
+    display: flex;
+    justify-content: center;
+}
+
+.colaborador{
+    width: fit-content;
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid var(--text-color-light)
+}
+
+.colaborador img{
+    max-width: 350px;
+}
+

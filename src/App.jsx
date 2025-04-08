@@ -10,6 +10,7 @@ import UnderConstruction from "./pages/UnderConstruction/UnderConstruction";
 import { TaskBar } from "./components/layout/TaskBar/TaskBar";
 import Footer from "./components/layout/Footer/Footer";
 import HomePage from './pages/Home/Home';
+import EventDetails from './pages/EventDetails/EventDetails';
 
 function AppRoutes() {
   const location = useLocation();
@@ -24,6 +25,7 @@ function AppRoutes() {
         <>
           <Route path="/ntxucblapaz.github.io/" element={<HomePage />} />
           <Route path="/ntxucblapaz.github.io/events" element={<Events />} />
+          <Route path="/ntxucblapaz.github.io/events/:id" element={<EventDetails />} />
           <Route path="/ntxucblapaz.github.io/our_team" element={<Our_Team />} />
           <Route path="/ntxucblapaz.github.io/podcast" element={<Podcast />} />
           <Route path="/ntxucblapaz.github.io/projects" element={<Projects />} />
