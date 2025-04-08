@@ -36,7 +36,6 @@ function EventDetails() {
                 <div className="section__image">
                     <img src={placeholderImage} alt="Imagen principal del proyecto" />
                 </div>
-
             </div>
             <div className="section--column" id="left-time">
                 <div className="section__time">

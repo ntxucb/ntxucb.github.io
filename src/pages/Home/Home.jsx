@@ -57,7 +57,7 @@ const HomePage = () => {
 
       <div className={styles["section-container--row"]} id="about">
         <div className={styles["about-section__image"]}>
-          <img src="src/assets/images/image1.png" alt="Logo" />
+          <img src="assets/images/image1.png" alt="Logo" />
         </div>
         <div className={styles["about-section__content"]}>
           <h2 className={styles["section-container__title"]}>ABOUT NTX UCB</h2>
@@ -128,11 +128,11 @@ const HomePage = () => {
         <TeamSectionComp
           layout={["'a a b'", "'a a c'", "'d e e'"]}
           images={[
-            { gridArea: "b", url: "src/assets/images/team1.png" },
-            { gridArea: "c", url: "src/assets/images/team2.png" },
-            { gridArea: "a", url: "src/assets/images/team3.png" },
-            { gridArea: "d", url: "src/assets/images/team4.png" },
-            { gridArea: "e", url: "src/assets/images/team5.png" },
+            { gridArea: "b", url: "assets/images/team1.png" },
+            { gridArea: "c", url: "assets/images/team2.png" },
+            { gridArea: "a", url: "assets/images/team3.png" },
+            { gridArea: "d", url: "assets/images/team4.png" },
+            { gridArea: "e", url: "assets/images/team5.png" },
           ]}
         />
       </div>
@@ -193,13 +193,13 @@ const HomePage = () => {
       <div className={styles["sponsors-section"]} id="our-sponsors">
         <h2 className={styles["sponsors-section__title"]}>Our Sponsors</h2>
         <div className={styles["sponsors-section__logos"]}>
-          <img src="src/assets/logos/NTX_Logo.png" alt="Logo" />
-          <img src="src/assets/logos/UIELogo.png" alt="Logo" />
-          <img src="src/assets/logos/UCB.png" alt="Logo" />
-          <img src="src/assets/logos/cidimec.png" alt="Logo" />
-          <img src="src/assets/logos/backyardbrains.png" alt="Logo" />
-          <img src="src/assets/logos/tinyml.png" alt="Logo" />
-          <img src="src/assets/logos/openbci.png" alt="Logo" />
+          <img src="assets/logos/NTX_Logo.png" alt="Logo" />
+          <img src="assets/logos/UIELogo.png" alt="Logo" />
+          <img src="assets/logos/UCB.png" alt="Logo" />
+          <img src="assets/logos/cidimec.png" alt="Logo" />
+          <img src="assets/logos/backyardbrains.png" alt="Logo" />
+          <img src="assets/logos/tinyml.png" alt="Logo" />
+          <img src="assets/logos/openbci.png" alt="Logo" />
         </div>
       </div>
     </div>

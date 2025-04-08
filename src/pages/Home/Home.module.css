@@ -39,7 +39,7 @@
   height: calc(100svh -  106.797px);  
   font-weight: 400;
 
-  background-image: url(/ntxucblapaz.github.io/src/assets/images/hero-banner-bacground.jpeg);
+  background-image: url(/src/assets/images/hero-banner-bacground.jpeg);
   background-size: cover;
   background-position: center;
 
@@ -221,7 +221,7 @@
   flex-direction: column;
   gap: 1.5rem;
   margin-top: 1.8rem;
-  background-image: url(/ntxucblapaz.github.io/src/assets/images/join-us-background.png);
+  background-image: url(/src/assets/images/join-us-background.png);
   background-size: cover;
   background-position: center;
   color: var(--text-color-dark);

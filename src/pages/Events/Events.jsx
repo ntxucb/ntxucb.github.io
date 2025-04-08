@@ -83,13 +83,13 @@ export const Events = () => {
         <h2 className="title-section">Colaboradores</h2>
         <div className="row">
           <div className="colaborador">
-            <img src="src/assets/images/placeholder-cuadrado.jpg" alt="" />
+            <img src="assets/images/placeholder-cuadrado.jpg" alt="" />
           </div>
           <div className="colaborador">
-            <img src="src/assets/images/placeholder-cuadrado.jpg" alt="" />
+            <img src="assets/images/placeholder-cuadrado.jpg" alt="" />
           </div>
           <div className="colaborador">
-            <img src="src/assets/images/placeholder-cuadrado.jpg" alt="" />
+            <img src="assets/images/placeholder-cuadrado.jpg" alt="" />
           </div>
         </div>
 
