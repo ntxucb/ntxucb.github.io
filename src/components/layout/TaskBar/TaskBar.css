@@ -39,9 +39,22 @@
   color: var(--primary-color);
 }
 
+.navbar__img{
+  width: 150px; /* Ajustar el tamaño de la imagen */
+  height: auto; /* Mantener la proporción de la imagen */
+  margin-right: 1rem; /* Espacio entre la imagen y el texto */
+}
+
 @media (max-width: 768px) {
   .nav-link {
     text-align: center; /* Centrar enlaces en dispositivos pequeños */
     padding: 0.5rem 0;
   }
+
+  .navbar__img{
+    width: 100px; /* Ajustar el tamaño de la imagen en móviles */
+    height: auto; /* Mantener la proporción de la imagen */
+  }
+
+
 }
