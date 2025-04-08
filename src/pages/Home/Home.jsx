@@ -4,6 +4,7 @@ import QuoteCard from "../../components/common/QuoteCard/QuoteCard";
 import InfoCard from "../../components/common/InfoCard/InfoCard";
 import FeatureCard from "../../components/common/FeatureCard/FeatureCard";
 import TeamSectionComp from "../../components/common/TeamSection/TeamSection";
+import EventModal from "../../components/common/EventModal/EventModal";
 
 
 const HomePage = () => {
@@ -12,6 +13,32 @@ const HomePage = () => {
   const sectionRef = useRef();
 
   const [backgroundProgress, setBackgroundProgress] = useState(0);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+
+  useEffect(() => {
+    const yaVisto = localStorage.getItem("eventoVisto");
+    const yaMostradoEstaSesion = sessionStorage.getItem("eventModalShown");
+  
+    if (!yaVisto && !yaMostradoEstaSesion) {
+      setTimeout(() => setIsModalOpen(true), 1000);
+      sessionStorage.setItem("eventModalShown", "true");
+    }
+  }, []);
+
+  const handleCloseModal = () => {
+    localStorage.setItem("eventoVisto", "true");
+    setIsModalOpen(false);
+  };
+
+  useEffect(() => {
+    const alreadyShown = sessionStorage.getItem("eventModalShown");
+    if (!alreadyShown) {
+      setTimeout(() => setShowModal(true), 1000); 
+      sessionStorage.setItem("eventModalShown", "true");
+    }
+  }, []);
 
   useEffect(function () {
     const scrollView = scrollRef.current;
@@ -32,6 +59,9 @@ const HomePage = () => {
 
   return (
     <div className={styles["landing-page scroll-view"]} ref={scrollRef}>
+
+    <EventModal isOpen={isModalOpen} onClose={handleCloseModal} />
+
 
       <div className={styles["hero-banner"]}>
         <div className={styles["hero-banner__content"]}>
