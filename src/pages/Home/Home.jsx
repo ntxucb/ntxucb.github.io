@@ -1,156 +1,209 @@
-import React, { useState, useEffect } from "react";
-import { TaskBar } from "../../components/layout/TaskBar/TaskBar";
-import Footer from "../../components/layout/Footer/Footer";
-import gif from "../../assets/logos/NTXUCB_Logo_first_github.gif";
-import ntxLogo from "../../assets/logos/NTX_Logo.png"; 
-import UIE from "../../assets/logos/UIELogo.png";
-import UCB from "../../assets/logos/UCB.png";
-import cidimec from "../../assets/logos/cidimec.png";
-import backyard from "../../assets/logos/backyardbrains.png";
-import tinyml from "../../assets/logos/tinyml.png";
-import openbci from "../../assets/logos/openbci.png";
-import "./Home.css";
+import React, { useEffect, useRef, useState } from "react";
+import styles from "./Home.module.css";
+import QuoteCard from "../../components/common/QuoteCard/QuoteCard";
+import InfoCard from "../../components/common/InfoCard/InfoCard";
+import FeatureCard from "../../components/common/FeatureCard/FeatureCard";
+import TeamSectionComp from "../../components/common/TeamSection/TeamSection";
 
-export const Home = () => {
-  const [showButton, setShowButton] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowButton(window.scrollY > 300);
-    };
-    window.addEventListener("scroll", handleScroll);
+const HomePage = () => {
+  const scrollRef = useRef();
+  const canvasRef = useRef();
+  const sectionRef = useRef();
+
+  const [backgroundProgress, setBackgroundProgress] = useState(0);
+
+  useEffect(function () {
+    const scrollView = scrollRef.current;
+    const canvasView = canvasRef.current;
+    const sectionView = sectionRef.current;
+
+    function checkScroll() {
+      const sectionBottom = sectionView.getBoundingClientRect().bottom;
+      const canvasHeight = canvasView.getBoundingClientRect().height;
+      const offsetY = Math.min(0, -(canvasHeight - sectionBottom));
+      canvasView.style.top = `${offsetY}px`;
+    }
+    scrollView.addEventListener("scroll", checkScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      scrollView.removeEventListener("scroll", checkScroll);
     };
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   return (
-    <div>
-      <img src={gif} alt="Descripción del GIF" className="main-gif" />
-      <div className="home-container">
-        <h2 className="main-title">Neurotech UCB</h2>
-        <p className="main-description">
-          NeurotechUCB is the neurotechnology student initiative from UCB. Our
-          goal is to work on issues related to neuroscience with a technological
-          and data-oriented approach. We aim to develop innovative solutions,
-          and train others with the same goal. We are located in La Paz,
-          Bolivia.
-        </p>
+    <div className={styles["landing-page scroll-view"]} ref={scrollRef}>
 
-        <section className="info-section">
-          <div className="info-card">
-            <h3 className="info-title">Mission</h3>
-            <p className="info-text">
-              As a community, we are committed to the personal and professional
-              growth of our members, as well as to the development of innovative
-              solutions that contribute to the well-being of our society.
-            </p>
-            <ul className="info-list">
-              <li>Organize academic events, workshops, and conferences.</li>
-              <li>Provide networking opportunities among students.</li>
-              <li>Promote research and multidisciplinary projects.</li>
-              <li>Encourage participation in university life.</li>
-            </ul>
-            <p className="info-text">
-              Our mission is to foster research, education, and the practical
-              application of neurotechnology at La Paz, promoting a
-              multidisciplinary approach that integrates knowledge and skills
-              from diverse fields to address neuroscience challenges.
-            </p>
-          </div>
+      <div className={styles["hero-banner"]}>
+        <div className={styles["hero-banner__content"]}>
+          <h1 className={styles["hero-banner__title"]}> NEUROTECHX UCB </h1>
+          <p className={styles["hero-banner__description"]}>
+            <span className={styles["hero-banner__description--highlight"]}>
+              Neurotechnology Innovative Club
+            </span>
 
-          <div className="info-card">
-            <h3 className="info-title">Vision</h3>
-            <p className="info-text">
-              To be recognized as leaders in the promotion and application of
-              neurotechnology in the Latin American community, driving
-              significant advances that improve people's quality of life and
-              promote sustainable development in our region.
-            </p>
-          </div>
-        </section>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
 
-        <section className="sponsors-section">
-          <h3 className="sponsors-title">Our Sponsors</h3>
-          <div className="sponsors-logos">
-            <a
-              href="https://neurotechx.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={ntxLogo} alt="Neurotech" className="sponsor-logo" />
-            </a>
-            <a
-              href="https://lpz.ucb.edu.bo/unidad-de-investigacion-experimental/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={UIE} alt="UIE" className="sponsor-logo" />
-            </a>
-            <a
-              href="https://www.ucb.edu.bo/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={UCB}
-                alt="Universidad Catolica Boliviana"
-                className="sponsor-logo"
-              />
-            </a>
-            <a
-              href="https://www.imt.ucb.edu.bo/cidimec/author/4xqr1/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={cidimec} alt="Cidimec" className="sponsor-logo" />
-            </a>
-            <a
-              href="https://backyardbrains.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={backyard}
-                alt="BackyardBrains"
-                className="sponsor-logo"
-              />
-            </a>
-            <a
-              href="https://www.tinyml.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={tinyml} alt="Tinyml" className="sponsor-logo" />
-            </a>
-            <a
-              href="https://openbci.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={openbci} alt="OpenBCI" className="sponsor-logo" />
+          <div className={styles["hero-banner__cta"]}>
+            <a href="#about" className={styles["hero-banner__cta-button"]}>
+              More Info
             </a>
           </div>
-        </section>
-
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d804.1208444642009!2d-68.11214902361621!3d-16.522819947208983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f20ee187a3103%3A0x2f2bb2b7df32a24d!2sUniversidad%20Cat%C3%B3lica%20Boliviana%20%22San%20Pablo%22!5e0!3m2!1ses!2sus!4v1729721207070!5m2!1ses!2sus"
-          width="100%"
-          height="400"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-          title="Mapa de la Universidad Católica Boliviana"
-        ></iframe>
+        </div>
+        <div className={styles["hero-banner__logo"]}>
+          <img src="assets/logos/NTX_BLUE.png" alt="Logo" />
+        </div>
       </div>
 
+      <div className={styles["section-container--row"]} id="about">
+        <div className={styles["about-section__image"]}>
+          <img src="src/assets/images/image1.png" alt="Logo" />
+        </div>
+        <div className={styles["about-section__content"]}>
+          <h2 className={styles["section-container__title"]}>ABOUT NTX UCB</h2>
+          <p className={styles["about-section__description"]}>
+            NeurotechX UCB is the neurotechnology student initiative from Universidad Católica Boliviana “San Pablo” in La Paz, Bolivia. Our club goal is to work on issues related to neuroscience with a technological and data-oriented approach. We aim to develop innovative solutions, and train others with the same goal.
+          </p>
+          <p className={styles["about-section__description"]}>
+            NTX UCB was born on 2021, during the COVID-19 lock down. It was formed due to the curiosity for Neuroscience and Data Science from a group of Psychology students of the UCB. We were the first NeurotechX club in Bolivia, and we´re really proud of it.
+          </p>
+
+          <div className={styles["about-section__cta"]}>
+            <a href="#mission" className={styles["about-section__cta-button"]}>
+              More Info
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles["section-container--row"]} id="philosophy">
+
+        <FeatureCard
+          number={1}
+          title="Mission"
+          description="To promote research, education and practical application of neurotechnology in La Paz through a multidisciplinary approach, offering academic events, networking and student participation opportunities."
+        />
+
+        <FeatureCard
+          number={2}
+          title="Vision"
+          description="To be recognized as a leading student initiative in the field of neurotechnology in La Paz, Bolivia, promoting research, education and practical application of neurotechnology through a multidisciplinary approach."
+        />
+
+        <FeatureCard
+          number={3}
+          title="Values"
+          description="Our 3 pilars are:"
+          list={["COMMUNITY", "INNOVATION", "EDUCATION"]}
+        />
+
+      </div>
+
+      <div className={styles["section-container--column"]} id="testimonials">
+        <h2 className={styles["section-container__title"]}>TESTIMONIALS</h2>
+        <div className={styles["cards-container"]}>
+          <QuoteCard
+            image="assets/project-images/Portrait_Placeholder.png"
+            quote={"I´m really proud of being part of this club. I´ve learned a lot of things that I didn´t even know existed. I´m really grateful for the opportunity to be here"}
+            name="Juan Perez"
+            position="President of NTX UCB"
+          />
+          <QuoteCard
+            image="assets/project-images/Portrait_Placeholder.png"
+            quote={"I´m really proud of being part of this club. I´ve learned a lot of things that I didn´t even know existed. I´m really grateful for the opportunity to be here"}
+            name="Juan Perez"
+            position="President of NTX UCB"
+          />
+          <QuoteCard
+            image="assets/project-images/Portrait_Placeholder.png"
+            quote={"I´m really proud of being part of this club. I´ve learned a lot of things that I didn´t even know existed. I´m really grateful for the opportunity to be here"}
+            name="Juan Perez"
+            position="President of NTX UCB"
+          />
+        </div>
+      </div>
+
+      <div className={styles["section-container--column"]} id="our-club">
+        <h3 className={styles["section-container__title"]}>OUR CLUB</h3>
+        <TeamSectionComp
+          layout={["'a a b'", "'a a c'", "'d e e'"]}
+          images={[
+            { gridArea: "b", url: "src/assets/images/team1.png" },
+            { gridArea: "c", url: "src/assets/images/team2.png" },
+            { gridArea: "a", url: "src/assets/images/team3.png" },
+            { gridArea: "d", url: "src/assets/images/team4.png" },
+            { gridArea: "e", url: "src/assets/images/team5.png" },
+          ]}
+        />
+      </div>
+
+      <div className={styles["section-container--column"]} id="news">
+        <h2 className={styles["section-container__title"]}>NEWS</h2>
+        <div className={styles["cards-container--column"]}>
+
+          <InfoCard
+            image="assets/project-images/wide_placeholder.webp"
+            title="New project in the works"
+            link="#"
+            date="12/12/2021"
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
+          />
+
+          <InfoCard
+            image="assets/project-images/wide_placeholder.webp"
+            title="New project in the works"
+            link="#"
+            date="12/12/2021"
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
+          />
+
+          <InfoCard
+            image="assets/project-images/wide_placeholder.webp"
+            title="New project in the works"
+            link="#"
+            date="12/12/2021"
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
+          />
+
+        </div>
+      </div>
+
+      <div className={styles["join-us-section"]} id="join-us">
+        <div className={styles["join-us-section__content"]}>
+          <h2 className={styles["join-us-section__title"]}>JOIN US</h2>
+          <p className={styles["join-us-section__description"]}>
+            Are you curious about Neuroscience, Artificial Intelligence, and Data Science?
+            Neurotech UCB invites you to join our incredible community and explore the fascinating world of neurotechnology.
+          </p>
+          <p className={styles["join-us-section__description"]}>
+            We are looking for students for the following areas:
+            <span className={styles["join-us-section__description--highlight"]}>
+              SOCIAL MEDIA, SOFTWARE,  DATA SCIENCE, HARDWARE ENGINEERING, OUTREACH, EDUCATION
+            </span>
+          </p>
+
+          <div className={styles["join-us-section__cta"]}>
+            <a href="#join" className={styles["join-us-section__cta-button"]}>
+              Join Us
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles["sponsors-section"]} id="our-sponsors">
+        <h2 className={styles["sponsors-section__title"]}>Our Sponsors</h2>
+        <div className={styles["sponsors-section__logos"]}>
+          <img src="src/assets/logos/NTX_Logo.png" alt="Logo" />
+          <img src="src/assets/logos/UIELogo.png" alt="Logo" />
+          <img src="src/assets/logos/UCB.png" alt="Logo" />
+          <img src="src/assets/logos/cidimec.png" alt="Logo" />
+          <img src="src/assets/logos/backyardbrains.png" alt="Logo" />
+          <img src="src/assets/logos/tinyml.png" alt="Logo" />
+          <img src="src/assets/logos/openbci.png" alt="Logo" />
+        </div>
+      </div>
     </div>
   );
 };
+
+export default HomePage;
