@@ -226,6 +226,21 @@
         height: auto;
     }
 
+    .info-event{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .info-event__content{
+        text-align: center;
+    }
+
+    .section__time-element{
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 1.5rem;
+    }
+
 }
 
 

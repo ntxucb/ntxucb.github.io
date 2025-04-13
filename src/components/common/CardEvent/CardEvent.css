@@ -8,4 +8,27 @@
 
 .card{
     margin: 5px;
+    min-height: 300px;
+    min-width: 350px;
+}
+
+.card-title{
+    font-family: var(--font-family);
+    color: var(--primary-color);
+}
+
+.card-text-secondary{
+    font-family: var(--secondary-font-family);
+    color: var(--text-color-light);
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+}
+
+/*alinear boton al final de su padre verticalmente*/
+.card-button {
+    margin-bottom: 0;
+    margin-top: auto;
 }

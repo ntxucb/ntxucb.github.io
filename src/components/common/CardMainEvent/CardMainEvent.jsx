@@ -1,9 +1,6 @@
 import PropTypes from "prop-types";
 import "./CardMainEvent.css";
 
-// import imagenPrueba from "../../assets/images/Podcast1.png";
-
-
 const CardMainEvent = ({ title, description, image, buttonText, onButtonClick }) => {
     return (
         <div className="container alto">
@@ -22,10 +19,9 @@ const CardMainEvent = ({ title, description, image, buttonText, onButtonClick })
                     </div>
 
                     {/* Columna de Imagen */}
-                    <div className="col-md-6">
+                    <div className="col-md-6 card-img-container">
                         <img
-                            // src={imagenPrueba || image}
-                            src="https://anmdecolombia.org.co/wp-content/uploads/2021/07/el-cerebro.jpg"
+                            src={image}
                             alt="Neurotech"
                             className="img-fluid card-img"
                         />
@@ -35,13 +31,13 @@ const CardMainEvent = ({ title, description, image, buttonText, onButtonClick })
         </div>
     );
 };
-// ✅ Validación de los props con PropTypes
+
 CardMainEvent.propTypes = {
-    title: PropTypes.string.isRequired,         // title debe ser un string obligatorio
-    description: PropTypes.string,              // description es un string opcional
-    image: PropTypes.string,                    // image es un string opcional
-    buttonText: PropTypes.string,               // buttonText es un string opcional
-    onButtonClick: PropTypes.func               // onButtonClick es una función opcional
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    image: PropTypes.string,
+    buttonText: PropTypes.string,
+    onButtonClick: PropTypes.func
 };
 
 export default CardMainEvent;

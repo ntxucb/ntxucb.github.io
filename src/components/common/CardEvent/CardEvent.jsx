@@ -7,9 +7,9 @@ const CardEvent = ({ title, description, image, buttonText, onButtonClick }) => 
             {image && <img src={image} className="card-img-top" alt={title} />}
             <div className="card-body">
                 <h5 className="card-title">{title}</h5>
-                <p className="card-text">{description}</p>
+                <p className="card-text-secondary">{description}</p>
                 {buttonText && (
-                    <button className="btn btn-primary" onClick={onButtonClick}>
+                    <button className="btn btn-primary card-button" onClick={onButtonClick}>
                         {buttonText}
                     </button>
                 )}
