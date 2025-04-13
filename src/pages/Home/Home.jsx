@@ -5,7 +5,7 @@ import InfoCard from "../../components/common/InfoCard/InfoCard";
 import FeatureCard from "../../components/common/FeatureCard/FeatureCard";
 import TeamSectionComp from "../../components/common/TeamSection/TeamSection";
 import EventModal from "../../components/common/EventModal/EventModal";
-
+import neuroxplore_banner from "../../assets/images/neuroxplore/banner.png";
 
 const HomePage = () => {
   const scrollRef = useRef();
@@ -20,7 +20,7 @@ const HomePage = () => {
   useEffect(() => {
     const yaVisto = localStorage.getItem("eventoVisto");
     const yaMostradoEstaSesion = sessionStorage.getItem("eventModalShown");
-  
+
     if (!yaVisto && !yaMostradoEstaSesion) {
       setTimeout(() => setIsModalOpen(true), 1000);
       sessionStorage.setItem("eventModalShown", "true");
@@ -35,7 +35,7 @@ const HomePage = () => {
   useEffect(() => {
     const alreadyShown = sessionStorage.getItem("eventModalShown");
     if (!alreadyShown) {
-      setTimeout(() => setShowModal(true), 1000); 
+      setTimeout(() => setShowModal(true), 1000);
       sessionStorage.setItem("eventModalShown", "true");
     }
   }, []);
@@ -60,7 +60,9 @@ const HomePage = () => {
   return (
     <div className={styles["landing-page scroll-view"]} ref={scrollRef}>
 
-    <EventModal isOpen={isModalOpen} onClose={handleCloseModal} />
+      <EventModal isOpen={isModalOpen} onClose={handleCloseModal} onClick={() => {
+        window.location.href = `/ntxucblapaz.github.io/events/1`;
+      }} image={neuroxplore_banner} title="NEUROXPLORE" date="29 de abril - 10 de mayo" description="Evento insignia organizado por el club Neurotech UCB con el objetivo de fomentar la innovación, el conocimiento y" highlighted="el desarrollo de soluciones tecnológicas aplicadas a la neurociencia." continueDescription="Incluye formación virtual, exposiciones de proyectos, actividades prácticas y una hackathon intensiva." />
 
 
       <div className={styles["hero-banner"]}>

@@ -2,7 +2,7 @@ import React from "react";
 import "./EventModal.css";
 import placeholderImage from "../../../assets/images/wide_placeholder.webp";
 
-const EventModal = ({ isOpen, onClose }) => {
+const EventModal = ({ isOpen, onClose, onClick, title, image, date, description, highlighted, continueDescription }) => {
   if (!isOpen) return null;
 
   return (
@@ -10,16 +10,16 @@ const EventModal = ({ isOpen, onClose }) => {
       <div className="event-modal-content">
         <button className="event-modal-close" onClick={onClose}>✕</button>
         <div className="event-modal-image">
-          <img src={placeholderImage} alt="Evento" />
+          <img src={image} alt="Evento" />
         </div>
         <div className="event-modal-text">
-          <h2 className="event-modal-title">¡No te pierdas este evento!</h2>
-          <p className="event-modal-date">📅 <strong>20 de abril</strong></p>
+          <h2 className="event-modal-title">{title}</h2>
+          <p className="event-modal-date">📅 <strong>{date}</strong></p>
           <p className="event-modal-description">
-            Prepárate para un día lleno de <span className="highlight">charlas, talleres y más sorpresas</span> en el auditorio principal.
+            {description} <span className="highlight">{highlighted}</span> {continueDescription}
           </p>
-          <button className="event-modal-button" onClick={onClose}>
-            Entendido
+          <button className="event-modal-button" onClick={onClick}>
+            Más Información
           </button>
         </div>
       </div>

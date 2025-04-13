@@ -48,7 +48,7 @@
   border: none;
   font-size: 1.8rem;
   cursor: pointer;
-  color: #444;
+  color: var(--text-color-dark);
 }
 
 .event-modal-image img {
