@@ -13,14 +13,12 @@ export function TaskBar() {
         <Navbar.Brand as={Link} to="/ntxucblapaz.github.io/">
           <img
             src={NTX_Logo}
-            width="150"
-            className="d-inline-block align-top"
+            className="d-inline-block align-top navbar__img"
             alt="Neurotech La Paz"
           />
           <img
             src={NTXUCB_Logo}
-            width="150"
-            className="d-inline-block align-top"
+            className="d-inline-block align-top navbar__img"
             alt="Neurotech La Paz"
           />
         </Navbar.Brand>

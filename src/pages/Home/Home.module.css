@@ -323,7 +323,7 @@
     flex-direction: column;
     height: 100%;
     padding: 0;
-    height: calc(100svh -  106.797px);  
+    height: calc(100svh -  84.25px);  
   }
 
   .hero-banner__content{
