@@ -2,7 +2,7 @@ import JoseDiaz from "../images/neuroxplore/organizers/José Isaí Díaz Soza - 
 import JoseReyes from "../images/neuroxplore/organizers/José Gabriel Reyes Jaldin.jpg"
 import KamilaVillanueva from "../images/neuroxplore/organizers/Kamila-Julieta-Villanueva-Calle-comisión-comida.jpeg"
 import ValeriaPalacios from "../images/neuroxplore/organizers/Valeria-Nicol-Palacios-Monrroy-comisión-de-comida.jpeg"
-import AdrianaCabrera from "../images/neuroxplore/organizers/Adriana Cabrera Elías- Comisión Hackaton BAW .jpg"
+import AdrianaCabrera from "../images/neuroxplore/organizers/Adriana Cabrera Elías- Comisión HACKATON BAW .jpg"
 import AlisonAguilar from "../images/neuroxplore/organizers/ALISON Aguilar Pabon .jpg"
 import AndresHinojosa from "../images/neuroxplore/organizers/AndresHinojosa.png"
 import AngelaSilva from "../images/neuroxplore/organizers/Ángela Melany Silva Fernández_.jpg"
