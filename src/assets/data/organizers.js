@@ -2,7 +2,7 @@ import JoseDiaz from "../images/neuroxplore/organizers/José Isaí Díaz Soza - 
 import JoseReyes from "../images/neuroxplore/organizers/José Gabriel Reyes Jaldin.jpg"
 import KamilaVillanueva from "../images/neuroxplore/organizers/Kamila-Julieta-Villanueva-Calle-comisión-comida.jpeg"
 import ValeriaPalacios from "../images/neuroxplore/organizers/Valeria-Nicol-Palacios-Monrroy-comisión-de-comida.jpeg"
-import AdrianaCabrera from "../images/neuroxplore/organizers/Adriana Cabrera Elías- Comisión HACKATON BAW .jpg"
+import AdrianaCabrera from "../images/neuroxplore/organizers/Adriana Cabrera Elías- Comisión Hackaton BAW .jpg"
 import AlisonAguilar from "../images/neuroxplore/organizers/ALISON Aguilar Pabon .jpg"
 import AndresHinojosa from "../images/neuroxplore/organizers/AndresHinojosa.png"
 import AngelaSilva from "../images/neuroxplore/organizers/Ángela Melany Silva Fernández_.jpg"
@@ -96,35 +96,35 @@ export const organizersData = [
     "id": 9,
     "name": "Juan Dilan Nina Magueño",
     "picture": JuanNina,
-    "team": "Cerebral Dissection",
+    "team": "Brain Dissection",
     "university": "Universidad Católica Boliviana",
   },
   {
     "id": 10,
     "name": "ROMULO ROBERTO VERASTEGUI MAMANI",
     "picture": RomuloVerastegui,
-    "team": "Cerebral Dissection",
+    "team": "Brain Dissection",
     "university": "Universidad Católica Boliviana",
   },
   {
     "id": 11,
     "name": "Alison Aguilar Pabon",
     "picture": AlisonAguilar,
-    "team": "Cerebral Dissection",
+    "team": "Brain Dissection",
     "university": "Universidad Mayor de San Andrés",
   },
   {
     "id": 12,
     "name": "Kamila Paz Soldán",
     "picture": KamilaPaz,
-    "team": "Cerebral Dissection",
+    "team": "Brain Dissection",
     "university": "Universidad Católica Boliviana",
   },
   {
     "id": 13,
     "name": "Pavel Genaro Vera Sanchez",
     "picture": PavelVera,
-    "team": "Cerebral Dissection",
+    "team": "Brain Dissection",
     "university": "Universidad Católica Boliviana",
   },
   {
@@ -279,48 +279,48 @@ export const organizersData = [
     "id": 36,
     "name": "Litzy Ximena Conde Alvarado",
     "picture": LitzyConde,
-    "tema": "Swags",
+    "team": "Swag & Merchandise",
     "university": "Universidad Católica Boliviana",
   },
   {
     "id": 37,
     "name": "Jhosue Callejas",
     "picture": JhosueCallejas,
-    "team": "Swags",
+    "team": "Swag & Merchandise",
     "university": "Universidad Católica Boliviana",
   },
   {
     "id": 38,
     "name": "Ángela Melany Silva Fernández",
     "picture": AngelaSilva,
-    "team": "Swags",
+    "team": "Swag & Merchandise",
     "university": "Universidad Mayor de San Andrés",
   },
   {
     "id": 39,
     "name": "Raphael Antonio Aramayo Vidal",
     "picture": RaphaelAramayo,
-    "team": "Swags",
+    "team": "Swag & Merchandise",
     "university": "Universidad Católica Boliviana",
   },
   {
     "id": 40,
     "name": "Ivana Severich Gomez",
-    "team": "Swags",
+    "team": "Swag & Merchandise",
     "university": "Universidad Católica Boliviana"
   },
   {
     "id": 41,
     "name": "Alejandro Johann Cori Aliaga",
     "picture": AlejandroCori,
-    "team": "Swags",
+    "team": "Swag & Merchandise",
     "university": "Universidad Católica Boliviana",
   },
   {
     "id": 42,
     "name": "José Luis Alcazar von Landwüst",
     "picture": JoseAlcazar,
-    "title": "Lead Swags Commission",
+    "title": "Lead Swag & Merchandise Commission",
   },
   {
     "id": 43,
@@ -391,7 +391,7 @@ export const organizersData = [
     "id": 53,
     "name": "Sebastian Castro Rivas",
     "picture": SebastianCastro,
-    "team": "HACKATON",
+    "team": "Hackaton",
     "university": "Universidad Católica Boliviana",
   }
 ];
