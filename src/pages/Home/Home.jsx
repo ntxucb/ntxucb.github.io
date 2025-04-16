@@ -19,9 +19,11 @@ const HomePage = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const yaVisto = localStorage.getItem("eventoVisto");
+    // const yaVisto = localStorage.getItem("eventoVisto");
+    const yaVisto = false
     const yaMostradoEstaSesion = sessionStorage.getItem("eventModalShown");
 
     if (!yaVisto && !yaMostradoEstaSesion) {
