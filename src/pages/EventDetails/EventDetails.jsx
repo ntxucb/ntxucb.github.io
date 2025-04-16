@@ -60,8 +60,6 @@ function EventDetails() {
             </p>
         ));
 
-    const animationClass = totalGroups > 1 ? (fade ? "fade-out" : "fade-in") : "";
-
     return (
         <>
             <div className="section--row" id="main-info">
