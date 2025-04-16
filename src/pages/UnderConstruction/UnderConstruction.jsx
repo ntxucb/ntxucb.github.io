@@ -1,30 +1,27 @@
 import React from "react";
-import { TaskBar } from "../../components/layout/TaskBar/TaskBar";
-import Footer from "../../components/layout/Footer/Footer";
-import { FaTools } from 'react-icons/fa'; 
+import { FaBrain } from "react-icons/fa";
+import { GiLightningArc } from "react-icons/gi";
 import "./UnderConstruction.css";
 
 const UnderConstruction = () => {
   return (
     <>
-
-      <div className="forbidden-container">
-        <div className="forbidden-content">
-          <div className="forbidden-icon">
-            <FaTools size={80} color="#FE8A9F" /> 
+      <div className="under-construction-wrapper">
+        <div className="under-construction-content">
+          <div className="under-construction-icon overloaded-brain">
+            <FaBrain size={80} color="var(--primary-color)" />
+            <GiLightningArc size={40} color="var(--accent-color)" className="lightning-effect" />
           </div>
-          <h1 className="forbidden-title">🚧</h1>
-          <h2 className="forbidden-subtitle">Page Under Construction</h2>
-          <p className="forbidden-message">
-            Sorry, we are working on something amazing. Come back soon!
+          <h1 className="under-construction-title">Cognitive Overload</h1>
+          <p className="under-construction-message">
+            Our neurons are firing non-stop to bring you something incredible. Please check back later!
           </p>
-          <a href="/ntxucblapaz.github.io" className="back-button">
-            <i className="fa fa-arrow-left"></i> 
+          <a href="/" className="under-construction-button">
+            <i className="fa fa-arrow-left" style={{ marginRight: "8px" }}></i>
             Go Back
           </a>
         </div>
       </div>
-
     </>
   );
 };
