@@ -8,6 +8,7 @@ import EventModal from "../../components/common/EventModal/EventModal";
 import neuroxplore_banner from "../../assets/images/neuroxplore/events/wide/1.png"
 import AndresAracena from "../../assets/images/neuroxplore/organizers/Andres-Aracena-Ocampo-President.jpg"
 import NeurotechUCB from "../../assets/logos/NeuroTechUCB.png";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
   const scrollRef = useRef();
@@ -63,7 +64,7 @@ const HomePage = () => {
     <div className={styles["landing-page scroll-view"]} ref={scrollRef}>
 
       <EventModal isOpen={isModalOpen} onClose={handleCloseModal} onClick={() => {
-        window.location.href = `/events/1`;
+        navigate('/events/1');
       }} image={neuroxplore_banner} title="NEUROXPLORE" date="28 de abril - 10 de mayo" description="Evento insignia organizado por el club Neurotech UCB con el objetivo de fomentar la innovación, el conocimiento y" highlighted="el desarrollo de soluciones tecnológicas aplicadas a la neurociencia." continueDescription="Incluye formación virtual, exposiciones de proyectos, actividades prácticas y una hackathon intensiva." />
 
 
