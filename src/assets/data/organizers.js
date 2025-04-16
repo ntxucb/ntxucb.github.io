@@ -6,7 +6,7 @@ import AdrianaCabrera from "../images/neuroxplore/organizers/Adriana Cabrera El�
 import AlisonAguilar from "../images/neuroxplore/organizers/ALISON Aguilar Pabon .jpg"
 import AndresHinojosa from "../images/neuroxplore/organizers/AndresHinojosa.png"
 import AngelaSilva from "../images/neuroxplore/organizers/Ángela Melany Silva Fernández_.jpg"
-import ArianneRios from "../images/neuroxplore/organizers/Arianne rios Llanos .jpg"
+import ArianneRios from "../images/neuroxplore/organizers/Arianne Rios Llanos .jpg"
 import JhosueCallejas from "../images/neuroxplore/organizers/CallejasCespedesJhosue.jpg"
 import CarlesAndre from "../images/neuroxplore/organizers/Carles Quispe Tarqui - Comision Sponsors y Aliados BAW 2025.jpeg"
 import LitzyConde from "../images/neuroxplore/organizers/Conde_Alvarado_Litzy_Ximena_CP.jpg"
