@@ -3,9 +3,7 @@ import { useParams } from "react-router-dom";
 import "./EventDetails.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faLocationDot } from "@fortawesome/free-solid-svg-icons";
-import portraitPlaceholder from "../../assets/images/Portrait_Placeholder.png";
 import { eventsData } from "../../assets/data/events";
-import { organizersData } from "../../assets/data/organizers";
 
 function EventDetails() {
     const { id } = useParams();
@@ -13,9 +11,6 @@ function EventDetails() {
 
     const [timeLeft, setTimeLeft] = useState({});
     const [eventStarted, setEventStarted] = useState(false);
-    const [visibleGroupIndex, setVisibleGroupIndex] = useState(0);
-    const [fade, setFade] = useState(false);
-    const itemsPerGroup = 6;
 
     useEffect(() => {
         if (!event) return;
@@ -43,28 +38,6 @@ function EventDetails() {
         const interval = setInterval(updateCountdown, 60000);
         return () => clearInterval(interval);
     }, [event]);
-
-    const fullOrganizers = organizersData.filter(org =>
-        event?.details.organizers.includes(org.id)
-    );
-
-    const totalGroups = Math.ceil(fullOrganizers.length / itemsPerGroup);
-    const currentGroup = fullOrganizers.slice(
-        visibleGroupIndex * itemsPerGroup,
-        (visibleGroupIndex + 1) * itemsPerGroup
-    );
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setFade(true);
-            setTimeout(() => {
-                setVisibleGroupIndex(prev => (prev + 1) % totalGroups);
-                setFade(false);
-            }, 500);
-        }, 8000);
-
-        return () => clearInterval(interval);
-    }, [totalGroups]);
 
     if (!event) return <div>Evento no encontrado</div>;
 
@@ -153,20 +126,6 @@ function EventDetails() {
                         <iframe src={locationMap} loading="lazy" title="mapa del evento"></iframe>
                     </div>
                 )}
-            </div>
-
-            <div className="section--column" id="organizers">
-                <h2 className="section__content-title--secondary">Organizadores</h2>
-                <div className={`section--row cards-container ${fade ? "fade-out" : "fade-in"}`}>
-                    {currentGroup.map((org, index) => (
-                        <div className="profile" key={index}>
-                            <div className="profile__picture">
-                                <img src={org.picture || portraitPlaceholder} alt={`Organizador: ${org.name}`} />
-                            </div>
-                            <p className="profile__name">{org.name.toUpperCase()}</p>
-                        </div>
-                    ))}
-                </div>
             </div>
         </>
     );
