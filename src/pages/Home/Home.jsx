@@ -5,7 +5,7 @@ import InfoCard from "../../components/common/InfoCard/InfoCard";
 import FeatureCard from "../../components/common/FeatureCard/FeatureCard";
 import TeamSectionComp from "../../components/common/TeamSection/TeamSection";
 import EventModal from "../../components/common/EventModal/EventModal";
-import neuroxplore_banner from "../../assets/images/neuroxplore/banner.png";
+import neuroxplore_banner from "../../assets/images/neuroxplore/events/wide/1.png"
 
 const HomePage = () => {
   const scrollRef = useRef();
