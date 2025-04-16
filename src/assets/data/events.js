@@ -22,7 +22,7 @@ export const eventsData = [
         image: neuroxplore_banner_sqd,
         buttonText: "More info",
         onButtonClick: () => {
-            window.location.href = `/ntxucblapaz.github.io/events/1`;
+            window.location.href = `/events/1`;
         },
         details: {
             completeTitle: "NEUROXPLORE 2025 - Neurotechnology and Innovation Gathering",
@@ -45,7 +45,7 @@ export const eventsData = [
         image: bootcamp_sqd,
         buttonText: "More info",
         onButtonClick: () => {
-            window.location.href = `/ntxucblapaz.github.io/events/2`;
+            window.location.href = `/events/2`;
         },
         details: {
             completeTitle: "Neuroxplore Virtual Bootcamp",
@@ -68,7 +68,7 @@ export const eventsData = [
         image: feria_sqd,
         buttonText: "More info",
         onButtonClick: () => {
-            window.location.href = `/ntxucblapaz.github.io/events/3`;
+            window.location.href = `/events/3`;
         },
         details: {
             completeTitle: "Neuroxplore Project Fair",
@@ -91,7 +91,7 @@ export const eventsData = [
         image: diseccion_sqd,
         buttonText: "More info",
         onButtonClick: () => {
-            window.location.href = `/ntxucblapaz.github.io/events/4`;
+            window.location.href = `/events/4`;
         },
         details: {
             completeTitle: "Applied Brain Dissection for Neuroscience",
@@ -114,7 +114,7 @@ export const eventsData = [
         image: hackathon_sqd,
         buttonText: "More info",
         onButtonClick: () => {
-            window.location.href = `/ntxucblapaz.github.io/events/5`;
+            window.location.href = `/events/5`;
         },
         details: {
             completeTitle: "Neurotechnology Hackathon - NEUROXPLORE 2025",

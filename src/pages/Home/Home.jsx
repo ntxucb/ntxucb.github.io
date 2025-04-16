@@ -63,7 +63,7 @@ const HomePage = () => {
     <div className={styles["landing-page scroll-view"]} ref={scrollRef}>
 
       <EventModal isOpen={isModalOpen} onClose={handleCloseModal} onClick={() => {
-        window.location.href = `/ntxucblapaz.github.io/events/1`;
+        window.location.href = `/events/1`;
       }} image={neuroxplore_banner} title="NEUROXPLORE" date="28 de abril - 10 de mayo" description="Evento insignia organizado por el club Neurotech UCB con el objetivo de fomentar la innovación, el conocimiento y" highlighted="el desarrollo de soluciones tecnológicas aplicadas a la neurociencia." continueDescription="Incluye formación virtual, exposiciones de proyectos, actividades prácticas y una hackathon intensiva." />
 
 

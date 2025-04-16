@@ -10,7 +10,7 @@ export function TaskBar() {
     <Navbar expand="lg" id="navbar" >
       <Container>
         {/* Logo */}
-        <Navbar.Brand as={Link} to="/ntxucblapaz.github.io/">
+        <Navbar.Brand as={Link} to="/">
           <img
             src={NTX_Logo}
             className="d-inline-block align-top navbar__img"
@@ -31,35 +31,35 @@ export function TaskBar() {
           <Nav className="ms-auto">
             <Nav.Link
               as={Link}
-              to="/ntxucblapaz.github.io/"
+              to="/"
               className="nav-link"
             >
               Home
             </Nav.Link>
             <Nav.Link
               as={Link}
-              to="/ntxucblapaz.github.io/projects"
+              to="/projects"
               className="nav-link"
             >
               Projects
             </Nav.Link>
             <Nav.Link
               as={Link}
-              to="/ntxucblapaz.github.io/events"
+              to="/events"
               className="nav-link"
             >
               Events
             </Nav.Link>
             <Nav.Link
               as={Link}
-              to="/ntxucblapaz.github.io/podcast"
+              to="/podcast"
               className="nav-link"
             >
               Podcast
             </Nav.Link>
             <Nav.Link
               as={Link}
-              to="/ntxucblapaz.github.io/our_team"
+              to="/our_team"
               className="nav-link"
             >
               Our Team

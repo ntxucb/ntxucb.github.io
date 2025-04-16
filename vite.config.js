@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/ntxucblapaz.github.io/',
+  base: process.env.VITE_PUBLIC_BASE_PATH || '/',
 });

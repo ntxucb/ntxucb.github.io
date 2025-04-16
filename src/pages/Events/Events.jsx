@@ -17,7 +17,7 @@ export const Events = () => {
   const leadIdsToExclude = [48, 49];
 
   const handleEventClick = (eventId) => {
-    navigate(`/ntxucblapaz.github.io/events/${eventId}`);
+    navigate(`/events/${eventId}`);
   };
 
   const outstandingEvent = eventsData.find((event) => event.isOutstanding);
