@@ -33,7 +33,7 @@ import AraceliAriñez from "../images/neuroxplore/organizers/Araceli Ariñez - L
 import CamilaRibera from "../images/neuroxplore/organizers/Camila Alejandra Ribera Loma - Diseccion Cerebral y Feria.jpg"
 import DeyamireCostillas from "../images/neuroxplore/organizers/Deyamire Costillas Flores.jpg"
 import JoseAlcazar from "../images/neuroxplore/organizers/Jose Luis Alcázar von Landwüst.jpg"
-import JulianaMendoza from "../images/neuroxplore/organizers/Juliana Mendoza Gómez Feria Baw Lead.jpg"
+import JulianaMendoza from "../images/neuroxplore/organizers/Juliana Mendoza Gómez Feria BAW Lead.jpg"
 import LucianaSaavedra from "../images/neuroxplore/organizers/LucianaSaavedraAyarde.jpg"
 import RaphaelAramayo from "../images/neuroxplore/organizers/Raphael Antonio Aramayo Vidal.jpeg"
 import VeronicaSolares from "../images/neuroxplore/organizers/Verónica Solares Mamani.jpg"
