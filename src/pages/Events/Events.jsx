@@ -5,6 +5,10 @@ import CardEvent from "../../components/common/CardEvent/CardEvent";
 import CardMainEvent from "../../components/common/CardMainEvent/CardMainEvent";
 import { eventsData } from "../../assets/data/events";
 import squared_placeholder from "../../assets/images/placeholder-cuadrado.jpg";
+import BrainAwarenessWeekLogo from "../../assets/logos/Brain-Awareness-Week-logo-color-rgb.png";
+import DanaFoundationLogo from "../../assets/logos/Dana_Logo-1.png";
+import IBROLogo from "../../assets/logos/IBRO_logo_main_RGB_1000.png";
+import NeurotechUmsaLogo from "../../assets/logos/Logo actual.jpg";
 
 export const Events = () => {
   const navigate = useNavigate();
@@ -24,7 +28,7 @@ export const Events = () => {
             <h2 className="title-section">Evento Destacado</h2>
             <CardMainEvent
               title={outstandingEvent.title}
-              image={outstandingEvent.image} 
+              image={outstandingEvent.image}
               description={outstandingEvent.description}
               buttonText={outstandingEvent.buttonText}
               onButtonClick={() => handleEventClick(outstandingEvent.id)}
@@ -48,11 +52,18 @@ export const Events = () => {
 
         <h2 className="title-section">Colaboradores</h2>
         <div className="row">
-          {[1, 2, 3].map((_, index) => (
-            <div className="colaborador" key={index}>
-              <img src={squared_placeholder} alt={`Colaborador ${index + 1}`} />
-            </div>
-          ))}
+          <div className="colaborador">
+            <img src={BrainAwarenessWeekLogo} alt="Brain Awareness Week Logo" />
+          </div>
+          <div className="colaborador">
+            <img src={DanaFoundationLogo} alt="Dana Foundation Logo" />
+          </div>
+          <div className="colaborador">
+            <img src={IBROLogo} alt="IBRO Logo" />
+          </div>
+          <div className="colaborador">
+            <img src={NeurotechUmsaLogo} alt="Neurotech UMSA Logo" />
+          </div>
         </div>
       </div>
     </>
