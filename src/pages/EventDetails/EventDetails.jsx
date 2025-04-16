@@ -39,7 +39,7 @@ function EventDetails() {
         return () => clearInterval(interval);
     }, [event]);
 
-    if (!event) return <div>Evento no encontrado</div>;
+    if (!event) return <div>Event not found</div>;
 
     const {
         completeTitle,
@@ -68,38 +68,38 @@ function EventDetails() {
                     <p className="section__content-date">{startDate} - {endDate}</p>
                     <p className="section__content-description">{description}</p>
                     <div className="section__content-qta">
-                        <a href="#">Registrarse</a>
+                        <a href="#">Register</a>
                     </div>
                 </div>
                 <div className="section__image">
-                    <img src={image} alt="Imagen principal del evento" />
+                    <img src={image} alt="Main event image" />
                 </div>
             </div>
 
             <div className="section--column" id="left-time">
                 <div className="section__time">
                     {eventStarted ? (
-                        <p className="section__time-started">¡El evento ha comenzado!</p>
+                        <p className="section__time-started">The event has started!</p>
                     ) : (
                         <>
                             <div className="section__time-element">
                                 <p className="section__time-text">{timeLeft.days ?? "--"}</p>
-                                <p className="section__time-text">Días</p>
+                                <p className="section__time-text">Days</p>
                             </div>
                             <div className="section__time-element">
                                 <p className="section__time-text">{timeLeft.hours ?? "--"}</p>
-                                <p className="section__time-text">Horas</p>
+                                <p className="section__time-text">Hours</p>
                             </div>
                             <div className="section__time-element">
                                 <p className="section__time-text">{timeLeft.minutes ?? "--"}</p>
-                                <p className="section__time-text">Minutos</p>
+                                <p className="section__time-text">Minutes</p>
                             </div>
                         </>
                     )}
                 </div>
 
                 <div className="section__content--dark">
-                    <h2 className="section__content-title--secondary">Acerca de este evento</h2>
+                    <h2 className="section__content-title--secondary">About this event</h2>
                     <p className="section__content-description">{about}</p>
                 </div>
             </div>
@@ -107,7 +107,7 @@ function EventDetails() {
             <div className="section--row" id="place">
                 <div className="info-event">
                     <div className="info-event__content">
-                        <p className="info-event__title">Cuándo</p>
+                        <p className="info-event__title">When</p>
                         {splitLines(when)}
                     </div>
                     <FontAwesomeIcon icon={faClock} className="info-event__icon" />
@@ -115,7 +115,7 @@ function EventDetails() {
 
                 <div className="info-event">
                     <div className="info-event__content">
-                        <p className="info-event__title">Dónde</p>
+                        <p className="info-event__title">Where</p>
                         {splitLines(location)}
                     </div>
                     <FontAwesomeIcon icon={faLocationDot} className="info-event__icon" />
@@ -123,7 +123,7 @@ function EventDetails() {
 
                 {locationMap && (
                     <div className="section__map">
-                        <iframe src={locationMap} loading="lazy" title="mapa del evento"></iframe>
+                        <iframe src={locationMap} loading="lazy" title="event map"></iframe>
                     </div>
                 )}
             </div>

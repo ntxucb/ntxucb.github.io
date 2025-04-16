@@ -6,6 +6,8 @@ import FeatureCard from "../../components/common/FeatureCard/FeatureCard";
 import TeamSectionComp from "../../components/common/TeamSection/TeamSection";
 import EventModal from "../../components/common/EventModal/EventModal";
 import neuroxplore_banner from "../../assets/images/neuroxplore/events/wide/1.png"
+import AndresAracena from "../../assets/images/neuroxplore/organizers/Andres-Aracena-Ocampo-President.jpg"
+import NeurotechUCB from "../../assets/logos/NeuroTechUCB.png";
 
 const HomePage = () => {
   const scrollRef = useRef();
@@ -67,13 +69,13 @@ const HomePage = () => {
 
       <div className={styles["hero-banner"]}>
         <div className={styles["hero-banner__content"]}>
-          <h1 className={styles["hero-banner__title"]}> NEUROTECHX UCB </h1>
+          <h1 className={styles["hero-banner__title"]}> NEUROTECH UCB </h1>
           <p className={styles["hero-banner__description"]}>
             <span className={styles["hero-banner__description--highlight"]}>
               Neurotechnology Innovative Club
             </span>
 
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Workshops, events and scientific outreach
           </p>
 
           <div className={styles["hero-banner__cta"]}>
@@ -83,7 +85,7 @@ const HomePage = () => {
           </div>
         </div>
         <div className={styles["hero-banner__logo"]}>
-          <img src="assets/logos/NTX_BLUE.png" alt="Logo" />
+          <img src={NeurotechUCB} alt="Logo" />
         </div>
       </div>
 
@@ -92,13 +94,11 @@ const HomePage = () => {
           <img src="assets/images/image1.png" alt="Logo" />
         </div>
         <div className={styles["about-section__content"]}>
-          <h2 className={styles["section-container__title"]}>ABOUT NTX UCB</h2>
+          <h2 className={styles["section-container__title"]}>ABOUT NeuroTechUCB</h2>
           <p className={styles["about-section__description"]}>
-            NeurotechX UCB is the neurotechnology student initiative from Universidad Católica Boliviana “San Pablo” in La Paz, Bolivia. Our club goal is to work on issues related to neuroscience with a technological and data-oriented approach. We aim to develop innovative solutions, and train others with the same goal.
-          </p>
+          NeuroTechUCB is the neurotechnology student initiative from Universidad Católica Boliviana “San Pablo” in La Paz, Bolivia. Our club goal is to work on issues related to neuroscience with a technological and data-oriented approach. We aim to develop innovative solutions, and train others with the same goal.           </p>
           <p className={styles["about-section__description"]}>
-            NTX UCB was born on 2021, during the COVID-19 lock down. It was formed due to the curiosity for Neuroscience and Data Science from a group of Psychology students of the UCB. We were the first NeurotechX club in Bolivia, and we´re really proud of it.
-          </p>
+          NTX UCB was born on 2021, during the COVID-19 lock down. It was formed due to the curiosity for Neuroscience and Data Science from a group of Psychology students of the UCB. We were the first NeurotechX club in Bolivia, and we´re really proud of it.          </p>
 
           <div className={styles["about-section__cta"]}>
             <a href="#mission" className={styles["about-section__cta-button"]}>
@@ -113,20 +113,20 @@ const HomePage = () => {
         <FeatureCard
           number={1}
           title="Mission"
-          description="To promote research, education and practical application of neurotechnology in La Paz through a multidisciplinary approach, offering academic events, networking and student participation opportunities."
+          description="To promote research, education and practical application of neurotechnology in Bolivia through a multidisciplinary approach, offering academic events, networking and student participation opportunities."
         />
 
         <FeatureCard
           number={2}
           title="Vision"
-          description="To be recognized as a leading student initiative in the field of neurotechnology in La Paz, Bolivia, promoting research, education and practical application of neurotechnology through a multidisciplinary approach."
+          description="To be recognized as leaders in the promotion and application of neurotechnology in the Latin American community, driving significant advances that improve people's quality of life and promote sustainable. development in our region."
         />
 
         <FeatureCard
           number={3}
           title="Values"
           description="Our 3 pilars are:"
-          list={["COMMUNITY", "INNOVATION", "EDUCATION"]}
+          list={["COMMUNITY", "EDUCATION", "PROFESSIONAL DEVELOPMENT"]}
         />
 
       </div>
@@ -135,6 +135,12 @@ const HomePage = () => {
         <h2 className={styles["section-container__title"]}>TESTIMONIALS</h2>
         <div className={styles["cards-container"]}>
           <QuoteCard
+            image={AndresAracena}
+            quote={"Seeing each team member grow, take on challenges, and turn ideas into real projects is what inspires me most. It’s an honor to support a brilliant team that innovates with purpose and vision."}
+            name="Andres Aracena Ocampo"
+            position="President - NeuroTechUCB"
+          />
+          {/* <QuoteCard
             image="assets/project-images/Portrait_Placeholder.png"
             quote={"I´m really proud of being part of this club. I´ve learned a lot of things that I didn´t even know existed. I´m really grateful for the opportunity to be here"}
             name="Juan Perez"
@@ -144,14 +150,8 @@ const HomePage = () => {
             image="assets/project-images/Portrait_Placeholder.png"
             quote={"I´m really proud of being part of this club. I´ve learned a lot of things that I didn´t even know existed. I´m really grateful for the opportunity to be here"}
             name="Juan Perez"
-            position="President of NTX UCB"
-          />
-          <QuoteCard
-            image="assets/project-images/Portrait_Placeholder.png"
-            quote={"I´m really proud of being part of this club. I´ve learned a lot of things that I didn´t even know existed. I´m really grateful for the opportunity to be here"}
-            name="Juan Perez"
-            position="President of NTX UCB"
-          />
+            position="President of NTX UCB" 
+          /> */}
         </div>
       </div>
 
@@ -174,27 +174,27 @@ const HomePage = () => {
         <div className={styles["cards-container--column"]}>
 
           <InfoCard
-            image="assets/project-images/wide_placeholder.webp"
-            title="New project in the works"
+            image="assets/images/congresoNeurociencias.png"
+            title="Invitación a Congreso de Neurociencia"
             link="#"
-            date="12/12/2021"
-            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
+            date="19/02/2025"
+            description="No te pierdas el I Congreso Latinoamericano de Neurociencias Cognitivas, organizado por @NeuroTransmitiendo!  Este congreso es una oportunidad única para reunir a la comunidad de neurociencias cognitivas de LATAM."
           />
 
           <InfoCard
-            image="assets/project-images/wide_placeholder.webp"
-            title="New project in the works"
+            image="assets/images/nuevosmiembros.png"
+            title="Convocatoria de nuevos miembros"
             link="#"
-            date="12/12/2021"
-            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
+            date="11/02/2025"
+            description="¿Tienes curiosidad por la Neurociencia, la Inteligencia Artificial y la Ciencia de Datos? Neurotech UCB te invita a unirte a nuestra increíble comunidad y explorar el fascinante mundo de la neurotecnología. "
           />
 
           <InfoCard
-            image="assets/project-images/wide_placeholder.webp"
+            image="assets/images/medusa.png"
             title="New project in the works"
             link="#"
-            date="12/12/2021"
-            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
+            date="16/11/2024"
+            description="Estamos buscando voluntarios para participar en el Proyecto Medusa, un estudio que evalúa cómo el bilingüismo (Español e Inglés) puede influir en la memoria y el desempeño cognitivo."
           />
 
         </div>
@@ -204,8 +204,8 @@ const HomePage = () => {
         <div className={styles["join-us-section__content"]}>
           <h2 className={styles["join-us-section__title"]}>JOIN US</h2>
           <p className={styles["join-us-section__description"]}>
-            Are you curious about Neuroscience, Artificial Intelligence, and Data Science?
-            Neurotech UCB invites you to join our incredible community and explore the fascinating world of neurotechnology.
+          Are you curious about Neuroscience, Artificial Intelligence, and Data Science?
+          Neurotech UCB invites you to join our incredible community and explore the fascinating world of neurotechnology.
           </p>
           <p className={styles["join-us-section__description"]}>
             We are looking for students for the following areas:
@@ -216,7 +216,7 @@ const HomePage = () => {
 
           <div className={styles["join-us-section__cta"]}>
             <a href="#join" className={styles["join-us-section__cta-button"]}>
-              Join Us
+            More info
             </a>
           </div>
         </div>

@@ -47,7 +47,7 @@
 }
 
 .hero-banner__content{
-  width: 55%;
+  width: 45%;
   height: fit-content;
   border-radius: 20px;
 
@@ -88,7 +88,7 @@
 
 .hero-banner__logo{
   margin: 1.05%;
-  width: 45%;
+  width: 55%;
   height: 57%;
   display: flex;
   align-items: center;
@@ -97,7 +97,6 @@
 
 .hero-banner__logo img{
   width: 100%;
-  max-width: 500px;
 }
 
 .hero-banner__cta{
@@ -340,7 +339,7 @@
   }
 
   .hero-banner__logo img{
-    width: 60%;
+    width: 100%;
   }
 
   .hero-banner__cta{
