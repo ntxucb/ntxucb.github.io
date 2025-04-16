@@ -26,7 +26,7 @@ import NagelyRodriguez from "../images/neuroxplore/organizers/Nagely Nicole Rodr
 import PavelVera from "../images/neuroxplore/organizers/Pavel Vera.jpeg"
 import RomuloVerastegui from "../images/neuroxplore/organizers/Rómulo Roberto Verástegui Mamani_Disección Cerebral.jpg"
 import RuthMitta from "../images/neuroxplore/organizers/Ruth Gloria Mitta Cahuaya_.jpg"
-import AlejandroCori from "../images/neuroxplore/organizers/Alejandro Johann Cori Aliaga - comisión de Swags 2025.png"
+import AlejandroCori from "../images/neuroxplore/organizers/Alejandro Johann Cori Aliaga - comisión de swags 2025.png"
 import AlejandroVargas from "../images/neuroxplore/organizers/Alejandro Vargas - Lead Social Media.jpg"
 import AndresAracena from "../images/neuroxplore/organizers/Andres-Aracena-Ocampo-President.jpg"
 import AraceliAriñez from "../images/neuroxplore/organizers/Araceli Ariñez - Lead Organizer.jpeg"
