@@ -22,8 +22,7 @@ const HomePage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // const yaVisto = localStorage.getItem("eventoVisto");
-    const yaVisto = false
+    const yaVisto = localStorage.getItem("eventoVisto");
     const yaMostradoEstaSesion = sessionStorage.getItem("eventModalShown");
 
     if (!yaVisto && !yaMostradoEstaSesion) {
