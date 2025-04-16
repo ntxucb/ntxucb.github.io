@@ -55,6 +55,8 @@ function EventDetails() {
     );
 
     useEffect(() => {
+        if (totalGroups <= 1) return;
+
         const interval = setInterval(() => {
             setFade(true);
             setTimeout(() => {
@@ -86,6 +88,8 @@ function EventDetails() {
                 {line.trim()}
             </p>
         ));
+
+    const animationClass = totalGroups > 1 ? (fade ? "fade-out" : "fade-in") : "";
 
     return (
         <>
@@ -157,7 +161,7 @@ function EventDetails() {
 
             <div className="section--column" id="organizers">
                 <h2 className="section__content-title--secondary">Organizadores</h2>
-                <div className={`section--row cards-container ${fade ? "fade-out" : "fade-in"}`}>
+                <div className={`section--row cards-container ${animationClass}`}>
                     {currentGroup.map((org, index) => (
                         <div className="profile" key={index}>
                             <div className="profile__picture">
