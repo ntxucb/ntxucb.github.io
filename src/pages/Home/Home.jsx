@@ -214,17 +214,21 @@ const HomePage = () => {
           <p className={styles["join-us-section__description"]}>
           Are you curious about Neuroscience, Artificial Intelligence, and Data Science?
           Neurotech UCB invites you to join our incredible community and explore the fascinating world of neurotechnology.
+          <span className={styles["join-us-section__description--highlight"]}>
+          We accept new members on summer and winter breaks
+          </span>
+         
           </p>
           <p className={styles["join-us-section__description"]}>
             We are looking for students for the following areas:
             <span className={styles["join-us-section__description--highlight"]}>
-              SOCIAL MEDIA, SOFTWARE,  DATA SCIENCE, HARDWARE ENGINEERING, OUTREACH, EDUCATION
+              SOCIAL MEDIA, SOFTWARE,  DATA SCIENCE, HARDWARE, OUTREACH, EDUCATION
             </span>
           </p>
 
           <div className={styles["join-us-section__cta"]}>
-            <a href="#join" className={styles["join-us-section__cta-button"]}>
-            More info
+            <a href="https://forms.gle/iYNsm8o79msEt6Pc9" className={styles["join-us-section__cta-button"]} target="_blank">
+            Join Us
             </a>
           </div>
         </div>
