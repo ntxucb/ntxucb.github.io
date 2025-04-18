@@ -67,9 +67,9 @@ function EventDetails() {
                     <h1 className="section__content-title">{completeTitle}</h1>
                     <p className="section__content-date">{startDate} - {endDate}</p>
                     <p className="section__content-description">{description}</p>
-                    <div className="section__content-qta">
+                    {/* <div className="section__content-qta">
                         <a href="#">Register</a>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="section__image">
                     <img src={image} alt="Main event image" />

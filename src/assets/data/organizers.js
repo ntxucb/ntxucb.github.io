@@ -32,7 +32,7 @@ import AndresAracena from "../images/neuroxplore/organizers/Andres-Aracena-Ocamp
 import AraceliAriñez from "../images/neuroxplore/organizers/Araceli Ariñez - Lead Organizer.jpeg"
 import CamilaRibera from "../images/neuroxplore/organizers/Camila Alejandra Ribera Loma - Diseccion Cerebral y Feria.jpg"
 import DeyamireCostillas from "../images/neuroxplore/organizers/Deyamire Costillas Flores.jpg"
-import JoseAlcazar from "../images/neuroxplore/organizers/Jose Luis Alcázar von Landwüst.jpg"
+import JoseAlcazar from "../images/neuroxplore/organizers/joseluis2.jpg"
 import JulianaMendoza from "../images/neuroxplore/organizers/Juliana Mendoza Gómez Feria BAW Lead.jpg"
 import LucianaSaavedra from "../images/neuroxplore/organizers/LucianaSaavedraAyarde.jpg"
 import RaphaelAramayo from "../images/neuroxplore/organizers/Raphael Antonio Aramayo Vidal.jpeg"
@@ -51,7 +51,7 @@ export const organizersData = [
     "id": 2,
     "name": "José Isaí Díaz Soza",
     "picture": JoseDiaz,
-    "title": "Lead Web Page Commission",
+    "title": "Lead Web Page Committee",
   },
   {
     "id": 3,
@@ -69,27 +69,27 @@ export const organizersData = [
     "id": 5,
     "name": "José Gabriel Reyes Jaldin",
     "picture": JoseReyes,
-    "team": "Food",
+    "team": "Cattering",
     "university": "Universidad Católica Boliviana",
   },
   {
     "id": 6,
     "name": "Paolo Alejandro Quisbert Cruz",
-    "team": "Food",
+    "team": "Cattering",
     "university": "Universidad Católica Boliviana"
   },
   {
     "id": 7,
     "name": "Kamila Julieta Villanueva Calle",
     "picture": KamilaVillanueva,
-    "team": "Food",
+    "team": "Cattering",
     "university": "Universidad Católica Boliviana",
   },
   {
     "id": 8,
     "name": "Valeria Nicol Palacios Monrroy",
     "picture": ValeriaPalacios,
-    "team": "Food",
+    "team": "Cattering",
     "university": "Universidad Católica Boliviana",
   },
   {
@@ -320,44 +320,44 @@ export const organizersData = [
     "id": 42,
     "name": "José Luis Alcazar von Landwüst",
     "picture": JoseAlcazar,
-    "title": "Lead Swag & Merchandise Commission",
+    "title": "Lead Swag & Merchandise Committee",
   },
   {
     "id": 43,
     "name": "Juliana Mendoza Gómez",
     "picture": JulianaMendoza,
-    "title": "Lead Projects Fair Commission",
+    "title": "Lead Projects Fair Committee",
   
   },
   {
     "id": 44,
     "name": "Camila Alejandra Ribera Loma",
     "picture": CamilaRibera,
-    "title": "Lead Brain Dissection Commission",
+    "title": "Lead Brain Dissection Committee",
   },
   {
     "id": 45,
     "name": "Verónica Solares Mamani",
     "picture": VeronicaSolares,
-    "title": "Lead Speakers Commission",
+    "title": "Lead Speakers Committee",
 
   },
   {
     "id": 46,
     "name": "Deyamire Costillas Flores",
     "picture": DeyamireCostillas,
-    "title": "Lead Sponsors and Allies Communities Commission",
+    "title": "Lead Sponsors Committee",
   },
   {
     "id": 47,
-    "name": "Mauricio",
-    "title": "Lead Sponsors and Allies Communities Commission",
+    "name": "Mauricio Velez Barahona",
+    "title": "Lead Allies Communities Committee",
   },
   {
     "id": 48,
     "name": "Araceli Ariñez",
     "picture": AraceliAriñez,
-    "title": "Lead Organizer and Lead Hackathon Commission",
+    "title": "Lead Organizer and Lead Hackathon Committee",
     "university": "Universidad Católica Boliviana",
   },
   {
@@ -371,20 +371,20 @@ export const organizersData = [
     "id": 50,
     "name": "Alejandro Vargas",
     "picture": AlejandroVargas,
-    "title": "Lead Social Media Commission", 
+    "title": "Lead Social Media Committee", 
   },
   {
     "id": 51,
     "name": "Luciana Saavedra Ayarde",
     "picture": LucianaSaavedra,
-    "title": "Lead Social Media Commission",
+    "title": "Lead Social Media Committee",
     "university": "Universidad Católica Boliviana",
   },
   {
     "id": 52,
     "name": "Geraldy Briseika Guzmán Espinoza",
     "picture": GeraldyGuzman,
-    "title": "Lead Food Commission",
+    "title": "Lead Cattering Committee",
     "university": "Universidad Católica Boliviana",
   },
   {

@@ -9,7 +9,7 @@ import neuroxplore_banner from "../../assets/images/neuroxplore/events/wide/1.pn
 import AndresAracena from "../../assets/images/neuroxplore/organizers/Andres-Aracena-Ocampo-President.jpg"
 import NeurotechUCB from "../../assets/logos/NeuroTechUCB.png";
 import { useNavigate } from "react-router-dom";
-
+import fundador from "../../assets/images/fundador.jpeg"
 const HomePage = () => {
   const scrollRef = useRef();
   const canvasRef = useRef();
@@ -102,11 +102,11 @@ const HomePage = () => {
           <p className={styles["about-section__description"]}>
           NTX UCB was born on 2021, during the COVID-19 lock down. It was formed due to the curiosity for Neuroscience and Data Science from a group of Psychology students of the UCB. We were the first NeurotechX club in Bolivia, and we´re really proud of it.          </p>
 
-          <div className={styles["about-section__cta"]}>
+          {/* <div className={styles["about-section__cta"]}>
             <a href="#mission" className={styles["about-section__cta-button"]}>
               More Info
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -128,7 +128,7 @@ const HomePage = () => {
           number={3}
           title="Values"
           description="Our 3 pilars are:"
-          list={["COMMUNITY", "EDUCATION", "PROFESSIONAL DEVELOPMENT"]}
+          list={["Community", "Education", "Professional development"]}
         />
 
       </div>
@@ -141,6 +141,12 @@ const HomePage = () => {
             quote={"Seeing each team member grow, take on challenges, and turn ideas into real projects is what inspires me most. It’s an honor to support a brilliant team that innovates with purpose and vision."}
             name="Andres Aracena Ocampo"
             position="President - NeuroTechUCB"
+          />
+          <QuoteCard
+            image={fundador}
+            quote={"Founding this club has been a dream come true — uniting passionate students from all fields to explore neurotechnology together. I love seeing how curiosity and collaboration spark innovation and purpose in our community."}
+            name="Manuel Illanes"
+            position="Cofounder - NeuroTechUCB"
           />
           {/* <QuoteCard
             image="assets/project-images/Portrait_Placeholder.png"

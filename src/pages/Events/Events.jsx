@@ -129,7 +129,7 @@ export const Events = () => {
 
         <div className="section--column">
           <h3 className="section__content-title--secondary">Commission Leaders</h3>
-          <div className="section-row cards-container">
+          <div className="section-row cards-container leads">
             {commissionLeaders.map((org) => (
               <div className="profile" key={org.id}>
                 <div className="profile__picture">
@@ -149,7 +149,7 @@ export const Events = () => {
           <div className="section--column">
             <div className="comite section--column">
               <h3 className="comite__title section__content-title--secondary">
-                Members Commission {currentTeamName}
+                {currentTeamName} Committee Members 
               </h3>
               <div
                 key={currentTeamName}
@@ -184,6 +184,9 @@ export const Events = () => {
         <div className="colaborador">
           <img src={IBROLogo} alt="IBRO Logo" />
         </div>
+      </div>
+      <h2 className="title-section">Allied Communities</h2>
+      <div className="row">
         <div className="colaborador">
           <img src={NeurotechUmsaLogo} alt="Neurotech UMSA Logo" />
         </div>

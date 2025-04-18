@@ -27,3 +27,26 @@
     max-width: 350px;
 }
 
+/* .cards-container.leads{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem; 
+    justify-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .cards-container.leads {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .cards-container.leads {
+      grid-template-columns: 1fr; 
+    }
+  } */
+
+/* .leads .profile__picture{
+    transform: scale(0.5);
+} */
+
