@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "VITE_ENV=development VITE_PUBLIC_BASE_PATH=/ vite",
-    "build": "VITE_ENV=production VITE_PUBLIC_BASE_PATH=/ntxucblapaz.github.io/ vite build",
+    "build": "VITE_ENV=production VITE_PUBLIC_BASE_PATH=/ vite build",
     "postbuild": "cp dist/index.html dist/404.html",
     "lint": "eslint .",
     "preview": "vite preview",
