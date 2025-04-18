@@ -73,7 +73,7 @@ export const Events = () => {
     <div className="container">
       {outstandingEvent && (
         <>
-          <h2 className="title-section">Evento Destacado</h2>
+          <h2 className="title-section">Featured Event</h2>
           <CardMainEvent
             title={outstandingEvent.title}
             image={outstandingEvent.image}
@@ -84,7 +84,7 @@ export const Events = () => {
         </>
       )}
 
-      <h2 className="title-section">Próximos Eventos</h2>
+      <h2 className="title-section">Upcoming Events</h2>
       <div className="row">
         {upcomingEvents.map((event) => (
           <CardEvent
