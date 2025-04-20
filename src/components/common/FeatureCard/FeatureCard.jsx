@@ -5,7 +5,7 @@ const FeatureCard = ({ number, title, description, list }) => {
   return (
     <div className={styles["feature-card"]}>
       <div className={styles["feature-card__number"]}>
-        <span>{"0" + number}</span>
+        <span>{number<10? "0" + number: number}</span>
       </div>
       <div className={styles["feature-card__content"]}>
         <h3 className={styles["feature-card__title"]}>{title}</h3>

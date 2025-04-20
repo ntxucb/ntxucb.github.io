@@ -110,8 +110,8 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className={styles["section-container--row"]} id="philosophy">
 
+      <div className={styles["section-container--row"]} id="philosophy">
         <FeatureCard
           number={1}
           title="Mission"

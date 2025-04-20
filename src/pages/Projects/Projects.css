@@ -1,69 +1,115 @@
-/* Importar la fuente Orbitron */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
-.project-title {
-  font-family: 'Orbitron', sans-serif; /* Fuente */
-  color: #23B2C6; /* Color personalizado */
-  font-size: 1.5rem; 
-  text-align: center; 
-  margin-bottom: 1rem; 
+.main-image-container{
+  height: 600px;
+  overflow: hidden;
+
+  border-radius: 1rem;
 }
 
-.project-text {
-  font-family: 'Arial', sans-serif; /* Fuente genérica para texto */
-  color: #333; /* Gris oscuro */
-  font-size: 1rem; /* Tamaño inicial */
-  line-height: 1.5;
-  text-align: justify;
+.main-image-container img{
+  object-fit: cover;
 }
 
-.projects-heading {
-  font-family: 'Orbitron', sans-serif;
-  color: #23B2C6;
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 700;
+.title-description {
+  font-weight: 300;
 }
 
+.title-section {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-decoration: none;
+  font-family: "Orbitron";
+  font-weight: normal;
+  font-size: 40px;
+  color: #23b2c6 !important;
+}
 
-@media (min-width: 576px) {
-  .project-title {
-    font-size: 1.6rem; 
-  }
+.row {
+  justify-content: center;
+  display: flex;
+  flex-wrap: nowrap;
 
-  .project-text {
-    font-size: 1.1rem;
+  margin: auto;
+  overflow-x: auto;
+
+  scrollbar-width: auto;
+  scrollbar-color: rgba(152, 152, 152, 0.5) transparent;
+}
+
+.row-container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: start;
+  gap: 50px;
+  width: 100%;
+}
+
+.row::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.container {
+  overflow-x: visible;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#root {
+  overflow: hidden;
+}
+
+.completed-container {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+  font-family: var(--secondary-font-family);
+
+  position: relative;
+  padding-block: 100px;
+  padding-inline: 300px;
+
+  left: 50%;
+  width: 100svw;
+  transform: translateX(-50%);
+
+  /* padding-block: 2rem; */
+}
+
+.colaborador {
+  width: fit-content;
+  padding: 1rem;
+  margin: 2rem;
+  /* border: 1px solid var(--text-color-light); */
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.colaborador img {
+  object-fit: cover;
+
+  max-width: 300px;
+}
+
+/* .cards-container.leads{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 2rem; 
+  justify-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .cards-container.leads {
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
-@media (min-width: 768px) {
-  .project-title {
-    font-size: 1.8rem; 
+@media screen and (max-width: 480px) {
+  .cards-container.leads {
+    grid-template-columns: 1fr; 
   }
+} */
 
-  .project-text {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .projects-heading {
-    font-size: 1.8rem;
-  }
-
-  .project-title {
-    font-size: 1.4rem; 
-  }
-
-  .project-text {
-    font-size: 0.95rem;
-  }
-}
-
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-}
+/* .leads .profile__picture{
+  transform: scale(0.5);
+} */
