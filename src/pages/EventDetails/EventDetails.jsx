@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./EventDetails.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faLocationDot } from "@fortawesome/free-solid-svg-icons";
@@ -8,6 +8,8 @@ import { eventsData } from "../../assets/data/events";
 function EventDetails() {
     const { id } = useParams();
     const event = eventsData.find((e) => e.id.toString() === id);
+
+    const navigate = useNavigate();
 
     const [timeLeft, setTimeLeft] = useState({});
     const [eventStarted, setEventStarted] = useState(false);
@@ -126,6 +128,13 @@ function EventDetails() {
                         <iframe src={locationMap} loading="lazy" title="event map"></iframe>
                     </div>
                 )}
+
+            </div>
+
+            <div className="section--row">
+            <div className="section__content-qta" id="back_button">
+                <a href="/events">Back to events</a>
+            </div>
             </div>
         </>
     );

@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: row;
     margin-bottom: 1.8rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .section--column{
@@ -196,6 +198,11 @@
 .fade-out {
     opacity: 0;
     transition: opacity 0.5s ease-out;
+}
+
+#back_button{
+    padding: 0.8rem;
+    max-width: fit-content;
 }
 
 
