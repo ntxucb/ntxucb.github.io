@@ -165,7 +165,7 @@ export const Events = () => {
         </div>
 
         <div className="section--column">
-          <h3 className="section__content-title--secondary">Commission Leaders</h3>
+          <h3 className="section__content-title--secondary">Committee Leaders </h3>
           <div className="section-row cards-container leads">
             {commissionLeaders.map((org) => (
               <div className="profile" key={org.id}>
