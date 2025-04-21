@@ -11,6 +11,7 @@ import { TaskBar } from "./components/layout/TaskBar/TaskBar";
 import Footer from "./components/layout/Footer/Footer";
 import HomePage from './pages/Home/Home';
 import EventDetails from './pages/EventDetails/EventDetails';
+import NotFound from './pages/NotFound/NotFound';
 
 function AppRoutes() {
   const location = useLocation();
@@ -29,6 +30,7 @@ function AppRoutes() {
           <Route path="/our_team" element={<Our_Team />} />
           <Route path="/podcast" element={<Podcast />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="*" element={<NotFound />} />
         </>
       )}
     </Routes>
