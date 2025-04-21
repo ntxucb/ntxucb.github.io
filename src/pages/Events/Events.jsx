@@ -11,6 +11,7 @@ import IBROLogo from "../../assets/logos/IBRO_logo_main_RGB_1000.png";
 import NeurotechUmsaLogo from "../../assets/logos/Logo actual.jpg";
 import { organizersData } from "../../assets/data/organizers";
 import portraitPlaceholder from "../../assets/images/Portrait_Placeholder.png";
+import { alliedCommunitiesData } from "../../assets/data/allied_communities";
 
 export const Events = () => {
   const navigate = useNavigate();
@@ -61,13 +62,49 @@ export const Events = () => {
 
           return nextIndex;
         });
-      }, 500); // Tiempo para fade-out
-    }, 10000); // Cada 10 segundos
+      }, 500); 
+    }, 10000);
 
     return () => clearInterval(interval);
   }, [committeeTeams]);
 
   const [currentTeamName, currentTeamMembers] = currentTeam || [];
+
+  const alliesRef = useRef(null);
+  const [currentCommunityIndex, setCurrentCommunityIndex] = useState(0);
+
+  const communityGroups = alliedCommunitiesData.reduce((acc, curr, index) => {
+    const groupIndex = Math.floor(index / 5);
+    if (!acc[groupIndex]) acc[groupIndex] = [];
+    acc[groupIndex].push(curr);
+    return acc;
+  }, []);
+
+  const currentCommunityGroup = communityGroups[currentCommunityIndex] || [];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (alliesRef.current) {
+        alliesRef.current.classList.remove("fade-in");
+        alliesRef.current.classList.add("fade-out");
+      }
+
+      setTimeout(() => {
+        setCurrentCommunityIndex((prevIndex) => {
+          const nextIndex = (prevIndex + 1) % communityGroups.length;
+
+          if (alliesRef.current) {
+            alliesRef.current.classList.remove("fade-out");
+            alliesRef.current.classList.add("fade-in");
+          }
+
+          return nextIndex;
+        });
+      }, 500); 
+    }, 10000); 
+
+    return () => clearInterval(interval);
+  }, [communityGroups.length]);
 
   return (
     <div className="container">
@@ -185,11 +222,24 @@ export const Events = () => {
           <img src={IBROLogo} alt="IBRO Logo" />
         </div>
       </div>
+
       <h2 className="title-section">Allied Communities</h2>
-      <div className="row">
-        <div className="colaborador">
-          <img src={NeurotechUmsaLogo} alt="Neurotech UMSA Logo" />
-        </div>
+      <div
+        className="row fade-in"
+        ref={alliesRef}
+        key={`community-group-${currentCommunityIndex}`}
+      >
+        {currentCommunityGroup.map((community) => (
+          <div className="colaborador" key={community.id}>
+            {community.social_media && community.social_media !== "none" ? (
+              <a href={community.social_media} target="_blank" rel="noopener noreferrer">
+                <img src={community.logo} alt={`${community.name} Logo`} />
+              </a>
+            ) : (
+              <img src={community.logo} alt={`${community.name} Logo`} />
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );

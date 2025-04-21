@@ -50,9 +50,9 @@ export const eventsData = [
         details: {
             completeTitle: "Neuroxplore Virtual Bootcamp",
             image: bootcamp_wide,
-            startDate: "April 28; 9:00a.m. (GMT-4)",
-            endDate: "May 2; 6:00p.m. (GMT-4)",
-            formatedStartDate: "2025-04-28T09:00:00-04:00",
+            startDate: "April 28; 2:00p.m. (GMT-4)",
+            endDate: "May 2; 9:00p.m. (GMT-4)",
+            formatedStartDate: "2025-04-28T14:00:00-04:00",
             description: "An intensive week of online training in neuroscience, BCI (Brain-Computer Interfaces), and brain signal processing. Taught by experts and tailored for those looking to enter the neurotechnology field.",
             about: "This bootcamp is the gateway to the world of neurotechnology. The virtual sessions will provide theoretical foundations, practical tools, and real-life use cases, preparing participants for the challenges of the upcoming events.",
             location: "Online",
