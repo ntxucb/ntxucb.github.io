@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ntxucb.github.io/sitemap.xml
