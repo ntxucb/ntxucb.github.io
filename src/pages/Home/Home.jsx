@@ -65,35 +65,28 @@ const HomePage = () => {
 
   return (
     <div className={styles["landing-page scroll-view"]} ref={scrollRef}>
+
       <Helmet>
-        <title>NeuroTech UCB | Neurotechnology Club at UCB Bolivia</title>
+        <title>Neurotech UCB | Innovación en Neurotecnología</title>
         <meta
           name="description"
-          content="NeuroTech UCB is a multidisciplinary student club at Universidad Católica Boliviana focused on promoting neuroscience through technology, education, and innovation. Join workshops, events, and a vibrant community!"
+          content="Neurotech UCB es la iniciativa estudiantil de neurotecnología de la Universidad Católica Boliviana. Organizamos eventos, talleres y promovemos la innovación científica en Bolivia."
         />
-        <meta name="keywords" content="Neurotechnology, UCB, Neuroscience, AI, Data Science, Bolivia, Student Club, Hackathon, Events, Innovation" />
-        <meta name="author" content="NeuroTech UCB" />
+        <meta name="keywords" content="neurotecnología, neurotech, inteligencia artificial, ciencia de datos, club estudiantil, neurociencia, UCB Bolivia, NeurotechX" />
+        <meta name="author" content="Neurotech UCB" />
 
-        {/* Open Graph for social media */}
-        <meta property="og:title" content="NeuroTech UCB | Student Neurotechnology Club" />
-        <meta
-          property="og:description"
-          content="Join the NeuroTech UCB community — promoting neuroscience through innovation, education, and multidisciplinary collaboration."
-        />
+        {/* Open Graph para redes sociales */}
+        <meta property="og:title" content="Neurotech UCB | Innovación en Neurotecnología" />
+        <meta property="og:description" content="Descubre el club de neurotecnología de la UCB: eventos, formación, comunidad y ciencia al servicio del futuro." />
         <meta property="og:image" content="https://ntxucb.github.io/assets/images/neuroxplore/events/wide/1.png" />
         <meta property="og:url" content="https://ntxucb.github.io/" />
         <meta property="og:type" content="website" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="NeuroTech UCB | Neurotechnology Club" />
-        <meta
-          name="twitter:description"
-          content="Discover the future of neuroscience and technology. Join NeuroTech UCB today!"
-        />
+        <meta name="twitter:title" content="Neurotech UCB | Innovación en Neurotecnología" />
+        <meta name="twitter:description" content="Únete a la comunidad de estudiantes que está revolucionando la neurociencia en Bolivia a través de la tecnología." />
         <meta name="twitter:image" content="https://ntxucb.github.io/assets/images/neuroxplore/events/wide/1.png" />
-
-        <link rel="canonical" href="https://ntxucb.github.io/" />
       </Helmet>
 
       <EventModal isOpen={isModalOpen} onClose={handleCloseModal} onClick={() => {
@@ -218,7 +211,7 @@ const HomePage = () => {
             title="Invitación a Congreso de Neurociencia"
             link="#"
             date="19/02/2025"
-            description="No te pierdas el I Congreso Latinoamericano de Neurociencias Cognitivas, organizado por @NeuroTransmitiendo!  Este congreso es una oportunidad única para reunir a la comunidad de neurociencias cognitivas de LATAM."
+            description="No te pierdas el I Congreso Latinoamericano de Neurociencias Cognitivas, organizado por @NeuroTransmitiendo! Este congreso es una oportunidad única para reunir a la comunidad de neurociencias cognitivas de LATAM."
           />
 
           <InfoCard
@@ -226,7 +219,7 @@ const HomePage = () => {
             title="Convocatoria de nuevos miembros"
             link="#"
             date="11/02/2025"
-            description="¿Tienes curiosidad por la Neurociencia, la Inteligencia Artificial y la Ciencia de Datos? Neurotech UCB te invita a unirte a nuestra increíble comunidad y explorar el fascinante mundo de la neurotecnología. "
+            description="¿Tienes curiosidad por la Neurociencia, la Inteligencia Artificial y la Ciencia de Datos?Neurotech UCB te invita a unirte a nuestra increíble comunidad y explorar el fascinante mundo de la neurotecnología. "
           />
 
           <InfoCard
@@ -245,13 +238,13 @@ const HomePage = () => {
           <h2 className={styles["join-us-section__title"]}>JOIN US</h2>
           <p className={styles["join-us-section__description"]}>
           Are you curious about Neuroscience, Artificial Intelligence, and Data Science?
-          Neurotech UCB invites you to join our incredible community and explore the fascinating world of neurotechnology.
+            Neurotech UCB invites you to join our incredible community and explore the fascinating world of neurotechnology.
             <span className={styles["join-us-section__description--highlight"]}>
             We accept new members on summer and winter breaks
-            </span>
-              
-            </p>
- <p className={styles["join-us-section__description"]}>
+              </span>
+            
+ </p>
+          <p className={styles["join-us-section__description"]}>
             We are looking for students for the following areas:
             <span className={styles["join-us-section__description--highlight"]}>
               SOCIAL MEDIA, SOFTWARE,  DATA SCIENCE, HARDWARE, OUTREACH, EDUCATION
@@ -261,8 +254,8 @@ const HomePage = () => {
           <div className={styles["join-us-section__cta"]}>
             <a href="https://forms.gle/iYNsm8o79msEt6Pc9" className={styles["join-us-section__cta-button"]} target="_blank">
             Join Us
-            </a>
-              div>
+              </a>
+          </div>
         </div>
       </div>
 
