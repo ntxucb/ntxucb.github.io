@@ -10,6 +10,8 @@ import AndresAracena from "../../assets/images/neuroxplore/organizers/Andres-Ara
 import NeurotechUCB from "../../assets/logos/NeuroTechUCB.png";
 import { useNavigate } from "react-router-dom";
 import fundador from "../../assets/images/fundador.jpeg"
+import { Helmet } from "react-helmet-async";
+
 const HomePage = () => {
   const scrollRef = useRef();
   const canvasRef = useRef();
@@ -63,6 +65,36 @@ const HomePage = () => {
 
   return (
     <div className={styles["landing-page scroll-view"]} ref={scrollRef}>
+      <Helmet>
+        <title>NeuroTech UCB | Neurotechnology Club at UCB Bolivia</title>
+        <meta
+          name="description"
+          content="NeuroTech UCB is a multidisciplinary student club at Universidad Católica Boliviana focused on promoting neuroscience through technology, education, and innovation. Join workshops, events, and a vibrant community!"
+        />
+        <meta name="keywords" content="Neurotechnology, UCB, Neuroscience, AI, Data Science, Bolivia, Student Club, Hackathon, Events, Innovation" />
+        <meta name="author" content="NeuroTech UCB" />
+
+        {/* Open Graph for social media */}
+        <meta property="og:title" content="NeuroTech UCB | Student Neurotechnology Club" />
+        <meta
+          property="og:description"
+          content="Join the NeuroTech UCB community — promoting neuroscience through innovation, education, and multidisciplinary collaboration."
+        />
+        <meta property="og:image" content="https://ntxucb.github.io/assets/images/neuroxplore/events/wide/1.png" />
+        <meta property="og:url" content="https://ntxucb.github.io/" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="NeuroTech UCB | Neurotechnology Club" />
+        <meta
+          name="twitter:description"
+          content="Discover the future of neuroscience and technology. Join NeuroTech UCB today!"
+        />
+        <meta name="twitter:image" content="https://ntxucb.github.io/assets/images/neuroxplore/events/wide/1.png" />
+
+        <link rel="canonical" href="https://ntxucb.github.io/" />
+      </Helmet>
 
       <EventModal isOpen={isModalOpen} onClose={handleCloseModal} onClick={() => {
         navigate('/events/1');
@@ -98,9 +130,9 @@ const HomePage = () => {
         <div className={styles["about-section__content"]}>
           <h2 className={styles["section-container__title"]}>ABOUT NeuroTechUCB</h2>
           <p className={styles["about-section__description"]}>
-          NeuroTechUCB is the neurotechnology student initiative from Universidad Católica Boliviana “San Pablo” in La Paz, Bolivia. Our club goal is to work on issues related to neuroscience with a technological and data-oriented approach. We aim to develop innovative solutions, and train others with the same goal.           </p>
+            NeuroTechUCB is the neurotechnology student initiative from Universidad Católica Boliviana “San Pablo” in La Paz, Bolivia. Our club goal is to work on issues related to neuroscience with a technological and data-oriented approach. We aim to develop innovative solutions, and train others with the same goal.           </p>
           <p className={styles["about-section__description"]}>
-          NTX UCB was born on 2021, during the COVID-19 lock down. It was formed due to the curiosity for Neuroscience and Data Science from a group of Psychology students of the UCB. We were the first NeurotechX club in Bolivia, and we´re really proud of it.          </p>
+            NTX UCB was born on 2021, during the COVID-19 lock down. It was formed due to the curiosity for Neuroscience and Data Science from a group of Psychology students of the UCB. We were the first NeurotechX club in Bolivia, and we´re really proud of it.          </p>
 
           {/* <div className={styles["about-section__cta"]}>
             <a href="#mission" className={styles["about-section__cta-button"]}>
@@ -214,12 +246,12 @@ const HomePage = () => {
           <p className={styles["join-us-section__description"]}>
           Are you curious about Neuroscience, Artificial Intelligence, and Data Science?
           Neurotech UCB invites you to join our incredible community and explore the fascinating world of neurotechnology.
-          <span className={styles["join-us-section__description--highlight"]}>
-          We accept new members on summer and winter breaks
-          </span>
-         
-          </p>
-          <p className={styles["join-us-section__description"]}>
+            <span className={styles["join-us-section__description--highlight"]}>
+            We accept new members on summer and winter breaks
+            </span>
+              
+            </p>
+ <p className={styles["join-us-section__description"]}>
             We are looking for students for the following areas:
             <span className={styles["join-us-section__description--highlight"]}>
               SOCIAL MEDIA, SOFTWARE,  DATA SCIENCE, HARDWARE, OUTREACH, EDUCATION
@@ -230,7 +262,7 @@ const HomePage = () => {
             <a href="https://forms.gle/iYNsm8o79msEt6Pc9" className={styles["join-us-section__cta-button"]} target="_blank">
             Join Us
             </a>
-          </div>
+              div>
         </div>
       </div>
 
