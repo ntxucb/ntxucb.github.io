@@ -76,7 +76,7 @@ export const eventsData = [
             completeTitle: "Neuroxplore Project Fair",
             image: feria_wide,
             startDate: "May 5; 9:00a.m. (GMT-4)",
-            endDate: "May 5; 4:00p.m. (GMT-4)",
+            endDate: "May 5; 3:00p.m. (GMT-4)",
             formatedStartDate: "2025-05-05T09:00:00-04:00",
             description: "An open exhibition at UCB's Ágora where students from Neurotech UCB and UMSA will present innovative projects developed as part of the event.",
             about: "The Project Fair is the space where ideas come to life. It seeks to foster creativity, scientific outreach, and knowledge exchange between clubs and visitors.",
@@ -109,6 +109,29 @@ export const eventsData = [
         }
     },
     {
+        id: 6,
+        title: "Brain Dissection second session",
+        description:
+            "On May 6, a hands-on experience in brain anatomy will take place at the Biomedical Engineering Laboratory.",
+        image: diseccion_sqd,
+        buttonText: "More info",
+        onButtonClick: () => {
+            window.location.href = `/events/4`;
+        },
+        details: {
+            completeTitle: "Applied Brain Dissection for Neuroscience",
+            image: diseccion_wide,
+            startDate: "May 6; 3:00p.m. (GMT-4)",
+            endDate: "May 6; 5:00p.m. (GMT-4)",
+            formatedStartDate: "2025-05-06T15:00:00-04:00",
+            description: "A practical and interactive session that allows direct exploration of brain anatomy under the guidance of neuroscience experts.",
+            about: "This activity offers a unique educational experience for students interested in understanding brain structure through real anatomical techniques.",
+            location: "Biomedical Engineering Lab - UCB",
+            locationMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1671.4825846391861!2d-68.11042608241759!3d-16.52208641711459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f20ee187a3103%3A0x2f2bb2b7df32a24d!2sUniversidad%20Cat%C3%B3lica%20Boliviana%20%22San%20Pablo%22!5e0!3m2!1ses-419!2sbo!4v1743635547336!5m2!1ses-419!2sbo",
+            when: "May 6, 2025 -- (GMT-4)",
+        }
+    },
+    {
         id: 5,
         title: "Neurotechnology Hackathon",
         description:
@@ -121,9 +144,9 @@ export const eventsData = [
         details: {
             completeTitle: "Neurotechnology Hackathon - NEUROXPLORE 2025",
             image: hackathon_wide,
-            startDate: "May 8; 4:00p.m. (GMT-4)",
-            endDate: "May 10; 1:00p.m. (GMT-4)",
-            formatedStartDate: "2025-05-08T16:00:00-04:00",
+            startDate: "May 8; 10:00a.m. (GMT-4)",
+            endDate: "May 10; 5:00p.m. (GMT-4)",
+            formatedStartDate: "2025-05-08T10:00:00-04:00",
             description: "An intensive innovation competition where participants design and prototype tech solutions focused on neurotechnology. Open to student and professional teams.",
             about: "The hackathon is the highlight of NEUROXPLORE. It fosters creativity, collaborative work, and the real-world application of technical knowledge to solve real challenges.",
             location: "Ground floor - Block C, UCB La Paz",
