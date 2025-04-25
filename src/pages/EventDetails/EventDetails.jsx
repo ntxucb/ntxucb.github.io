@@ -53,6 +53,8 @@ function EventDetails() {
         locationMap,
         when,
         image,
+        registrationLink,
+        moreInfoLink,
     } = event.details;
 
     const splitLines = (text) =>
@@ -69,9 +71,16 @@ function EventDetails() {
                     <h1 className="section__content-title">{completeTitle}</h1>
                     <p className="section__content-date">{startDate} - {endDate}</p>
                     <p className="section__content-description">{description}</p>
-                    {/* <div className="section__content-qta">
-                        <a href="#">Register</a>
-                    </div> */}
+                    {registrationLink && (
+                        <div className="section__content-qta">
+                            <button
+                                className="button"
+                                onClick={() => window.open(registrationLink, "_blank")}
+                            >
+                                Register
+                            </button>
+                        </div>
+                    )}
                 </div>
                 <div className="section__image">
                     <img src={image} alt="Main event image" />
@@ -103,6 +112,16 @@ function EventDetails() {
                 <div className="section__content--dark">
                     <h2 className="section__content-title--secondary">About this event</h2>
                     <p className="section__content-description">{about}</p>
+                    {moreInfoLink && (
+                        <div className="section__content-qta" id="about_button">
+                            <button
+                                className="button"
+                                onClick={() => window.open(moreInfoLink, "_blank")}
+                            >
+                                Learn more
+                            </button>
+                        </div>
+                    )}
                 </div>
             </div>
 
@@ -132,9 +151,9 @@ function EventDetails() {
             </div>
 
             <div className="section--row">
-            <div className="section__content-qta" id="back_button">
-                <a href="/events">Back to events</a>
-            </div>
+                <div className="section__content-qta" id="back_button">
+                    <a href="/events">Back to events</a>
+                </div>
             </div>
         </>
     );
