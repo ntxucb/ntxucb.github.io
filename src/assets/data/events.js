@@ -119,7 +119,7 @@ export const eventsData = [
             window.location.href = `/events/4`;
         },
         details: {
-            completeTitle: "Applied Brain Dissection for Neuroscience",
+            completeTitle: "Applied Brain Dissection for Neuroscience (second session)",
             image: diseccion_wide,
             startDate: "May 6; 3:00p.m. (GMT-4)",
             endDate: "May 6; 5:00p.m. (GMT-4)",
