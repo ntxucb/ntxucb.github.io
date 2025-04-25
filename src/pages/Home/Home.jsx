@@ -123,9 +123,15 @@ const HomePage = () => {
         <div className={styles["about-section__content"]}>
           <h2 className={styles["section-container__title"]}>ABOUT NeuroTechUCB</h2>
           <p className={styles["about-section__description"]}>
-            NeuroTechUCB is the neurotechnology student initiative from Universidad Católica Boliviana “San Pablo” in La Paz, Bolivia. Our club goal is to work on issues related to neuroscience with a technological and data-oriented approach. We aim to develop innovative solutions, and train others with the same goal.           </p>
+          NeuroTechUCB is a student-led neurotechnology initiative at the Universidad Católica Boliviana “San Pablo” in La Paz, Bolivia. We are dedicated to exploring the intersection between neuroscience, technology, and data science through hands-on projects, education, and community outreach.
+          </p>
           <p className={styles["about-section__description"]}>
-            NTX UCB was born on 2021, during the COVID-19 lock down. It was formed due to the curiosity for Neuroscience and Data Science from a group of Psychology students of the UCB. We were the first NeurotechX club in Bolivia, and we´re really proud of it.          </p>
+          Founded in 2021 during the COVID-19 lockdown, NeuroTechUCB emerged from the shared curiosity and passion for neuroscience and data-driven innovation among a group of Psychology students. Since then, we have grown into a multidisciplinary team that brings together students from Biomedical Engineering, Psychology, Computer Science, and other fields.
+          </p>
+          <p className={styles["about-section__description"]}>
+          As the first NeuroTechX chapter in Bolivia, we are proud to be part of the global NeuroTechX network, promoting open knowledge, interdisciplinary collaboration, and technological development in neuroscience.
+          </p>
+
 
           {/* <div className={styles["about-section__cta"]}>
             <a href="#mission" className={styles["about-section__cta-button"]}>

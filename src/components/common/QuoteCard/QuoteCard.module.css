@@ -18,7 +18,7 @@
   
   .quote__card-picture img{
     width: 100%;
-    max-height: 320px;
+    min-height: 500px;
     object-fit: cover;
   }
   

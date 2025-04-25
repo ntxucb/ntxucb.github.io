@@ -27,9 +27,9 @@ export const eventsData = [
         details: {
             completeTitle: "NEUROXPLORE 2025 - Neurotechnology and Innovation Gathering",
             image: neuroxplore_banner_wide,
-            startDate: "April 28; 9:00a.m. (GMT-4)",
+            startDate: "April 28; 2:00p.m. (GMT-4)",
             endDate: "May 10; 1:00p.m. (GMT-4)",
-            formatedStartDate: "2025-04-28T09:00:00-04:00",
+            formatedStartDate: "2025-04-28T14:00:00-04:00",
             description: "NEUROXPLORE is a unique university experience that merges training, science, and creativity around neurotechnology. Over nearly two weeks, students and professionals will take part in activities such as a virtual bootcamp, a project fair, a hands-on brain dissection, and a 48-hour hackathon. Led by the Neurotech UCB club, the event aims to boost the development of tech solutions applied to neuroscience in a collaborative setting.",
             about: "Organized by Neurotech UCB, NEUROXPLORE is designed to foster technical, research, and creative skills in neuroscience and emerging technologies. Through both theoretical and hands-on activities, it promotes multidisciplinary collaboration, scientific outreach, and the development of real-world projects with impact. The event not only strengthens academic training but also connects students with an active community of innovation and brain-centered technology.",
             location: "UCB La Paz -- Av. 14 de Septiembre N° 4807",
