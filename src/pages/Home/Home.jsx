@@ -10,6 +10,7 @@ import AndresAracena from "../../assets/images/neuroxplore/organizers/Andres-Ara
 import NeurotechUCB from "../../assets/logos/NeuroTechUCB.png";
 import { useNavigate } from "react-router-dom";
 import fundador from "../../assets/images/fundador.jpeg"
+import EricRoth from "../../assets/images/EricRoth.jpeg"
 import { Helmet } from "react-helmet-async";
 
 const HomePage = () => {
@@ -167,6 +168,12 @@ const HomePage = () => {
       <div className={styles["section-container--column"]} id="testimonials">
         <h2 className={styles["section-container__title"]}>TESTIMONIALS</h2>
         <div className={styles["cards-container"]}>
+        <QuoteCard
+            image={EricRoth}
+            quote={"I have had the privilege of supporting the creation of NeuroTechUCB and assisting its team at the university by sponsoring and facilitating some of their projects. Congratulations to this amazing team, and I wish you a bright future!"}
+            name="Eric Roth Ph.D"
+            position="Former Mentor NeuroTechUCB"
+          />
           <QuoteCard
             image={AndresAracena}
             quote={"Seeing each team member grow, take on challenges, and turn ideas into real projects is what inspires me most. It’s an honor to support a brilliant team that innovates with purpose and vision."}
@@ -179,18 +186,6 @@ const HomePage = () => {
             name="Manuel Illanes"
             position="Cofounder - NeuroTechUCB"
           />
-          {/* <QuoteCard
-            image="assets/project-images/Portrait_Placeholder.png"
-            quote={"I´m really proud of being part of this club. I´ve learned a lot of things that I didn´t even know existed. I´m really grateful for the opportunity to be here"}
-            name="Juan Perez"
-            position="President of NTX UCB"
-          />
-          <QuoteCard
-            image="assets/project-images/Portrait_Placeholder.png"
-            quote={"I´m really proud of being part of this club. I´ve learned a lot of things that I didn´t even know existed. I´m really grateful for the opportunity to be here"}
-            name="Juan Perez"
-            position="President of NTX UCB" 
-          /> */}
         </div>
       </div>
 
