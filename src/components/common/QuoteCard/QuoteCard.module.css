@@ -29,3 +29,51 @@
     gap: 0.5rem;
     text-align: justify;
   }
+
+@media (max-width: 1720px) {
+    .quote__card{
+      padding: 2rem;
+      max-width: 400px;
+      max-height: 720px;
+    }
+  
+    .quote__card-content{
+      gap: 0.75rem;
+    }
+  
+    .quote__card-picture img{
+      height: 450px;
+    }
+  }
+
+
+@media (max-width: 1400px) {
+    .quote__card{
+      padding: 1.5rem;
+      max-width: 320px;
+      max-height: 700px;
+    }
+  
+    .quote__card-content{
+      gap: 0.5rem;
+    }
+  
+    .quote__card-picture img{
+      height: 400px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .quote__card{
+      padding: 1rem;
+      max-width: 300px;
+    }
+  
+    .quote__card-content{
+      gap: 0.25rem;
+    }
+  
+    .quote__card-picture img{
+      height: 300px;
+    }
+  }
