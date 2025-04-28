@@ -9,7 +9,7 @@ import neuroxplore_banner from "../../assets/images/neuroxplore/events/wide/1.pn
 import AndresAracena from "../../assets/images/neuroxplore/organizers/Andres-Aracena-Ocampo-President.jpg"
 import NeurotechUCB from "../../assets/logos/NeuroTechUCB.png";
 import { useNavigate } from "react-router-dom";
-import fundador from "../../assets/images/fundador.jpeg"
+import fundador from "../../assets/images/fundador.jpg"
 import EricRoth from "../../assets/images/EricRoth.jpeg"
 import { Helmet } from "react-helmet-async";
 
