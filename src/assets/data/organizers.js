@@ -39,7 +39,7 @@ import RaphaelAramayo from "../images/neuroxplore/organizers/Raphael Antonio Ara
 import VeronicaSolares from "../images/neuroxplore/organizers/Verónica Solares Mamani.jpg"
 import GeraldyGuzman from "../images/neuroxplore/organizers/Geraldy Briseika Guzmán Espinoza.jpg"
 import SebastianCastro from "../images/neuroxplore/organizers/Sebastian Castro Rivas_.jpg"
-
+import AlanFernandez from "../images/neuroxplore/organizers/Alan Mauricio Fernandez Callejas.jpeg"
 export const organizersData = [
   {
     "id": 1,
@@ -212,6 +212,7 @@ export const organizersData = [
   {
     "id": 26,
     "name": "Alan Mauricio Fernández Calleja",
+    "picture": AlanFernandez,
     "team": "Social Media",
     "university": "Universidad Católica Boliviana"
   },
@@ -393,5 +394,32 @@ export const organizersData = [
     "picture": SebastianCastro,
     "team": "Hackaton",
     "university": "Universidad Católica Boliviana",
-  }
+  },
+  {
+    "id": 54,
+    "name": "ANDRES IGNACIO HINOJOSA GARNICA",
+    "picture": AndresHinojosa,
+    "team": "Web Page",
+    "university": "Universidad Católica Boliviana",
+  },
+  {
+    "id": 55,
+    "name": "Constanza Valentina Monzón Pérez",
+    "picture": ConstanzaMonzon,
+    "team": "Web Page",
+    "university": "Universidad Católica Boliviana",
+  },
+  {
+    "id": 56,
+    "name": "Alan Mauricio Fernández Calleja",
+    "picture": AlanFernandez,
+    "team": "Web Page",
+    "university": "Universidad Católica Boliviana"
+  },
+  {
+    "id": 57,
+    "name": "Melina Callizaya",
+    "team": "Web Page",
+    "university": "Universidad Católica Boliviana"
+  },
 ];

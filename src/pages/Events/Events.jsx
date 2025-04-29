@@ -40,49 +40,68 @@ export const Events = () => {
 
   const committeeTeams = Object.entries(groupedCommittee);
   const [activeTeamIndex, setActiveTeamIndex] = useState(0);
-  const [currentTeam, setCurrentTeam] = useState(committeeTeams[0]);
+  const [currentTeam, setCurrentTeam] = useState(committeeTeams[0] || []);
   const comiteRef = useRef(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (comiteRef.current) {
-        comiteRef.current.classList.remove("fade-in");
-        comiteRef.current.classList.add("fade-out");
-      }
-
-      setTimeout(() => {
+    let isMounted = true;
+  
+    const rotateCommitteeAsync = async () => {
+      while (isMounted && committeeTeams.length > 1) {
+        if (comiteRef.current) {
+          comiteRef.current.classList.remove("fade-in");
+          comiteRef.current.classList.add("fade-out");
+        }
+  
+        await new Promise((resolve) => setTimeout(resolve, 500));
+  
+        if (!isMounted) break;
+  
         setActiveTeamIndex((prevIndex) => {
           const nextIndex = (prevIndex + 1) % committeeTeams.length;
           setCurrentTeam(committeeTeams[nextIndex]);
-
-          if (comiteRef.current) {
-            comiteRef.current.classList.remove("fade-out");
-            comiteRef.current.classList.add("fade-in");
-          }
-
           return nextIndex;
         });
-      }, 500); 
-    }, 10000);
-
-    return () => clearInterval(interval);
-  }, [committeeTeams]);
-
+  
+        await new Promise((resolve) => setTimeout(resolve, 100));
+  
+        if (comiteRef.current) {
+          comiteRef.current.classList.remove("fade-out");
+          comiteRef.current.classList.add("fade-in");
+        }
+  
+        await new Promise((resolve) => setTimeout(resolve, 9400));
+      }
+    };
+  
+    rotateCommitteeAsync();
+  
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+  
   const [currentTeamName, currentTeamMembers] = currentTeam || [];
 
   const alliesRef = useRef(null);
   const [currentCommunityIndex, setCurrentCommunityIndex] = useState(0);
 
-  const communityGroups = alliedCommunitiesData.reduce((acc, curr, index) => {
-    const groupIndex = Math.floor(index / 5);
-    if (!acc[groupIndex]) acc[groupIndex] = [];
-    acc[groupIndex].push(curr);
-    return acc;
-  }, []);
+  const communityGroups =
+    alliedCommunitiesData && alliedCommunitiesData.length > 0
+      ? alliedCommunitiesData.reduce((acc, curr, index) => {
+          const groupIndex = Math.floor(index / 5);
+          if (!acc[groupIndex]) acc[groupIndex] = [];
+          acc[groupIndex].push(curr);
+          return acc;
+        }, [])
+      : [];
 
-  const currentCommunityGroup = communityGroups[currentCommunityIndex] || [];
+  const currentCommunityGroup =
+    communityGroups.length > 0 ? communityGroups[currentCommunityIndex] : [];
 
   useEffect(() => {
+    if (communityGroups.length === 0) return;
+
     const interval = setInterval(() => {
       if (alliesRef.current) {
         alliesRef.current.classList.remove("fade-in");
@@ -100,8 +119,8 @@ export const Events = () => {
 
           return nextIndex;
         });
-      }, 500); 
-    }, 10000); 
+      }, 500);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, [communityGroups.length]);
@@ -141,31 +160,27 @@ export const Events = () => {
         <div className="section--column">
           <h3 className="section__content-title--secondary">Lead Organizers</h3>
           <div className="cards-container">
-            <div className="profile" key={49}>
-              <div className="profile__picture">
-                <img
-                  src={organizersData[48].picture || portraitPlaceholder}
-                  alt={`Organizador: ${organizersData[48].name}`}
-                />
+            {[48, 49].map((id) => (
+              <div className="profile" key={id}>
+                <div className="profile__picture">
+                  <img
+                    src={organizersData[id - 1]?.picture || portraitPlaceholder}
+                    alt={`Organizador: ${organizersData[id - 1]?.name}`}
+                  />
+                </div>
+                <p className="profile__name">
+                  {organizersData[id - 1]?.name?.toUpperCase()}
+                </p>
+                <p className="profile__role">
+                  {organizersData[id - 1]?.title}
+                </p>
               </div>
-              <p className="profile__name">{organizersData[48].name.toUpperCase()}</p>
-              <p className="profile__role">{organizersData[48].title}</p>
-            </div>
-            <div className="profile" key={48}>
-              <div className="profile__picture">
-                <img
-                  src={organizersData[47].picture || portraitPlaceholder}
-                  alt={`Organizador: ${organizersData[47].name}`}
-                />
-              </div>
-              <p className="profile__name">{organizersData[47].name.toUpperCase()}</p>
-              <p className="profile__role">{organizersData[47].title}</p>
-            </div>
+            ))}
           </div>
         </div>
 
         <div className="section--column">
-          <h3 className="section__content-title--secondary">Committee Leaders </h3>
+          <h3 className="section__content-title--secondary">Committee Leaders</h3>
           <div className="section-row cards-container leads">
             {commissionLeaders.map((org) => (
               <div className="profile" key={org.id}>
@@ -186,7 +201,7 @@ export const Events = () => {
           <div className="section--column">
             <div className="comite section--column">
               <h3 className="comite__title section__content-title--secondary">
-                {currentTeamName} Committee Members 
+                {currentTeamName} Committee Members
               </h3>
               <div
                 key={currentTeamName}
