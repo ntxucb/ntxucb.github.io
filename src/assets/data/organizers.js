@@ -418,7 +418,7 @@ export const organizersData = [
   },
   {
     "id": 57,
-    "name": "Melina Callizaya",
+    "name": "MELINA AYLEM GUTIERREZ CALIZAYA",
     "team": "Web Page",
     "university": "Universidad Católica Boliviana"
   },
