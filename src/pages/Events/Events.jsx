@@ -12,6 +12,7 @@ import NeurotechUmsaLogo from "../../assets/logos/Logo actual.jpg";
 import { organizersData } from "../../assets/data/organizers";
 import portraitPlaceholder from "../../assets/images/Portrait_Placeholder.png";
 import { alliedCommunitiesData } from "../../assets/data/allied_communities";
+import { useLocation } from "react-router-dom";
 
 export const Events = () => {
   const navigate = useNavigate();
@@ -42,6 +43,20 @@ export const Events = () => {
   const [activeTeamIndex, setActiveTeamIndex] = useState(0);
   const [currentTeam, setCurrentTeam] = useState(committeeTeams[0] || []);
   const comiteRef = useRef(null);
+
+  const location = useLocation();
+
+useEffect(() => {
+  if (location.hash) {
+    const id = location.hash.replace("#", "");
+    const el = document.getElementById(id);
+    if (el) {
+      setTimeout(() => {
+        el.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }
+}, [location]);
 
   useEffect(() => {
     let isMounted = true;
@@ -141,7 +156,7 @@ export const Events = () => {
       )}
 
       <h2 className="title-section">Upcoming Events</h2>
-      <div className="row">
+      <div className="row" id="upcoming-events">
         {upcomingEvents.map((event) => (
           <CardEvent
             key={event.id}
