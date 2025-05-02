@@ -1,89 +1,100 @@
-// import React from "react";
-// import { TaskBar } from "../../components/layout/TaskBar/TaskBar";
-// import Footer from "../../components/layout/Footer/Footer";
-import CardEvent from "../Events/CardEvent";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Events.css";
-import CardMainEvent from "./CardMainEvent";
+import CardEvent from "../../components/common/CardEvent/CardEvent";
+import CardMainEvent from "../../components/common/CardMainEvent/CardMainEvent";
 
 export const Events = () => {
+  const navigate = useNavigate();
+
   const image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxFvoRX4Y_mAxPaWqaHP5XBrWmjd47UfiM0A&s";
   const title = "Titulo del Evento";
   const description = "loremIpsum datos del evento";
   const buttonText = "Registrarse Ahora";
   const onButtonClick = "Click";
+
+  const handleEventClick = (eventId) => {
+    navigate(`/ntxucblapaz.github.io/events/${eventId}`)
+  }
+
   return (
     <>
-      {/* Seccion del evento Principal */}
-      <section>
-        <div className="container">
-          <h1 className="title-section">Evento Destacado</h1>
-          <div>
-            <CardMainEvent
-              title={title}
-              image={image}
-              description={description}
-              buttonText={buttonText}
-              onButtonClick={onButtonClick} />
-          </div>
-        </div>
-      </section>
+      <div className="container">
 
-      {/* Seccion de los Proximos Eventos */}
-      <section className="proximos-eventos-section">
-        <div className="own-container">
-          <h1 className="title-section">Proximos Eventos</h1>
-          <div className="proximos-eventos-container">
-            
-            <div className="even-item">
-              <CardEvent
-                title={title}
-                image={image}
-                description={description}
-                buttonText="Registrarse1"
-                onButtonClick={onButtonClick}
-              ></CardEvent>
-            </div>
-            <div className="even-item">
-              <CardEvent
-                title={title}
-                image={image}
-                description={description}
-                buttonText="Registrarse2"
-                onButtonClick={onButtonClick}
-              ></CardEvent>
-            </div>
-            <div className="even-item">
-              <CardEvent
-                title={title}
-                image={image}
-                description={description}
-                buttonText="Registrars3e"
-                onButtonClick={onButtonClick}
-              ></CardEvent>
-            </div>
-
-            <div className="even-item">
-              <CardEvent
-                title={title}
-                image={image}
-                description={description}
-                buttonText="Registrars3e"
-                onButtonClick={onButtonClick}
-              ></CardEvent>
-            </div>
-
-
-
-          </div>
-        </div>
-      </section>
-      
-      <section>
+        <h2 className="title-section">Evento Destacado</h2>
         <div>
-          <h1>Eventos pasados</h1>
+          <CardMainEvent
+            title={title}
+            image={image}
+            description={description}
+            buttonText={buttonText}
+            onButtonClick={() => handleEventClick(1)} />
         </div>
-        <div></div>
-      </section>
+        <h2 className="title-section">Proximos Eventos</h2>
+        <div className="row">
+          <CardEvent
+            title={title}
+            image={image}
+            description={description}
+            buttonText="Registrarse"
+            onButtonClick={onButtonClick}
+          />
+          <CardEvent
+            title={title}
+            image={image}
+            description={description}
+            buttonText="Registrarse"
+            onButtonClick={onButtonClick}
+          />
+          <CardEvent
+            title={title}
+            image={image}
+            description={description}
+            buttonText="Registrarse"
+            onButtonClick={onButtonClick}
+          />
+        </div>
+
+        <h2 className="title-section">Eventos pasados</h2>
+        <div className="row">
+          <CardEvent
+            title={title}
+            image={image}
+            description={description}
+            buttonText="Registrarse"
+            onButtonClick={onButtonClick}
+          />
+          <CardEvent
+            title={title}
+            image={image}
+            description={description}
+            buttonText="Registrarse"
+            onButtonClick={onButtonClick}
+          />
+          <CardEvent
+            title={title}
+            image={image}
+            description={description}
+            buttonText="Registrarse"
+            onButtonClick={onButtonClick}
+          />
+        </div>
+
+        <h2 className="title-section">Colaboradores</h2>
+        <div className="row">
+          <div className="colaborador">
+            <img src="src/assets/images/placeholder-cuadrado.jpg" alt="" />
+          </div>
+          <div className="colaborador">
+            <img src="src/assets/images/placeholder-cuadrado.jpg" alt="" />
+          </div>
+          <div className="colaborador">
+            <img src="src/assets/images/placeholder-cuadrado.jpg" alt="" />
+          </div>
+        </div>
+
+
+      </div>
 
     </>
   );

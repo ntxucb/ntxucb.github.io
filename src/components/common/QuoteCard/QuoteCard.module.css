@@ -1,0 +1,30 @@
+.quote__card{
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+    font-family: var(--secondary-font-family);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .quote__card-picture{
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .quote__card-picture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .quote__card-content{
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }

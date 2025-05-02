@@ -1,0 +1,62 @@
+.section-container {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  overflow: hidden;
+  background-color: #010013;
+  margin-bottom: 1.5rem;
+  border-radius: 20px;
+}
+/* 
+.background-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  z-index: 1;
+  background: #01001399;
+  mix-blend-mode: color-burn;
+} */
+
+/* .section-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  backdrop-filter: contrast(110%) saturate(200%) hue-rotate(108deg) invert(100%);
+  z-index: 0;
+} */
+
+
+/* .section-container::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1;
+
+  background-color: #0c0c1889;
+} */
+
+.title-container {
+  margin-inline-start: 100px;
+}
+
+.title {
+  font-family: "Orbitron";
+  color: #23B2C6;
+  font-size: 40px;
+
+}
+

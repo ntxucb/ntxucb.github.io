@@ -3,24 +3,23 @@
 /* General para la barra de navegación #23B2C6*/
 .navbar {
   border-bottom: 2px solid var(--primary-color);
-  background-color: var(--background-color-light);
+  background-color: var(--background-color-dark);
 }
 
 /* Enlaces de navegación */
 .nav-link {
   color: var(--primary-color); /* Texto principal */
   font-size: 1.1rem;
-  font-family: 'Orbitron', sans-serif;
+  font-family: var(--font-family);
   transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: var(--text-color-light); /* Color al hacer hover */
-  text-shadow: 
-    1px 1px 0px var(--primary-color), 
-    -1px -1px 0px var(--primary-color), 
-    1px -1px 0px var(--primary-color), 
-    -1px 1px 0px var(--primary-color);
+  color:var(--text-color-dark); /* Color al hacer hover */
+}
+
+.nav-link:focus {
+  color: var(--text-color-dark)
 }
 
 /* Botón hamburguesa */
@@ -29,13 +28,15 @@
 }
 
 .navbar-toggler-icon {
-  background-color: var(--background-color-light); /* Cambiar color del ícono hamburguesa */
+  background-color: var(--background-color-dark); /* Cambiar color del ícono hamburguesa */
+  background-image: url(/assets/icons/burger-menu-svgrepo-com.svg);
 }
 
 /* Fondo del menú desplegable */
 .navbar-collapse {
-  background-color: var(--background-color-light); /* Fondo al desplegar en móviles */
+  background-color: var(--background-color-dark); /* Fondo al desplegar en móviles */
   border-top: 2px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
 @media (max-width: 768px) {
