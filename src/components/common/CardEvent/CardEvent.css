@@ -22,3 +22,12 @@
     color: #00bcd4;
     font-weight: 400;
 }
+.boton-estilos{
+    background-color: #00bcd4;
+    color: white;
+    border-radius: 10px;
+}
+.boton-estilos:hover{
+    background-color: #0097a7;
+    color: white;
+}

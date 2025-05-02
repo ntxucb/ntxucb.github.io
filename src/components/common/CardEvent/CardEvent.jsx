@@ -3,7 +3,7 @@ import './CardEvent.css';
 
 const CardEvent = ({ title, description, image, buttonText, onButtonClick, date, location }) => {
     return (
-      <div className="card h-100 shadow-sm border-0">
+      <div className="card h-100 shadow border-0">
         {image && (
           <div className="overflow-hidden">
             <img 
@@ -41,7 +41,7 @@ const CardEvent = ({ title, description, image, buttonText, onButtonClick, date,
             
             {/* Botón */}
             <button 
-                className="btn btn-primary w-100 mt-auto"
+                className="btn w-100 mt-auto boton-estilos"
                 onClick={onButtonClick}
             >
                 <i className="bi bi-ticket-perforated me-2"></i>
