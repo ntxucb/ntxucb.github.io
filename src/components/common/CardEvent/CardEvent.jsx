@@ -16,7 +16,7 @@ const CardEvent = ({ title, description, image, buttonText, onButtonClick, date,
         )}
         <div className="card-body d-flex flex-column">
             {/* Título */}
-            <h5 className="card-title mb-1">{title}</h5>
+            <h5 className="card-title fs-3 mb-1 ">{title}</h5>
             
             {/* Descripción */}
             <p className="card-text text-muted flex-grow-1 mb-1">{description}</p>

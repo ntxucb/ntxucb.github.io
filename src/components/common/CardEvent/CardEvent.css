@@ -3,7 +3,6 @@
 }
 
 
-
 .card{
     
     background-color: transparent;
@@ -19,6 +18,7 @@
     max-height: 250px;
 }
 .card-title{
+    font-family: 'Orbitron', sans-serif;
     color: #00bcd4;
     font-weight: 400;
 }
