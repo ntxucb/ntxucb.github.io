@@ -24,12 +24,12 @@
   max-width: 350px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .custom-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width: 1082px) {
+@media (min-width: 1190px) {
   .custom-grid {
     grid-template-columns: repeat(3, 1fr);
   }

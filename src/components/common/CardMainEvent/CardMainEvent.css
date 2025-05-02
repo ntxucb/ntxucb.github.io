@@ -33,4 +33,22 @@
     max-height: 360px;
     object-fit: cover;
   }
+
+
   
+  /* Estilo para el badge de fecha */
+.badge.bg-opacity-25 {
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Efecto hover para el botón */
+.btn-registrate:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Ajuste para iconos */
+.bi-geo-alt-fill {
+  font-size: 1.1rem;
+}
