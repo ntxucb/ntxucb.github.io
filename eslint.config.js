@@ -38,7 +38,8 @@ export default [
       "no-unused-vars": "warn",
       "no-case-declarations": "warn",
       camelcase: "warn",
-      "react/react-in-jsx-scope": "warn",
+      "react/react-in-jsx-scope": "off",
+      
     },
   },
 ]
