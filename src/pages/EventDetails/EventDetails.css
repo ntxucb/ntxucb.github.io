@@ -228,6 +228,21 @@
     padding: 0.8rem;
 }
 
+#extra_content{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+#extra_content blockquote{
+    margin: 1.5rem;
+}
+
+#extra_content iframe{
+    width: 100%;
+    height: 450px;
+}
 
 @media screen and (max-width: 768px) {
     .section{

@@ -41,6 +41,33 @@ function EventDetails() {
         return () => clearInterval(interval);
     }, [event]);
 
+    useEffect(() => {
+        if (!event?.details?.extraContent) return;
+    
+        const content = event.details.extraContent;
+    
+        if (typeof content === "string" && content.includes("instagram.com")) {
+            const scriptAlreadyLoaded = document.querySelector(
+                'script[src="https://www.instagram.com/embed.js"]'
+            );
+    
+            if (!scriptAlreadyLoaded) {
+                const script = document.createElement("script");
+                script.src = "https://www.instagram.com/embed.js";
+                script.async = true;
+                script.onload = () => {
+                    window?.instgrm?.Embeds?.process?.();
+                };
+                document.body.appendChild(script);
+            } else {
+                setTimeout(() => {
+                    window?.instgrm?.Embeds?.process?.();
+                }, 0);
+            }
+        }
+    }, [event]);
+
+
     if (!event) return <div>Event not found</div>;
 
     const {
@@ -150,11 +177,23 @@ function EventDetails() {
 
             </div>
 
+            {event.details.extraContent && (
+                <div className="section--row">
+                    <div className="section__content">
+                        <h2 className="section__content-title">
+                           Extra Content 
+                        </h2>
+                        <div id="extra_content" dangerouslySetInnerHTML={{ __html: event.details.extraContent }}/>
+                    </div>
+                </div>
+            )}
+
             <div className="section--row">
                 <div className="section__content-qta" id="back_button">
                     <a href="/events">Back to events</a>
                 </div>
             </div>
+
         </>
     );
 }
