@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "VITE_ENV=development VITE_PUBLIC_BASE_PATH=/ vite",
-    "build": "VITE_ENV=production VITE_PUBLIC_BASE_PATH=/ vite build",
+    "dev": "cross-env VITE_ENV=development VITE_PUBLIC_BASE_PATH=/ vite",
+    "build": "cross-env VITE_ENV=production VITE_PUBLIC_BASE_PATH=/ vite build",
     "postbuild": "cp dist/index.html dist/404.html",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -29,6 +29,7 @@
     "@types/react": "^18.3.10",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.2",
+    "cross-env": "^10.1.0",
     "eslint": "^9.11.1",
     "eslint-plugin-react": "^7.37.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",

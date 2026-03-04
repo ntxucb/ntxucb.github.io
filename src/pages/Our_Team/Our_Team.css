@@ -1,47 +1,322 @@
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas por defecto */
-    grid-gap: 20px;
-    margin-top: 20px;
-  }
-  
-  .team-card {
-    padding: 20px;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .team-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .card-link {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
-    margin-top: 10px;
-  }
-  
+.ourteam-page {
+  min-height: 100vh;
+  background: #010013;
+  color: #ffffff;
+  padding: 24px;
+}
 
-  @media (max-width: 768px) {
-    .cards-container {
-      grid-template-columns: 1fr;
-      grid-gap: 15px;
-    }
-  }
-  
- 
-  @media (min-width: 768px) and (max-width: 1200px) {
-    .cards-container {
-      grid-template-columns: repeat(2, 1fr); 
-    }
+.ourteam-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 40px;
+  color: #23b2c6;
+  margin: 0 0 18px 0;
+}
 
-    .cards-container > :nth-child(3) {
-      grid-column: span 2; 
-    }
+/* contenedor acordeón */
+.accordion-stage {
+  height: 520px;
+  width: 100%;
+  border-radius: 22px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+
+  display: flex;
+  gap: 18px;
+  padding: 18px;
+  align-items: stretch;
+
+  /* clave: que no te “sobre” espacio visual */
+  justify-content: stretch;
+}
+
+/* cada panel */
+.team-pane {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45);
+  filter: brightness(0.95);
+
+  /*cerrado: comparte ancho */
+  flex: 1 1 92px;
+  /* grow=1, shrink=1, basis=92px */
+  min-width: 86px;
+  /* evita que se vuelvan micro */
+  transition: flex 280ms ease, filter 200ms ease;
+}
+
+/* el activo ocupa el resto */
+.team-pane.active {
+  flex: 8 1 560px;
+  /* grow=8, shrink=1, basis=560px */
+  filter: brightness(1);
+}
+
+/* etiqueta vertical siempre visible */
+.pane-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 200ms ease;
+}
+
+.team-pane.active .pane-label {
+  opacity: 0;
+  /* se oculta cuando abre */
+}
+
+.pane-label-text {
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 2px;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.9);
+  transform: rotate(-90deg);
+  white-space: nowrap;
+}
+
+/* contenido del panel (solo visible cuando está activo) */
+.pane-content {
+  height: 100%;
+  padding: 22px 22px 18px 22px;
+  opacity: 0;
+  transform: translateX(18px);
+  transition: opacity 220ms ease, transform 220ms ease;
+  pointer-events: none;
+  overflow: auto;
+}
+
+.team-pane.active .pane-content {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+/* botón cerrar */
+.pane-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.75);
+  color: #111;
+  font-size: 16px;
+}
+
+/* tipografías y colores dentro (para que se lea encima del color sólido) */
+.pane-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 30px;
+  margin: 0 0 10px 0;
+  color: #0b0b0b;
+}
+
+.pane-desc {
+  margin: 0 0 18px 0;
+  color: #0b0b0b;
+  line-height: 1.35;
+  font-size: 14px;
+}
+
+.pane-section {
+  margin-top: 18px;
+}
+
+.pane-subtitle {
+  font-family: "Orbitron", sans-serif;
+  font-size: 16px;
+  margin: 0 0 10px 0;
+  color: #0b0b0b;
+}
+
+/* grid de personas */
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+/* base (member por defecto) */
+.person-card {
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 14px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ---- LEADER: más grande ---- */
+.person-card.leader {
+  padding: 40px;
+  border-radius: 18px;
+}
+
+.person-card.leader .avatar {
+  width: 155px;
+  height: 160px;
+  border-radius: 22px;
+}
+
+.person-card.leader .person-name {
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.person-card.leader .person-role {
+  font-size: 13px;
+}
+
+/* ---- MEMBER: más corto/compacto ---- */
+.person-card.member {
+  padding: 10px;
+}
+
+.person-card.member .avatar {
+  width: 76px;
+  height: 76px;
+  border-radius: 16px;
+}
+
+.person-card.member .person-name {
+  font-size: 13px;
+}
+
+.person-card.member .person-role {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+/* solo para leadership: una card por fila */
+.pane-col:first-child .people-grid {
+  grid-template-columns: 1fr;
+}
+
+/* Leadership izquierda / Members derecha */
+.pane-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 14px;
+}
+
+.pane-col {
+  min-width: 0;
+}
+
+/* ahora cada columna tiene su propia grilla de personas */
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+/* card vertical */
+.person-card {
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 14px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  /* 🔥 vertical */
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 86px;
+  /* 🔥 más grande */
+  height: 86px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.person-name {
+  font-weight: 800;
+  font-size: 13px;
+  color: #101010;
+  line-height: 1.15;
+}
+
+/* texto debajo, centrado */
+.person-meta {
+  text-align: center;
+}
+
+.person-role {
+  font-size: 12px;
+  color: rgba(16, 16, 16, 0.75);
+}
+
+.empty-hint {
+  color: rgba(0, 0, 0, 0.65);
+  background: rgba(255, 255, 255, 0.55);
+  padding: 10px 12px;
+  border-radius: 12px;
+  grid-column: 1 / -1;
+}
+
+/* responsive: en móvil esto NO funciona bien como acordeón horizontal */
+@media (max-width: 900px) {
+  .accordion-stage {
+    height: auto;
+    flex-direction: column;
   }
-  
+
+  .team-pane {
+    flex: 0 0 auto;
+    min-height: 92px;
+  }
+
+  .team-pane.active {
+    min-height: 380px;
+  }
+
+  .pane-label-text {
+    transform: none;
+  }
+
+  .team-pane.active .pane-label {
+    display: none;
+  }
+
+  .people-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pane-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .people-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .people-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -6,11 +6,11 @@ import FeatureCard from "../../components/common/FeatureCard/FeatureCard";
 import TeamSectionComp from "../../components/common/TeamSection/TeamSection";
 import EventModal from "../../components/common/EventModal/EventModal";
 import neuroxplore_banner from "../../assets/images/neuroxplore/events/wide/1.png"
-import AndresAracena from "../../assets/images/neuroxplore/organizers/Andres-Aracena-Ocampo-President.jpg"
+import AndresAracena from "../../assets/images/neuroxplore/organizers/Camila Alejandra Ribera Loma - Diseccion Cerebral y Feria.jpg"
 import NeurotechUCB from "../../assets/logos/NeuroTechUCB.png";
 import { useNavigate } from "react-router-dom";
 import fundador from "../../assets/images/fundador.jpg"
-import EricRoth from "../../assets/images/EricRoth.jpeg"
+import EricRoth from "../../assets/images/mentor1.jpeg"
 import { Helmet } from "react-helmet-async";
 
 const HomePage = () => {
@@ -124,13 +124,13 @@ const HomePage = () => {
         <div className={styles["about-section__content"]}>
           <h2 className={styles["section-container__title"]}>ABOUT NeuroTechUCB</h2>
           <p className={styles["about-section__description"]}>
-          NeuroTechUCB is a student-led neurotechnology initiative at the Universidad Católica Boliviana “San Pablo” in La Paz, Bolivia. We are dedicated to exploring the intersection between neuroscience, technology, and data science through hands-on projects, education, and community outreach.
+            NeuroTechUCB is a student-led neurotechnology initiative at the Universidad Católica Boliviana “San Pablo” in La Paz, Bolivia. We are dedicated to exploring the intersection between neuroscience, technology, and data science through hands-on projects, education, and community outreach.
           </p>
           <p className={styles["about-section__description"]}>
-          Founded in 2021 during the COVID-19 lockdown, NeuroTechUCB emerged from the shared curiosity and passion for neuroscience and data-driven innovation among a group of Psychology students. Since then, we have grown into a multidisciplinary team that brings together students from Biomedical Engineering, Psychology, Computer Science, and other fields.
+            Founded in 2021 during the COVID-19 lockdown, NeuroTechUCB emerged from the shared curiosity and passion for neuroscience and data-driven innovation among a group of Psychology students. Since then, we have grown into a multidisciplinary team that brings together students from Biomedical Engineering, Psychology, Computer Science, and other fields.
           </p>
           <p className={styles["about-section__description"]}>
-          As the first NeuroTechX chapter in Bolivia, we are proud to be part of the global NeuroTechX network, promoting open knowledge, interdisciplinary collaboration, and technological development in neuroscience.
+            As the first NeuroTechX chapter in Bolivia, we are proud to be part of the global NeuroTechX network, promoting open knowledge, interdisciplinary collaboration, and technological development in neuroscience.
           </p>
 
 
@@ -168,16 +168,16 @@ const HomePage = () => {
       <div className={styles["section-container--column"]} id="testimonials">
         <h2 className={styles["section-container__title"]}>TESTIMONIALS</h2>
         <div className={styles["cards-container"]}>
-        <QuoteCard
+          <QuoteCard
             image={EricRoth}
             quote={"I have had the privilege of supporting the creation of NeuroTechUCB and assisting its team at the university by sponsoring and facilitating some of their projects. Congratulations to this amazing team, and I wish you a bright future!"}
-            name="Eric Roth Ph.D"
+            name="Dra. Maria Elena Lora Fuentes"
             position="Former Mentor NeuroTechUCB"
           />
           <QuoteCard
             image={AndresAracena}
             quote={"Seeing each team member grow, take on challenges, and turn ideas into real projects is what inspires me most. It’s an honor to support a brilliant team that innovates with purpose and vision."}
-            name="Andres Aracena Ocampo"
+            name="Camila Ribera Loma"
             position="President - NeuroTechUCB"
           />
           <QuoteCard
@@ -238,13 +238,13 @@ const HomePage = () => {
         <div className={styles["join-us-section__content"]}>
           <h2 className={styles["join-us-section__title"]}>JOIN US</h2>
           <p className={styles["join-us-section__description"]}>
-          Are you curious about Neuroscience, Artificial Intelligence, and Data Science?
+            Are you curious about Neuroscience, Artificial Intelligence, and Data Science?
             Neurotech UCB invites you to join our incredible community and explore the fascinating world of neurotechnology.
             <span className={styles["join-us-section__description--highlight"]}>
-            We accept new members on summer and winter breaks
-              </span>
-            
- </p>
+              We accept new members on summer and winter breaks
+            </span>
+
+          </p>
           <p className={styles["join-us-section__description"]}>
             We are looking for students for the following areas:
             <span className={styles["join-us-section__description--highlight"]}>
@@ -254,8 +254,8 @@ const HomePage = () => {
 
           <div className={styles["join-us-section__cta"]}>
             <a href="https://forms.gle/iYNsm8o79msEt6Pc9" className={styles["join-us-section__cta-button"]} target="_blank">
-            Join Us
-              </a>
+              Join Us
+            </a>
           </div>
         </div>
       </div>

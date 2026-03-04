@@ -1,32 +1,79 @@
 [
-    {
-      "name": "Hardware",
-      "color": "#0a33a5",
-      "description": "El equipo de Hardware se encarga de diseñar y optimizar los dispositivos, por lo que buscamos personas interesadas en: Diseno y mantenimiento de equipos biomedicos. Habilidad con sistemas embebidos y sus aplicaciones en la robotica. Se valora un buen nivel de ingles y las habilidades de liderazgo.",
-      "link": "/data-science"
-    },
-    {
-      "name": "Data Science",
-      "color": "#00bb5a",
-      "description": "El equipo de Data Science trabaja con grandes volúmenes de datos para encontrar patrones es por esto que buscamos personas interesadas en: Machine Learning. Experiencia con manejo y analisis de datos. Procesamiento de senales. Se valora un buen nivel de ingles y habilidades de liderazgo.",
-      "link": "/data-science"
-    },
-    {
-      "name": "Outreach",
-      "color": "#e8dd10",
-      "description": "El equipo de Outreach busca establecer relaciones y alianzas externas, es por este motivo que el team busca: Capacidad de gestion y organizacion de eventos. Facilidad de comunicacion oreal y escrita. Habilidades interpersonales y de networking. Se valora un buen nivel de ingles y hailidades de liderazgo.",
-      "link": "/data-science"
-    },
-    {
-      "name": "Social Media",
-      "color": "#f88c07",
-      "description": "El equipo de Social Media maneja las redes sociales y la comunicación digital, por lo que en estos las principales caracteristicas que se buscan en los postulantes son: Edicion de videos. Diseno de contenido. Manejo de redes sociales. Se valora un buen nivel de ingles y las habilidades de liderazgo",
-      "link": "/data-science"
-    },
-    {
-      "name": "Education",
-      "color": "#7900ca",
-      "description": "El equipo de Education se dedica a la capacitación y formación continua, por lo que se busca personas para: Elaboracion de contenidos educativos. Manejo de herramientas digitales para edicion. Pasion por la ensenanza. Se valora un buen nivel de ingles y habilidades de liderazgo.",
-      "link": "/data-science"
-    }
-  ]
+  {
+    "name": "Hardware",
+    "color": "#C82E2E",
+    "description": "The Hardware team is in charge of designing and optimizing the devices, so we are looking for people interested in: Design and maintenance of biomedical equipment. Skill with embedded systems and their applications in robotics. A good level of English and leadership skills are valued.",
+    "leaders": [
+      {
+        "name": "Alida Rueda",
+        "role": "Lead",
+        "image": "/images/teams/hardware/lead-hardware.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Social Media",
+    "color": "#C8852E",
+    "description": "The Social Media team handles social networks and digital communication, so the main characteristics sought in applicants are: Video editing. Content design. Management of social networks. A good level of English and leadership skills are valued.",
+    "leaders": [
+      {
+        "name": "Nagely Rodriguez",
+        "role": "Lead",
+        "image": "/images/teams/socialmedia/lead-socialmedia.jpeg"
+      }
+    ],
+    "members": []
+  },
+  {
+    "name": "Outreach",
+    "color": "#C0C82E",
+    "description": "The Outreach team seeks to establish external relationships and alliances, which is why the team seeks: Event management and organization capacity. Ease of oral and written communication. Interpersonal and networking skills. A good level of English and leadership skills are valued.",
+    "leaders": [
+      {
+        "name": "Ivana Severich",
+        "role": "Lead",
+        "image": "/assets/images/teams/outreach/lead-outreach.jpeg"
+      }
+    ],
+    "members": []
+  },
+  {
+    "name": "Data Science",
+    "color": "#2EC854",
+    "description": "The Data Science team works with large volumes of data to find patterns, which is why we are looking for people interested in: Machine Learning. Experience with data management and analysis. Signal processing. A good level of English and leadership skills are valued.",
+    "leaders": [
+      {
+        "name": "Constanza Monzón",
+        "role": "Lead",
+        "image": "/assets/images/teams/datascience/lead-datascience.jpeg"
+      }
+    ],
+    "members": []
+  },
+  {
+    "name": "Software",
+    "color": "#2E75C8",
+    "description": "The Software team is in charge of design, develop and maintenance of the operation systems and programs in our club. That´s why the team is looking for people interested in design of software and has experience with it. Skills needed: a good level of English and leadership skills.",
+    "leaders": [
+      {
+        "name": "Jhulianna Tarqui",
+        "role": "Lead",
+        "image": "/assets/images/teams/software/lead-software.jpg"
+      }
+    ],
+    "members": []
+  },
+  {
+    "name": "Education",
+    "color": "#6B2EC8",
+    "description": "The Education team is dedicated to training and continuous education, so we are looking for people to: Prepare educational content. Management of digital tools for editing. Passion for teaching. A good level of English and leadership skills are valued.",
+    "leaders": [
+      {
+        "name": "Roberto Verastegui",
+        "role": "Lead",
+        "image": "/assets/images/teams/education/lead-education.jpeg"
+      }
+    ],
+    "members": []
+  }
+]
