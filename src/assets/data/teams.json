@@ -7,7 +7,7 @@
       {
         "name": "Alida Rueda",
         "role": "Lead",
-        "image": "/images/teams/hardware/lead-hardware.jpg"
+        "image": "/assets/images/teams/hardware/lead-hardware.jpg"
       }
     ]
   },
@@ -19,7 +19,7 @@
       {
         "name": "Nagely Rodriguez",
         "role": "Lead",
-        "image": "/images/teams/socialmedia/lead-socialmedia.jpeg"
+        "image": "/assets/images/teams/socialmedia/lead-socialmedia.jpeg"
       }
     ],
     "members": []
