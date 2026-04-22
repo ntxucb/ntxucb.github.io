@@ -5,7 +5,7 @@ import InfoCard from "../../components/common/InfoCard/InfoCard";
 import FeatureCard from "../../components/common/FeatureCard/FeatureCard";
 import TeamSectionComp from "../../components/common/TeamSection/TeamSection";
 import EventModal from "../../components/common/EventModal/EventModal";
-import neuroxplore_banner from "../../assets/images/neuroxplore/events/wide/1.png"
+import baw2026_logo from "../../assets/images/neuroxplore/events/baw2026/baw2026.jpeg"
 import AndresAracena from "../../assets/images/neuroxplore/organizers/Camila Alejandra Ribera Loma - Diseccion Cerebral y Feria.jpg"
 import NeurotechUCB from "../../assets/logos/NeuroTechUCB.png";
 import { useNavigate } from "react-router-dom";
@@ -79,7 +79,7 @@ const HomePage = () => {
         {/* Open Graph para redes sociales */}
         <meta property="og:title" content="Neurotech UCB | Innovación en Neurotecnología" />
         <meta property="og:description" content="Descubre el club de neurotecnología de la UCB: eventos, formación, comunidad y ciencia al servicio del futuro." />
-        <meta property="og:image" content="https://ntxucb.github.io/assets/images/neuroxplore/events/wide/1.png" />
+        <meta property="og:image" content="https://ntxucb.github.io/assets/images/neuroxplore/events/baw2026/baw2026.jpeg" />
         <meta property="og:url" content="https://ntxucb.github.io/" />
         <meta property="og:type" content="website" />
 
@@ -87,12 +87,12 @@ const HomePage = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Neurotech UCB | Innovación en Neurotecnología" />
         <meta name="twitter:description" content="Únete a la comunidad de estudiantes que está revolucionando la neurociencia en Bolivia a través de la tecnología." />
-        <meta name="twitter:image" content="https://ntxucb.github.io/assets/images/neuroxplore/events/wide/1.png" />
+        <meta name="twitter:image" content="https://ntxucb.github.io/assets/images/neuroxplore/events/baw2026/baw2026.jpeg" />
       </Helmet>
 
       <EventModal isOpen={isModalOpen} onClose={handleCloseModal} onClick={() => {
         navigate('/events#upcoming-events');
-      }} image={neuroxplore_banner} title="NEUROXPLORE" date="28 de abril - 10 de mayo" description="Evento insignia organizado por el club Neurotech UCB con el objetivo de fomentar la innovación, el conocimiento y" highlighted="el desarrollo de soluciones tecnológicas aplicadas a la neurociencia." continueDescription="Incluye formación virtual, exposiciones de proyectos, actividades prácticas y una hackathon intensiva." />
+      }} image={baw2026_logo} title="BAW NeuroXperience 2026" date="14 - 24 de abril" description="Brain Awareness Week (BAW) es la campaña global para fomentar el entusiasmo y el apoyo público por la ciencia del cerebro." highlighted="Únete a nosotros para una serie de eventos interactivos, charlas y una feria de proyectos." continueDescription="Incluye NeuroForum, NeuroCinema, NeuroFest y NeuroTalks." />
 
 
       <div className={styles["hero-banner"]}>
@@ -260,7 +260,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className={styles["sponsors-section"]} id="our-sponsors">
+      {/* <div className={styles["sponsors-section"]} id="our-sponsors">
         <h2 className={styles["sponsors-section__title"]}>Our Sponsors</h2>
         <div className={styles["sponsors-section__logos"]}>
           <img src="assets/logos/NTX_Logo.png" alt="Logo" />
@@ -271,7 +271,7 @@ const HomePage = () => {
           <img src="assets/logos/tinyml.png" alt="Logo" />
           <img src="assets/logos/openbci.png" alt="Logo" />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

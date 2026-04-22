@@ -169,7 +169,7 @@ useEffect(() => {
         ))}
       </div>
 
-      <div className="section--column" id="organizers">
+      {/* <div className="section--column" id="organizers">
         <h2 className="section__content-title--secondary">Organizers</h2>
 
         <div className="section--column">
@@ -251,7 +251,8 @@ useEffect(() => {
         <div className="colaborador">
           <img src={IBROLogo} alt="IBRO Logo" />
         </div>
-      </div>
+      </div> */}
+
 
       <h2 className="title-section">Allied Communities</h2>
       <div
