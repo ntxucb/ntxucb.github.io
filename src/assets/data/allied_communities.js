@@ -16,6 +16,7 @@ import hacklabBrickheads from '../images/allied communities/large_dark - Hacklab
 import buidlersBolivia from '../images/allied communities/Banner buidlers Bolivia - HANSA Proyectos y servicios.png'
 import angularBolivia from '../images/allied communities/Group 177 - Rodrigo Torrico.png'
 import bitcoinResearch from '../images/allied communities/Bitcoin Reseach Logo - Carles Romy Andres Quispe Tarqui.jpg'
+import sceSistemas from '../images/allied communities/SCE INS LOGO.png'
 
 export const alliedCommunitiesData = [
     {
@@ -126,4 +127,10 @@ export const alliedCommunitiesData = [
         "logo": bitcoinResearch,
         "social_media": "https://www.instagram.com/bitcoinr3/"
     },
+    {
+        "id": 19,
+        "name": "Sociedad Científica Estudiantil de Ingeniería de Sistemas \"Norbert Wiener\"",
+        "logo": sceSistemas,
+        "social_media": "https://www.instagram.com/sce_sis_ucb/"
+    }
 ];
