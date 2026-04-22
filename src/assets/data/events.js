@@ -1,175 +1,126 @@
-import neuroxplore_banner_sqd from "../images/neuroxplore/events/squared/1.png"
-import neuroxplore_banner_wide from "../images/neuroxplore/events/wide/1.png"
-import bootcamp_sqd from "../images/neuroxplore/events/squared/2.png"
-import bootcamp_wide from "../images/neuroxplore/events/wide/2.png"
-import feria_sqd from "../images/neuroxplore/events/squared/3.png"
-import feria_wide from "../images/neuroxplore/events/wide/3.png"
-import diseccion_sqd from "../images/neuroxplore/events/squared/4.png"
-import diseccion_wide from "../images/neuroxplore/events/wide/5.png"
-import hackathon_sqd from "../images/neuroxplore/events/squared/5.png"
-import hackathon_wide from "../images/neuroxplore/events/wide/4.png"
+import baw2026_logo from "../images/neuroxplore/events/baw2026/baw2026.jpeg"
+import cronograma from "../images/neuroxplore/events/baw2026/cronograma.jpeg"
+import neurocinema from "../images/neuroxplore/events/baw2026/neurocinema.jpeg"
+import neurofest from "../images/neuroxplore/events/baw2026/neurofest.jpeg"
+import neuroforum from "../images/neuroxplore/events/baw2026/neuroforum.jpeg"
 import squared_placeholder from "../images/placeholder-cuadrado.jpg";
-import portrait_placeholder from "../images/Portrait_Placeholder.png";
 import wide_placeholder from "../images/wide_placeholder.webp"
-import hackathonPDF from "./CONVOCATORIA HACKATON - NEUROXPLORE.pdf"
-import bootcampPDF from "./BOOTCAMP  - NEURO X PLORE.pdf"
 
 export const eventsData = [
     {
         id: 1,
-        title: "NEUROXPLORE",
+        title: "BAW NeuroXperience 2026",
         isOutstanding: true,
         description:
-            "NEUROXPLORE, organized by Neurotech UCB, is an event taking place from April 28 to May 10 that promotes innovation in neurotechnology through a Virtual Bootcamp, a Project Fair, a Brain Dissection, and a Hackathon. It is aimed at students, educators, and professionals in neuroscience, biomedical engineering, and artificial intelligence.",
-        image: neuroxplore_banner_sqd,
+            "Brain Awareness Week (BAW) is the global campaign to foster public enthusiasm and support for brain science. Join us from April 14 to 24 for a series of interactive events, talks, and a project fair.",
+        image: baw2026_logo,
         buttonText: "More info",
         onButtonClick: () => {
             window.location.href = `/events/1`;
         },
         details: {
-            completeTitle: "NEUROXPLORE 2025 - Neurotechnology and Innovation Gathering",
-            image: neuroxplore_banner_wide,
-            startDate: "April 28; 2:00p.m. (GMT-4)",
-            endDate: "May 10; 1:00p.m. (GMT-4)",
-            formatedStartDate: "2025-04-28T14:00:00-04:00",
-            description: "NEUROXPLORE is a unique university experience that merges training, science, and creativity around neurotechnology. Over nearly two weeks, students and professionals will take part in activities such as a virtual bootcamp, a project fair, a hands-on brain dissection, and a 48-hour hackathon. Led by the Neurotech UCB club, the event aims to boost the development of tech solutions applied to neuroscience in a collaborative setting.",
-            about: "Organized by Neurotech UCB, NEUROXPLORE is designed to foster technical, research, and creative skills in neuroscience and emerging technologies. Through both theoretical and hands-on activities, it promotes multidisciplinary collaboration, scientific outreach, and the development of real-world projects with impact. The event not only strengthens academic training but also connects students with an active community of innovation and brain-centered technology.",
+            completeTitle: "BAW NeuroXperience 2026 - Brain Awareness Week",
+            image: cronograma,
+            startDate: "April 14; 2:00p.m. (GMT-4)",
+            endDate: "April 24; 6:00p.m. (GMT-4)",
+            formatedStartDate: "2026-04-14T14:00:00-04:00",
+            description: "BAW NeuroXperience 2026 is a week-long celebration of neuroscience organized by Neurotech UCB. The event features a variety of activities designed to engage the community and promote the wonders of the brain.",
+            about: "Through activities like NeuroForum, NeuroCinema, and NeuroFest, we aim to bridge the gap between science and the general public, showcasing the latest developments in neurotechnology and brain research.",
             location: "UCB La Paz -- Av. 14 de Septiembre N° 4807",
             locationMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1671.4825846391861!2d-68.11042608241759!3d-16.52208641711459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f20ee187a3103%3A0x2f2bb2b7df32a24d!2sUniversidad%20Cat%C3%B3lica%20Boliviana%20%22San%20Pablo%22!5e0!3m2!1ses-419!2sbo!4v1743635547336!5m2!1ses-419!2sbo",
-            when: "April 28 - May 10, 2025 -- (GMT-4)",
+            when: "April 14 - 24, 2026 -- (GMT-4)",
         }
     },
     {
         id: 2,
-        title: "Virtual Bootcamp",
+        title: "NeuroForum",
         description:
-            "From April 28 to May 2, the Virtual Bootcamp will provide training in neuroscience, brain-computer interfaces, and brain signal analysis.",
-        image: bootcamp_sqd,
+            "From April 14 to 16, join the Journal Club to discuss and analyze scientific papers in neuroscience and psychology.",
+        image: neuroforum,
         buttonText: "More info",
         onButtonClick: () => {
             window.location.href = `/events/2`;
         },
         details: {
-            completeTitle: "Neuroxplore Virtual Bootcamp",
-            image: bootcamp_wide,
-            startDate: "April 28; 2:00p.m. (GMT-4)",
-            endDate: "May 2; 9:00p.m. (GMT-4)",
-            formatedStartDate: "2025-04-28T14:00:00-04:00",
-            description: "An intensive week of online training in neuroscience, BCI (Brain-Computer Interfaces), and brain signal processing. Taught by experts and tailored for those looking to enter the neurotechnology field.",
-            about: "This bootcamp is the gateway to the world of neurotechnology. The virtual sessions will provide theoretical foundations, practical tools, and real-life use cases, preparing participants for the challenges of the upcoming events.",
-            location: "Online",
+            completeTitle: "NeuroForum - Journal Club",
+            image: neuroforum,
+            startDate: "April 14; 2:00p.m. (GMT-4)",
+            endDate: "April 16; 4:00p.m. (GMT-4)",
+            formatedStartDate: "2026-04-14T14:00:00-04:00",
+            description: "An academic space for students and professionals to dive deep into neuroscience literature, sharing insights and critical analysis of recent papers.",
+            about: "This event focuses on the Journal Club format, where participants present and discuss research findings in the field of neuroscience and psychology.",
+            location: "Biblioteca - Piso 3, UCB",
             locationMap: "",
-            when: "April 28 - May 2, 2025 -- (GMT-4)",
-            registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLScHKi_kJHi7wen2WBFMbbd1yj5EB27z2C9nVjPxj_ML_OSh8w/viewform",
-            moreInfoLink: bootcampPDF,
-            extraContent: `
-      <iframe width="100%" height="315" 
-        src="https://www.youtube.com/embed/videoseries?list=PLbDw25_A00FUKNC0RWciGs4T7AAJ6XLWU" 
-        title="YouTube playlist" frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-      </iframe>`
+            when: "April 14 - 16, 2026 -- (GMT-4)",
         }
     },
     {
         id: 3,
-        title: "Project Fair",
+        title: "NeuroCinema",
         description:
-            "On May 5, the Project Fair will showcase student talent through over 15 tech developments in neuroscience.",
-        image: feria_sqd,
+            "On April 17, experience the intersection of cinema and neuroscience with screenings and discussions of iconic films.",
+        image: neurocinema,
         buttonText: "More info",
         onButtonClick: () => {
             window.location.href = `/events/3`;
         },
         details: {
-            completeTitle: "Neuroxplore Project Fair",
-            image: feria_wide,
-            startDate: "May 5; 9:00a.m. (GMT-4)",
-            endDate: "May 5; 3:00p.m. (GMT-4)",
-            formatedStartDate: "2025-05-05T09:00:00-04:00",
-            description: "An open exhibition at UCB's Ágora where students from Neurotech UCB and UMSA will present innovative projects developed as part of the event.",
-            about: "The Project Fair is the space where ideas come to life. It seeks to foster creativity, scientific outreach, and knowledge exchange between clubs and visitors.",
-            location: "Ágora - UCB La Paz",
-            locationMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1671.4825846391861!2d-68.11042608241759!3d-16.52208641711459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f20ee187a3103%3A0x2f2bb2b7df32a24d!2sUniversidad%20Cat%C3%B3lica%20Boliviana%20%22San%20Pablo%22!5e0!3m2!1ses-419!2sbo!4v1743635547336!5m2!1ses-419!2sbo",
-            when: "May 5, 2025 -- (GMT-4)",
-            extraContent: 
-            `
-            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DJRsKTUtw5N/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/DJRsKTUtw5N/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/DJRsKTUtw5N/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by NeuroTechUCB (@neurotechucb)</a></p></div></blockquote>
-            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DJRq4dktwd4/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/DJRq4dktwd4/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/DJRq4dktwd4/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by NeuroTechUCB (@neurotechucb)</a></p></div></blockquote>
-            `
+            completeTitle: "NeuroCinema - Cine y Neurociencia",
+            image: neurocinema,
+            startDate: "April 17; 9:30a.m. (GMT-4)",
+            endDate: "April 17; 9:30p.m. (GMT-4)",
+            formatedStartDate: "2026-04-17T09:30:00-04:00",
+            description: "Immerse yourself in a free, unique experience where cinema and neuroscience meet. Featuring screenings of 'Lucy' and 'Eternal Sunshine of the Spotless Mind'.",
+            about: "Open to the general public, this event uses the power of film to explore complex brain concepts and stimulate discussion about the mind.",
+            location: "Auditorio Principal - Bloque G, UCB",
+            locationMap: "",
+            when: "April 17, 2026 -- (GMT-4)",
         }
     },
     {
         id: 4,
-        title: "Brain Dissection",
+        title: "NeuroFest",
         description:
-            "On May 6, a hands-on experience in brain anatomy will take place at the Biomedical Engineering Laboratory.",
-        image: diseccion_sqd,
+            "On April 22, the project fair will showcase university projects in neuroscience, technology, and medicine.",
+        image: neurofest,
         buttonText: "More info",
         onButtonClick: () => {
             window.location.href = `/events/4`;
         },
         details: {
-            completeTitle: "Applied Brain Dissection for Neuroscience",
-            image: diseccion_wide,
-            startDate: "May 6; 10:00a.m. (GMT-4)",
-            endDate: "May 6; 12:00p.m. (GMT-4)",
-            formatedStartDate: "2025-05-06T10:00:00-04:00",
-            description: "A practical and interactive session that allows direct exploration of brain anatomy under the guidance of neuroscience experts.",
-            about: "This activity offers a unique educational experience for students interested in understanding brain structure through real anatomical techniques.",
-            location: "Biomedical Engineering Lab - UCB",
+            completeTitle: "NeuroFest - Feria de Proyectos",
+            image: neurofest,
+            startDate: "April 22; 10:00a.m. (GMT-4)",
+            endDate: "April 22; 4:00p.m. (GMT-4)",
+            formatedStartDate: "2026-04-22T10:00:00-04:00",
+            description: "A large exhibition where students present their innovative projects and initiatives to the community.",
+            about: "NeuroFest is a space for sharing academic and technological proposals, fostering collaboration and interest in neurotech.",
+            location: "Ágora - UCB",
             locationMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1671.4825846391861!2d-68.11042608241759!3d-16.52208641711459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f20ee187a3103%3A0x2f2bb2b7df32a24d!2sUniversidad%20Cat%C3%B3lica%20Boliviana%20%22San%20Pablo%22!5e0!3m2!1ses-419!2sbo!4v1743635547336!5m2!1ses-419!2sbo",
-            when: "May 6, 2025 -- (GMT-4)",
-            registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSedBuEmVt_e4EO0drmi4rVZKrxwH6OGpRQ6OmBeUXb7dOwCNw/viewform"
-        }
-    },
-    {
-        id: 6,
-        title: "Brain Dissection second session",
-        description:
-            "On May 6, a hands-on experience in brain anatomy will take place at the Biomedical Engineering Laboratory.",
-        image: diseccion_sqd,
-        buttonText: "More info",
-        onButtonClick: () => {
-            window.location.href = `/events/4`;
-        },
-        details: {
-            completeTitle: "Applied Brain Dissection for Neuroscience (second session)",
-            image: diseccion_wide,
-            startDate: "May 6; 3:00p.m. (GMT-4)",
-            endDate: "May 6; 5:00p.m. (GMT-4)",
-            formatedStartDate: "2025-05-06T15:00:00-04:00",
-            description: "A practical and interactive session that allows direct exploration of brain anatomy under the guidance of neuroscience experts.",
-            about: "This activity offers a unique educational experience for students interested in understanding brain structure through real anatomical techniques.",
-            location: "Biomedical Engineering Lab - UCB",
-            locationMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1671.4825846391861!2d-68.11042608241759!3d-16.52208641711459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f20ee187a3103%3A0x2f2bb2b7df32a24d!2sUniversidad%20Cat%C3%B3lica%20Boliviana%20%22San%20Pablo%22!5e0!3m2!1ses-419!2sbo!4v1743635547336!5m2!1ses-419!2sbo",
-            when: "May 6, 2025 -- (GMT-4)",
-            registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSedBuEmVt_e4EO0drmi4rVZKrxwH6OGpRQ6OmBeUXb7dOwCNw/viewform"
+            when: "April 22, 2026 -- (GMT-4)",
         }
     },
     {
         id: 5,
-        title: "Neurotechnology Hackathon",
+        title: "NeuroTalks",
         description:
-            "From May 8 to 10, multidisciplinary teams will develop technological solutions applied to neuroscience in a 48-hour competition.",
-        image: hackathon_sqd,
+            "From April 23 to 24, attend virtual talks with specialist speakers sharing their expertise in various neuroscience areas.",
+        image: cronograma,
         buttonText: "More info",
         onButtonClick: () => {
             window.location.href = `/events/5`;
         },
         details: {
-            completeTitle: "Neurotechnology Hackathon - NEUROXPLORE 2025",
-            image: hackathon_wide,
-            startDate: "May 8; 10:00a.m. (GMT-4)",
-            endDate: "May 10; 5:00p.m. (GMT-4)",
-            formatedStartDate: "2025-05-08T10:00:00-04:00",
-            description: "An intensive innovation competition where participants design and prototype tech solutions focused on neurotechnology. Open to student and professional teams.",
-            about: "The hackathon is the highlight of NEUROXPLORE. It fosters creativity, collaborative work, and the real-world application of technical knowledge to solve real challenges.",
-            location: "Ground floor - Block C, UCB La Paz",
-            locationMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1671.4825846391861!2d-68.11042608241759!3d-16.52208641711459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f20ee187a3103%3A0x2f2bb2b7df32a24d!2sUniversidad%20Cat%C3%B3lica%20Boliviana%20%22San%20Pablo%22!5e0!3m2!1ses-419!2sbo!4v1743635547336!5m2!1ses-419!2sbo",
-            when: "May 8 - 10, 2025 -- (GMT-4)",
-            registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSevlzNuLcfxxUjej-jSGVJSNd7x34bqLTdECDWCnGbdfjcg0g/viewform",
-            moreInfoLink: hackathonPDF,
+            completeTitle: "NeuroTalks - Virtual Series",
+            image: wide_placeholder,
+            startDate: "April 23; 9:00a.m. (GMT-4)",
+            endDate: "April 24; 6:00p.m. (GMT-4)",
+            formatedStartDate: "2026-04-23T09:00:00-04:00",
+            description: "A series of online talks featuring experts in neuroscience, technology, and clinical applications.",
+            about: "NeuroTalks provides a platform for global knowledge exchange, allowing participants to learn from leaders in the field from the comfort of their homes.",
+            location: "Virtual",
+            locationMap: "",
+            when: "April 23 - 24, 2026 -- (GMT-4)",
         }
     }
 ];
