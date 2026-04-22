@@ -14,7 +14,7 @@ const EventModal = ({ isOpen, onClose, onClick, title, image, date, description,
         </div>
         <div className="event-modal-text">
           <h2 className="event-modal-title">{title}</h2>
-          <p className="event-modal-date">📅 <strong>{date}</strong></p>
+          <p className="event-modal-date"><strong>{date}</strong></p>
           <p className="event-modal-description">
             {description} <span className="highlight">{highlighted}</span> {continueDescription}
           </p>

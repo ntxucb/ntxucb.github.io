@@ -22,8 +22,8 @@
 .event-modal-content {
   background-color: #ffffffee;
   border-radius: 1.25rem;
-  max-width: 600px;
-  width: 90%;
+  max-width: 500px;
+  width: 85%;
   padding: 0;
   overflow: hidden;
   position: relative;
@@ -51,12 +51,20 @@
   color: var(--text-color-dark);
 }
 
+.event-modal-image {
+  max-height: 250px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+}
+
 .event-modal-image img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-top-left-radius: 1.25rem;
-  border-top-right-radius: 1.25rem;
+  height: 100%;
+  object-fit: contain;
+  padding: 1rem;
 }
 
 .event-modal-text {
